@@ -32,7 +32,7 @@ This book is part of a comprehensive series for mastering modern software develo
 - **[Python Development Pipelines](https://michaelborck-books.github.io/python-development-pipelines)**: Tools and Workflows for Professional Python
 
 ### Web Track
-- **[Web Development Step by Step](https://michaelborck-books.github.io/web-dev-step-by-ste-ai)** (this book): Building Business Solutions with AI
+- **[Web Development Step by Step](https://michaelborck-books.github.io/web-dev-step-by-step-ai)** (this book): Building Business Solutions with AI
 
 ## Building the Book
 

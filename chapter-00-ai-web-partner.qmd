@@ -244,6 +244,24 @@ Start your learning journal now. For this chapter, record:
 3. **Mental Model**: How do you now think about AI as a development partner?
 4. **Business Question**: What kind of web solutions do you want to build?
 
+## Related Materials
+
+This book is part of a comprehensive series for mastering modern software development in the AI era:
+
+**Foundational Methodology**
+
+- [Intentional Prompting: Mastering the Human-AI Development Process](https://michaelborck-books.github.io/intentional-prompting)
+
+**Python Track**
+
+- [Python Step by Step with AI: Learning with AI](https://michaelborck-books.github.io/python-step-by-step-ai) - Perfect for absolute beginners
+- [Python Jumpstart: Coding Fundamentals for the AI Era](https://michaelborck-books.github.io/python-jumpstart) - Focused Python fundamentals
+- [From Zero to Production: A Practical Python Development Pipeline](https://michaelborck-books.github.io/python-dev-book) - Professional-grade applications
+
+**Web Track**
+
+- [Web Development Step by Step: Building Business Solutions with AI](https://michaelborck-books.github.io/web-dev-step-by-ste-ai) (this book) - HTML, CSS, JavaScript, WordPress, React
+
 ## Next Steps
 
 In Chapter 1, we'll explore how web pages are structured using HTML. You'll use your new prompt skills to discover semantic markup – the foundation of everything we build. We'll start with the concept of "documents as structured information" before writing a single line of code.

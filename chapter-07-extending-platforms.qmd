@@ -1,74 +1,548 @@
 # Extending Platforms {#sec-extending-platforms}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
-
 ## The Concept First
 
-Platforms become powerful through extensions. WordPress plugins add functionality without changing core code. But **when do you use an existing plugin vs build custom?** This is a critical business decision.
+In @sec-wordpress-platform, you learned that WordPress's value lies in its ecosystem. Now we'll learn to extend WordPress professionally—using plugins wisely, customising safely, and making business decisions about when to build versus when to buy.
+
+Here's the tension: plugins make WordPress powerful, but plugins also create risk. Every plugin you add:
+
+- Depends on someone else maintaining it
+- Could conflict with other plugins
+- Might introduce security vulnerabilities
+- Adds complexity to troubleshoot
+
+Professional WordPress development isn't about installing the most plugins—it's about installing the *right* plugins and knowing when custom development makes more sense.
 
 ## Understanding Through Build vs Buy
 
-Every extension decision weighs:
+Every feature request presents a choice:
 
-- **Time**: How long to build vs install?
-- **Cost**: Development vs licensing?
-- **Maintenance**: Who updates it?
-- **Fit**: Does it solve 80% or 100% of the need?
+**Buy (Use existing plugin):**
+
+- Faster to implement
+- Someone else maintains it
+- Battle-tested by thousands of users
+- May not fit exact requirements
+
+**Build (Custom development):**
+
+- Exact fit for requirements
+- You control maintenance
+- No dependency on external developers
+- Higher upfront cost
+
+Neither is always better. The professional skill is evaluating trade-offs.
+
+Consider a business that needs a booking system:
+
+| Factor | Plugin (e.g., Bookly) | Custom Build |
+|--------|----------------------|--------------|
+| Implementation time | Hours | Weeks |
+| Upfront cost | $0-300 | $5,000-20,000 |
+| Fits requirements | 80-90% | 100% |
+| Ongoing updates | Plugin developer | You |
+| Customisation | Limited | Unlimited |
+| Risk of abandonment | Medium | None (you own it) |
+
+For most small businesses, the plugin wins. For a booking-centric business with unique requirements, custom might justify its cost.
+
+::: {.callout-tip}
+## The 80% Rule
+If an existing solution meets 80% of requirements, adapting workflows to fit the tool often costs less than building the remaining 20% custom. Perfect fit isn't always worth the price.
+:::
 
 ## Discovering Extensions with Your AI Partner
 
-### Exploration 1: Plugin Evaluation
+### Exploration 1: Plugin Evaluation Framework
+
+When multiple plugins solve the same problem, how do you choose?
 
 ```
 Ask your AI:
-I need a contact form for WordPress. Create a framework for evaluating the top 3 options.
+I need a contact form plugin for a WordPress business site. Create
+a framework for evaluating options. What criteria matter, and how
+would I compare Contact Form 7, WPForms, and Gravity Forms?
 ```
 
-### Exploration 2: Build vs Buy
+Your evaluation framework should include:
+
+- Feature match to requirements
+- Ease of use (for you and the client)
+- Performance impact
+- Price (free vs. premium features)
+- Support and documentation
+- Update frequency and developer reputation
+- Integration with other tools
+
+```
+Continue the conversation:
+What questions should I ask the client before recommending a contact
+form plugin? What requirements might change my recommendation?
+```
+
+### Exploration 2: Build vs Buy Decision
+
+Let's work through a realistic scenario:
 
 ```
 Ask your AI:
-A client needs a booking system. Walk me through the decision process for using a plugin vs building custom.
+A client runs a yoga studio and needs an online booking system.
+Students should book classes, see instructor schedules, and manage
+their memberships. Walk me through the decision process: should we
+use an existing plugin like Bookly, integrate a third-party service
+like Mindbody, or build custom? What factors matter most?
+```
+
+This conversation should reveal:
+
+- Volume of bookings (justifies complexity)
+- Unique requirements (standard vs. unusual workflows)
+- Integration needs (payment, email, calendars)
+- Budget reality (short-term vs. long-term costs)
+- Client technical capacity (who maintains this?)
+
+```
+Continue the conversation:
+What if the client says "I want exactly what my competitor has but
+for half the price"? How do I manage expectations?
 ```
 
 ### Exploration 3: Technical Debt
 
+Plugins have hidden costs:
+
 ```
 Ask your AI:
-What is "plugin bloat"? How do too many plugins create technical debt?
+What is "plugin bloat" in WordPress? How do too many plugins create
+technical debt? Give me a concrete example of how this affects a
+real site.
+```
+
+Technical debt accumulates when:
+
+- Plugins conflict with each other
+- Updates break functionality
+- Performance degrades
+- Security vulnerabilities compound
+- Nobody understands all the pieces
+
+```
+Continue the conversation:
+If I inherited a WordPress site with 47 plugins, how would I audit
+which ones are actually needed? What's a safe process?
 ```
 
 ## From Concept to Code
 
-[To be developed: Plugin installation, evaluation, basic customisation, child themes, functions.php]
+Let's learn to extend WordPress professionally.
+
+### Installing and Managing Plugins
+
+**Installing from the repository:**
+
+1. Plugins → Add New
+2. Search for the plugin
+3. Click "Install Now"
+4. Click "Activate"
+
+**Installing premium plugins:**
+
+1. Download the .zip file from the vendor
+2. Plugins → Add New → Upload Plugin
+3. Select the .zip file
+4. Install and activate
+
+**Managing plugins:**
+
+- Deactivate plugins you're not using (don't just leave them inactive—delete them)
+- Update plugins regularly (but test first on staging)
+- Document why each plugin is installed
+- Review plugins quarterly—needs change
+
+### Essential Plugin Categories
+
+Most business WordPress sites need plugins in these categories:
+
+**Security:**
+
+- Wordfence or Sucuri: Firewall, malware scanning, login protection
+- Essential—WordPress is a common target
+
+**Backup:**
+
+- UpdraftPlus: Scheduled backups to cloud storage
+- Non-negotiable—databases get corrupted, hosts fail
+
+**Performance:**
+
+- WP Super Cache or W3 Total Cache: Page caching
+- Smush or ShortPixel: Image optimisation
+- Noticeable impact on user experience and SEO
+
+**SEO:**
+
+- Yoast SEO or RankMath: Meta tags, sitemaps, readability
+- Important for discoverability
+
+**Forms:**
+
+- WPForms, Gravity Forms, or Contact Form 7
+- Nearly every site needs contact forms
+
+```
+Ask your AI:
+For a small business WordPress site, what's the minimum set of
+plugins I should consider essential? What does each one protect
+against or enable?
+```
+
+### Evaluating Plugin Quality
+
+Before installing any plugin, check:
+
+**In the repository listing:**
+
+- Last updated (within 3-6 months)
+- Active installations (higher = more tested)
+- WordPress version compatibility
+- Star rating and reviews (read the negative ones)
+- Support forum activity (does developer respond?)
+
+**In reviews, watch for:**
+
+- Security issues mentioned
+- Conflicts with common plugins/themes
+- Broken updates
+- Abandoned development
+- Excessive resource usage
+
+**Test before deploying:**
+
+- Install on a staging site first
+- Test core functionality
+- Check for conflicts with existing plugins
+- Monitor performance impact
+
+### Plugin Conflicts
+
+Plugins can conflict because they:
+
+- Modify the same functionality
+- Use incompatible JavaScript libraries
+- Compete for database resources
+- Override the same hooks
+
+**Diagnosing conflicts:**
+
+1. Note the symptoms (error messages, broken features)
+2. Deactivate all plugins
+3. Reactivate one by one, testing each time
+4. Identify the conflicting combination
+5. Decide: replace one, find alternative, or contact support
+
+**Preventing conflicts:**
+
+- Minimise plugin count (each one adds risk)
+- Choose well-maintained plugins
+- Test updates on staging first
+- Keep WordPress core updated
+
+### Child Themes: Safe Customisation
+
+If you modify a theme directly, your changes disappear when the theme updates. Child themes solve this.
+
+A child theme:
+
+- Inherits everything from the parent theme
+- Lets you override specific files
+- Preserves your changes through parent theme updates
+
+**Creating a child theme:**
+
+1. Create a folder in `/wp-content/themes/` named `{parent-theme}-child`
+2. Create `style.css` with required headers:
+
+```css
+/*
+ Theme Name: Twenty Twenty-Four Child
+ Template: twentytwentyfour
+*/
+
+/* Your custom CSS goes here */
+```
+
+3. Create `functions.php` to enqueue parent styles:
+
+```php
+<?php
+function child_theme_enqueue_styles() {
+    wp_enqueue_style(
+        'parent-style',
+        get_template_directory_uri() . '/style.css'
+    );
+}
+add_action('wp_enqueue_scripts', 'child_theme_enqueue_styles');
+```
+
+4. Activate the child theme in Appearance → Themes
+
+Now any CSS you add to the child's `style.css` applies on top of the parent, and any template files you create in the child override the parent's versions.
+
+```
+Ask your AI:
+I want to change the footer on my WordPress site to include
+additional business information. Walk me through doing this
+properly with a child theme, so my changes survive theme updates.
+```
+
+### Functions.php: Small Customisations
+
+For small code customisations, the child theme's `functions.php` is appropriate:
+
+```php
+<?php
+// Remove WordPress version from head (minor security)
+remove_action('wp_head', 'wp_generator');
+
+// Change excerpt length
+function custom_excerpt_length($length) {
+    return 25; // Words
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
+
+// Add custom image size
+add_image_size('featured-thumb', 400, 300, true);
+```
+
+::: {.callout-warning}
+## functions.php Caution
+Syntax errors in functions.php can break your entire site. Test on staging, and consider a plugin like Code Snippets that isolates code pieces and lets you disable them if they cause problems.
+:::
+
+### When to Build Custom
+
+Consider custom development when:
+
+- No plugin meets the core requirement
+- Plugins would require heavy modification anyway
+- The feature is central to the business model
+- Security or performance requirements are extreme
+- Long-term cost of plugin licensing exceeds development
+
+Even then, consider:
+
+- A small custom plugin (focused, maintainable)
+- Modifying an existing plugin (with a child plugin approach)
+- Combining simpler plugins with custom glue code
+
+Full custom rarely means starting from zero.
+
+## Building Your Mental Model
+
+### The Extension Pyramid
+
+```
+                   ┌───────────────┐
+                   │ Custom Code   │  (Last resort)
+                   ├───────────────┤
+                │  │ Child Themes   │  (Theme customisation)
+              │    ├───────────────┤
+            │      │ Premium Plugins│  (Paid, supported)
+          │        ├───────────────┤
+        │          │ Free Plugins   │  (Widely tested)
+      │            ├───────────────┤
+    │              │ WordPress Core │  (Foundation)
+────────────────────────────────────────
+```
+
+Start from the bottom: can WordPress core do it? Can a well-established free plugin do it? Only climb the pyramid when lower levels don't work.
+
+### The Dependency Chain
+
+Every plugin creates a dependency:
+
+```
+Your Site
+  └── Depends on Plugin A
+        └── Depends on Plugin A's Developer
+              └── Depends on Developer's continued interest
+                    └── Depends on WordPress compatibility
+```
+
+More plugins = more dependencies = more things that can break.
+
+### The True Cost Formula
+
+When evaluating options:
+
+```
+True Cost = Upfront Cost + (Yearly Maintenance × Years) + Risk Cost
+
+Plugin:
+- Upfront: $0-300 (purchase/license)
+- Maintenance: $50-100/year (updates, support subscription)
+- Risk: plugin abandonment, security issues
+
+Custom:
+- Upfront: $5,000-20,000 (development)
+- Maintenance: $500-2,000/year (updates, hosting, developer retainer)
+- Risk: developer availability, scope creep
+```
+
+Over 5 years, the math often favours plugins for standard features.
 
 ## Business Applications
 
-*This develops ULO 4 – making and defending technology choices.*
+### ROI Calculation
 
-- **ROI calculation**: Development cost vs plugin cost
-- **Risk assessment**: Plugin abandonment, security
-- **Client communication**: Explaining trade-offs
-- **Long-term thinking**: Maintenance burden
+Present plugin decisions to clients in business terms:
+
+"A custom booking system would cost $15,000 to build and $2,000/year to maintain. The plugin costs $200/year. Over 5 years:
+
+- Custom: $15,000 + ($2,000 × 5) = $25,000
+- Plugin: $200 × 5 = $1,000
+
+The plugin doesn't do *everything* you want, but is that extra functionality worth $24,000?"
+
+### Risk Communication
+
+Help clients understand risks:
+
+"This plugin has 500,000 active installations and is updated monthly. It's well-maintained. But if the developer stops working on it, we'd need to find an alternative. That's a risk with any plugin, which is why we document everything and maintain backups."
+
+### Managing Expectations
+
+When clients want custom features:
+
+"We can definitely build that custom. But let me show you how three existing plugins handle similar needs. If any of these work for you, you'll save significant money and get something battle-tested by thousands of users."
+
+This positions you as an advisor, not just an implementer.
+
+### Security Responsibility
+
+Plugins are the most common WordPress security vulnerability. Your role:
+
+- Evaluate plugin security before installation
+- Keep plugins updated
+- Monitor for vulnerability announcements
+- Have a response plan if something is compromised
+- Document which plugins are installed and why
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 4** (making and defending technology choices) and **ULO 1** (evaluating effective solutions). Professional plugin decisions require balancing features, costs, risks, and long-term maintenance—exactly the judgment businesses need from technology advisors.
+:::
 
 ## Practice Exercises
 
-[Exercises to be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 7.1: Plugin Research (Level 1)
+
+On your local WordPress site:
+
+1. Search for and compare three SEO plugins (e.g., Yoast, RankMath, All in One SEO)
+2. For each, document: active installs, last updated, rating, key features
+3. Install one and explore its settings
+4. Write a brief summary of which you'd recommend and why
+
+### Exercise 7.2: Create a Child Theme (Level 2)
+
+Create a child theme for your local site:
+
+1. Follow the child theme creation process
+2. Add custom CSS that changes the site's link colour
+3. Verify the change appears
+4. Confirm the parent theme still functions
+
+Document the process with screenshots.
+
+### Exercise 7.3: Plugin Audit (Level 3)
+
+Your local site probably has several plugins now. Conduct an audit:
+
+1. List every installed plugin
+2. For each, document: purpose, last update, whether it's essential
+3. Identify any that could be removed
+4. Identify any that should be replaced with better alternatives
+5. Create a recommendation document
+
+### Exercise 7.4: Build vs Buy Analysis (Level 4)
+
+A client needs an event calendar for their community centre. Events have dates, times, locations, descriptions, and categories. Visitors should be able to filter by category and view a monthly calendar.
+
+Research options and write a 400-word recommendation:
+
+1. Identify two or three plugin options
+2. Evaluate each against requirements
+3. Consider what custom development would entail
+4. Make a recommendation with justification
+5. Address risks and mitigation
+
+### Exercise 7.5: Extension Strategy (Level 5)
+
+You're taking over a WordPress site for a small marketing agency. They need:
+
+- Portfolio showcase
+- Team member profiles
+- Client testimonials
+- Contact forms
+- Blog
+- Newsletter signup
+
+Currently, they have 23 plugins installed, some of which seem redundant.
+
+Develop an extension strategy document (500 words):
+
+1. What categories of plugins are essential?
+2. How would you evaluate their current plugins?
+3. What's your approach to consolidation?
+4. How would you communicate changes to the client?
+5. What ongoing maintenance would you recommend?
+
+This exercise develops professional consulting skills.
 
 ## Chapter Summary
 
-- Extensions multiply platform value
-- Build vs buy is a business decision
-- Evaluation frameworks reduce risk
-- Technical debt accumulates silently
+- Every extension decision weighs build vs. buy trade-offs
+- Plugin evaluation requires systematic criteria, not just feature lists
+- Child themes allow safe customisation that survives updates
+- Technical debt from plugins accumulates silently
+- Professional judgment means recommending the *right* solution, not the most impressive one
+- Security, maintenance, and long-term costs matter as much as features
 
 ## Reflection
 
-[Checklist to be developed]
+Before moving to Chapter 8, ensure you can:
+
+- [ ] Evaluate plugins using systematic criteria
+- [ ] Articulate build vs. buy trade-offs to a non-technical client
+- [ ] Create and use a child theme for customisation
+- [ ] Identify signs of a poorly maintained plugin
+- [ ] Explain technical debt in business terms
+- [ ] Recommend an appropriate number of plugins for a business site
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **Extension Audit**: Look at a WordPress site you use or manage. How many plugins does it have? Do they all seem necessary? What would you consolidate?
+
+2. **Trade-off Thinking**: Think of a feature request that could be solved by either plugin or custom development. What factors would tip your recommendation one way or the other?
+
+3. **AI Conversation Reflection**: What question about plugin evaluation or build vs. buy decisions did your AI partner help clarify?
+
+4. **Professional Communication**: How would you explain to a client why you're recommending a paid plugin instead of a free one? What value does the paid version provide?
 
 ## Next Steps
 
-In Chapter 8, we'll explore headless architecture – using WordPress as a content backend while building custom frontends. This bridges your CMS knowledge with modern frontend development.
+You now know how to extend WordPress wisely with plugins and child themes. But there's another approach entirely: using WordPress as a content backend while building the frontend with modern tools.
+
+In @sec-headless-architecture, we'll explore headless WordPress—using the WordPress REST API to power a React frontend. This bridges your CMS knowledge with the modern frontend skills from Part III and represents how many larger organisations use WordPress today.

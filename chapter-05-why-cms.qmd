@@ -1,73 +1,421 @@
 # Why CMS? The Business Value of Managed Content {#sec-why-cms}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
-
 ## The Concept First
 
-In Part I, you built pages by writing code. But who updates that content? A CMS (Content Management System) separates content from code, allowing non-technical users to manage their own websites.
+In Part I, you built websites by writing code. Every heading, every paragraph, every image—you placed them precisely where they belonged. You had complete control.
 
-This is a **business decision**, not just a technical one.
+But here's the business reality: most websites need regular content updates, and most content updates shouldn't require a developer.
+
+Consider a small business website. The owner wants to:
+
+- Add a new service offering next week
+- Update prices when costs change
+- Post news about an upcoming event
+- Change the phone number when they move offices
+
+If every change requires editing HTML files and redeploying, that business has a problem. They either pay a developer for simple updates or let their site become stale.
+
+A **Content Management System (CMS)** solves this by separating content from code. The developer builds the structure and design once. Then, the business owner—without touching code—can create, edit, and publish content through a friendly interface.
+
+This isn't a technical convenience. It's a **business architecture decision** that affects costs, maintenance, and who controls what.
 
 ## Understanding Through Roles
 
-Think about a newspaper. Writers create content. Editors review it. Designers create templates. Each role focuses on what they do best.
+Think about how a newspaper works:
 
-A CMS enables this separation for websites.
+- **Journalists** write articles. They focus on content quality, not page layout.
+- **Editors** review and approve content before publication.
+- **Designers** create the newspaper's visual templates and structure.
+- **Printers** produce the physical paper at scale.
 
-## Discovering CMS with Your AI Partner
+Each role has expertise. Each focuses on their domain. The journalist doesn't need to understand printing presses; they need a system that accepts their article and handles everything else.
+
+A CMS creates similar role separation for websites:
+
+- **Content creators** write and manage content through an interface
+- **Administrators** control permissions, workflows, and settings
+- **Developers** build themes, extend functionality, and handle technical concerns
+- **Visitors** see the published result
+
+The magic is that content creators never see code. Developers rarely touch content. Each role works in their comfort zone, and the system coordinates.
+
+::: {.callout-tip}
+## The Handoff Test
+A website is truly "done" when you can hand it to the client and they can manage their own content. If they need to call a developer for every text change, the project succeeded technically but failed practically.
+:::
+
+## Discovering CMS Concepts with Your AI Partner
 
 ### Exploration 1: Build vs Buy
 
-```
-Ask your AI:
-When should a business build a custom website vs use a CMS? Create a decision framework.
-```
-
-### Exploration 2: Stakeholder Analysis
+When should a business build a custom-coded site versus use a CMS? This is a foundational business decision.
 
 ```
 Ask your AI:
-Who are the stakeholders in a website project? What does each need from a CMS?
+When should a business build a completely custom website versus using
+a CMS like WordPress? Create a decision framework with criteria like
+budget, content volume, update frequency, and technical resources.
 ```
 
-### Exploration 3: Content Strategy
+This conversation should reveal that CMS becomes increasingly valuable as:
+
+- Content updates become more frequent
+- More non-technical people need to contribute
+- The site needs to scale without developer intervention
+- Long-term maintenance costs matter
+
+Follow up:
+
+```
+Continue the conversation:
+What are the trade-offs? What do you lose by using a CMS instead
+of building everything custom?
+```
+
+### Exploration 2: Stakeholder Perspectives
+
+Different people care about different things. Understanding stakeholder needs is essential for recommending solutions.
 
 ```
 Ask your AI:
-Explain content strategy for a small business website. What questions should we answer first?
+In a website project for a small business, who are all the
+stakeholders? What does each stakeholder need, and what are their
+potential concerns about using a CMS?
 ```
 
-## From Concept to Code
+Stakeholders typically include:
 
-[To be developed: CMS types, WordPress overview, content modelling]
+- Business owner (wants control, worries about costs)
+- Marketing team (wants easy publishing, worries about limitations)
+- IT/Developer (wants maintainability, worries about security)
+- End users (want good experience, don't care how it's built)
+
+```
+Continue the conversation:
+How might these stakeholders have conflicting needs? How would you
+balance them when recommending a CMS solution?
+```
+
+### Exploration 3: Content Strategy First
+
+Technology should serve content, not the other way around. Content strategy asks: What content do we need? Who creates it? How is it organised?
+
+```
+Ask your AI:
+Explain content strategy for a small business website. What questions
+should we answer before choosing any technology? Walk me through how
+content strategy informs CMS requirements.
+```
+
+This should reveal that technology decisions come *after* understanding:
+
+- What content types exist (pages, posts, products, events)
+- Who creates and approves content
+- How often content changes
+- How content relates to business goals
+
+## From Concept to Code (Understanding CMS Architecture)
+
+While this chapter focuses on concepts, let's understand what a CMS actually does technically.
+
+### The Core Separation
+
+Without a CMS:
+```
+HTML File → Browser
+(Content is embedded in code)
+```
+
+With a CMS:
+```
+Database (Content) + Templates (Design) → CMS Engine → HTML → Browser
+(Content and presentation are separate)
+```
+
+The CMS combines content from a database with design templates to generate the HTML that browsers display. Change the content in the database, and the generated HTML changes—without touching any code.
+
+### CMS Types
+
+Not all CMSs work the same way:
+
+**Traditional CMS (Coupled)**
+
+- Content management and website delivery are one system
+- Examples: WordPress, Drupal, Joomla
+- Good for: Standard websites, blogs, small-medium businesses
+- The CMS generates and serves the web pages
+
+**Headless CMS (Decoupled)**
+
+- Content management is separate from content delivery
+- Content is accessed via API, displayed by a separate frontend
+- Examples: Contentful, Strapi, Sanity
+- Good for: Multi-channel content (web, mobile, kiosk), developer-led projects
+- We'll explore this in @sec-headless-architecture
+
+**Website Builders (All-in-one)**
+
+- Simplified CMS with built-in design tools
+- Examples: Squarespace, Wix, Webflow
+- Good for: Simple sites, non-technical users, quick launches
+- Limited flexibility but minimal technical requirement
+
+### WordPress: The Dominant CMS
+
+WordPress powers over 40% of all websites. That's not a typo—nearly half of the web runs on this one platform.
+
+Why? Because it hits a sweet spot:
+
+- **Free and open source**: No licensing costs
+- **Massive ecosystem**: Thousands of themes and plugins
+- **Flexible**: Blogs, business sites, e-commerce, anything
+- **Accessible**: Non-developers can manage content
+- **Extensible**: Developers can customise deeply
+
+We'll spend Chapters 6-8 learning WordPress properly—not just how to use it, but how to evaluate it professionally and extend it when needed.
+
+### The CMS Decision Framework
+
+When evaluating whether a project needs a CMS:
+
+| Factor | Suggests CMS | Suggests Custom Code |
+|--------|-------------|---------------------|
+| Content updates | Frequent (weekly+) | Rare (yearly) |
+| Content editors | Non-technical staff | Developers only |
+| Content volume | Growing over time | Fixed/static |
+| Budget for updates | Limited ongoing budget | Developer always available |
+| Time to launch | Faster with templates | Longer but fully custom |
+| Unique requirements | Standard patterns work | Highly unusual needs |
+
+```
+Ask your AI:
+A local restaurant wants a website with their menu, location, and
+hours. They update the menu monthly. The owner isn't technical.
+Their budget is limited. Walk me through whether they need a CMS
+and what type might be appropriate.
+```
+
+## Building Your Mental Model
+
+### Content as Structured Data
+
+In a CMS, content isn't just text—it's structured data with defined fields:
+
+```
+Blog Post:
+├── Title (text, required)
+├── Content (rich text)
+├── Author (relationship to User)
+├── Category (relationship to Category)
+├── Featured Image (media)
+├── Publish Date (date)
+└── Status (draft/published)
+```
+
+This structure enables:
+
+- Consistent presentation (every post has the same fields)
+- Searchability (find all posts by author)
+- Relationships (posts belong to categories)
+- Validation (required fields must be filled)
+
+```
+Ask your AI:
+For a small business website with services, team members, and
+testimonials, what content types would I need? What fields would
+each content type have?
+```
+
+### The Template Layer
+
+Templates define how structured content becomes visual HTML:
+
+```
+Template: "Single Blog Post"
+┌────────────────────────────────────┐
+│  {{ post.featured_image }}          │
+│  <h1>{{ post.title }}</h1>          │
+│  <p>By {{ post.author.name }}</p>   │
+│  {{ post.content }}                 │
+└────────────────────────────────────┘
+```
+
+The template pulls fields from the content and arranges them. Change the template, and every post's appearance changes. Change one post's content, and only that post changes.
+
+This separation is powerful: designers work on templates, writers work on content, neither needs to understand the other's domain.
+
+### The Permission Layer
+
+CMSs control who can do what:
+
+- **Administrator**: Full access to everything
+- **Editor**: Can manage all content but not settings
+- **Author**: Can write and publish their own content
+- **Contributor**: Can write but not publish (needs approval)
+
+These roles prevent accidents ("The intern deleted the homepage") and enable workflows ("All posts need editor approval before publishing").
 
 ## Business Applications
 
-*This develops ULO 3 – translating stakeholder needs into requirements.*
+### Client Handoff
 
-- **Client handoff**: Clients can update their own content
-- **Reduced maintenance**: Content changes don't require developers
-- **Governance**: Control who can change what
-- **Scalability**: Add content without code changes
+The true measure of a successful website project isn't launch day—it's whether the client can maintain it independently. A CMS-based site can be handed off with training:
+
+"Here's how you add a new blog post. Here's how you update your hours. Here's how you add a team member."
+
+Custom-coded sites often create ongoing dependency.
+
+### Reduced Maintenance Costs
+
+Every developer-required change has a cost. With a CMS:
+
+- Content changes: Client handles directly ($0)
+- Design tweaks: Occasional developer work
+- Major features: Developer project
+
+Without a CMS:
+
+- Content changes: Developer required ($$$)
+- Everything requires technical involvement
+
+Over years, this difference compounds significantly.
+
+### Content Governance
+
+For organisations with multiple content contributors, governance matters:
+
+- Who can publish without approval?
+- Who reviews content before it goes live?
+- Who can delete pages?
+- Who can access sensitive sections?
+
+A CMS with proper roles and workflows provides this structure. Custom code rarely includes such considerations.
+
+### Scalability
+
+Need to add 50 new product pages? With a CMS:
+
+1. Create a "Product" content type with appropriate fields
+2. Content team adds 50 products through the interface
+3. Products appear on the site automatically
+
+Without a CMS: a developer writes and deploys 50 pages of HTML.
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 3** (translating stakeholder needs into technical requirements) and **ULO 4** (selecting appropriate technologies). Recommending a CMS isn't a technical decision—it's understanding who needs to do what and choosing architecture accordingly.
+:::
 
 ## Practice Exercises
 
-[Exercises to be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 5.1: CMS Identification (Level 1)
+
+Visit five local business websites. For each:
+
+1. Try to identify if they're using a CMS (check for `/wp-admin/`, `?p=123` URLs, or use tools like BuiltWith)
+2. If CMS, which one?
+3. Does the site appear actively maintained?
+
+Document your findings. What patterns do you notice about businesses that use CMS versus those that don't?
+
+### Exercise 5.2: Stakeholder Analysis (Level 2)
+
+For a hypothetical dental practice website, identify:
+
+1. All stakeholders (beyond just the dentist)
+2. What each stakeholder needs from the website
+3. What each stakeholder would need to be able to do themselves
+4. Potential conflicts between stakeholder needs
+
+Create a stakeholder matrix mapping needs to CMS requirements.
+
+### Exercise 5.3: Content Audit (Level 3)
+
+Choose a small business website (could be a local business or a fictional scenario). Conduct a content audit:
+
+1. List every content type on the site (pages, posts, products, etc.)
+2. For each type, define the fields it would need
+3. Estimate how often each content type changes
+4. Identify who would likely update each type
+
+Based on your audit, would you recommend a CMS? Why or why not?
+
+### Exercise 5.4: CMS Recommendation (Level 4)
+
+A boutique fitness studio approaches you. They want a website with:
+
+- Class schedules (change weekly)
+- Instructor profiles (change occasionally)
+- Pricing information (change quarterly)
+- Blog posts about fitness tips (new posts monthly)
+- Photo gallery (updated after events)
+
+The owner is comfortable with computers but not technical. Budget is moderate. They want to manage most updates themselves.
+
+Write a 300-word recommendation addressing:
+
+- Whether they need a CMS
+- What type of CMS would suit them
+- What content types you'd create
+- What the client could manage versus what needs developer involvement
+
+### Exercise 5.5: Build vs Buy Analysis (Level 5)
+
+A tech startup wants a unique, highly interactive product landing page with animated demonstrations, custom calculators, and unusual layouts. They update content quarterly and have developers on staff.
+
+Another client, a law firm, wants a professional site with attorney profiles, practice areas, blog, and contact forms. They update content weekly and have no technical staff.
+
+For each:
+
+1. Argue the case for using a CMS
+2. Argue the case against using a CMS
+3. Make and defend your recommendation
+
+This exercise has no single correct answer—develop your ability to weigh trade-offs and justify decisions (ULO 4).
 
 ## Chapter Summary
 
-- CMS separates content from code
-- Stakeholder needs drive CMS choice
-- Content strategy precedes technology
-- The right CMS reduces long-term costs
+- A CMS separates content from code, enabling non-technical users to manage websites
+- The decision to use a CMS is a business architecture decision, not just a technical one
+- Different stakeholders have different needs; CMS choice should balance these
+- Content strategy (what content, who creates it, how often it changes) precedes technology choice
+- WordPress dominates the CMS market due to its flexibility, ecosystem, and accessibility
+- Role-based permissions enable content governance and workflow control
 
 ## Reflection
 
-[Checklist to be developed]
+Before moving to Chapter 6, ensure you can:
+
+- [ ] Explain what a CMS does without using technical jargon
+- [ ] Identify when a project would benefit from a CMS versus custom development
+- [ ] List at least three different stakeholder roles and their CMS-related needs
+- [ ] Describe the difference between traditional and headless CMS
+- [ ] Explain why WordPress is so widely used
+- [ ] Articulate the long-term cost implications of CMS versus custom code
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **CMS Encounters**: Think about websites you use regularly. Which are clearly CMS-powered? How can you tell? What does this suggest about when CMS makes sense?
+
+2. **Stakeholder Empathy**: Put yourself in the shoes of a non-technical business owner. What would frustrate you about needing to contact a developer for every content change? What would you want from a content management interface?
+
+3. **AI Conversation Reflection**: What question about CMS selection did your AI partner help clarify? What factors hadn't you considered before the conversation?
+
+4. **Business Thinking**: How does thinking about "who updates what" change how you approach web projects? Why might this question be more important than "what technology should we use"?
 
 ## Next Steps
 
-In Chapter 6, we'll dive into WordPress – the CMS powering over 40% of the web. We'll understand it as a platform, not just a blogging tool.
+You now understand why CMS matters and when to use one. In @sec-wordpress-platform, we'll dive deep into WordPress—not as a blogging tool, but as a professional platform.
+
+We'll set up a local development environment, understand WordPress's architecture, and learn to evaluate it critically. This isn't about clicking through menus—it's about understanding a platform that powers nearly half the web and knowing when it's the right (or wrong) choice for a project.

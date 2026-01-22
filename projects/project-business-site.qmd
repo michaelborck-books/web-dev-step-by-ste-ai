@@ -1,66 +1,346 @@
 # Project: Business Website with WordPress {#sec-project-business-site}
 
-::: {.callout-note}
-## Project Status: Stub
-This project needs full specification development.
-:::
-
 ## Project Overview
 
-Build a complete WordPress website for a fictional (or real) business, demonstrating CMS configuration, theme customisation, and plugin integration.
+Part II taught you to think about content management strategically: when to use a CMS, how to evaluate platforms and plugins, and how WordPress architecture works. Now you'll apply that knowledge to build a complete business website.
 
-**Aligned with**: Assessment 2 Part A in ISYS3004
+This project simulates a real client engagement. You'll analyse requirements, make technology decisions, implement a solution, and document your choices professionally. The deliverables mirror what you'd provide to an actual client.
+
+**Aligned with**: Assessment 2 in ISYS3004
 
 ## Learning Outcomes Addressed
 
 - **ULO 2**: Demonstrate project management and professional skills
-- **ULO 3**: Analyse stakeholder requirements
-- **ULO 4**: Select and integrate technologies
+- **ULO 3**: Analyse stakeholder requirements to inform design decisions
+- **ULO 4**: Select and integrate appropriate technologies
 
 ## Business Scenario
 
-Choose or create a business scenario:
+Choose one of these scenarios or propose your own:
 
-- Local café or restaurant
-- Professional services firm
-- Retail shop
-- Non-profit organisation
-- Your own venture
+### Option A: Sunrise Café
+
+A local café expanding to two locations. They need:
+
+- Menu with categories (drinks, food, specials)
+- Location pages for each café
+- Blog for news and events
+- Contact forms for catering inquiries
+- Instagram feed integration
+
+### Option B: Hartley & Associates Accountants
+
+A small accounting firm establishing online presence. They need:
+
+- Service pages (tax, bookkeeping, advisory)
+- Team member profiles
+- Blog for tax tips and updates
+- Client testimonials
+- Secure contact form for inquiries
+
+### Option C: Community Garden Network
+
+A non-profit connecting community gardens. They need:
+
+- Garden listings with locations and details
+- Events calendar
+- Volunteer signup forms
+- Resource library (downloadable guides)
+- Newsletter signup
+
+### Option D: Your Own Scenario
+
+Propose a real or fictional business. Must include:
+
+- At least three distinct content types
+- Clear business goals for the website
+- Identifiable stakeholders
+- Reasonable scope for this project
 
 ## Requirements
 
-### Business Requirements
+### Phase 1: Business Analysis
 
-- Clear business case documentation
-- Stakeholder analysis
-- Content strategy
-- Site map
+Before touching WordPress, complete:
 
-### Technical Requirements
+**Business Case Document** (500-750 words):
 
-- WordPress installation (LocalWP)
-- Theme selection and customisation
-- Essential plugins (contact form, SEO, security)
-- Custom functionality (child theme)
-- REST API endpoints exposed
+1. **Business Overview**: What does this business do? What's their market position?
+2. **Website Goals**: What should the website achieve? (leads, information, sales, community)
+3. **Target Audience**: Who visits this site? What do they need?
+4. **Success Metrics**: How will we know the website is working?
+
+**Stakeholder Analysis**:
+
+| Stakeholder | Needs | Concerns | Priority |
+|-------------|-------|----------|----------|
+| (e.g., Owner) | ... | ... | High/Med/Low |
+
+**Content Strategy**:
+
+- What content types are needed?
+- Who creates and maintains each type?
+- How often does each type update?
+- What's the approval workflow?
+
+**Site Map**:
+
+Create a visual or text-based site map showing:
+
+- All pages and their hierarchy
+- Content types and relationships
+- Navigation structure
+
+### Phase 2: Technology Decisions
+
+Document your decisions with justification:
+
+**Theme Selection**:
+
+- Evaluate at least three themes
+- Document criteria and scores
+- Justify your final selection
+- Note any limitations you'll work around
+
+**Plugin Selection**:
+
+For each functional requirement, document:
+
+- The need it addresses
+- Options you evaluated
+- Your selection and why
+- Any concerns or trade-offs
+
+**Minimum plugins to evaluate:**
+
+- Contact forms (e.g., WPForms, Contact Form 7, Gravity Forms)
+- SEO (e.g., Yoast, RankMath)
+- Security (e.g., Wordfence, Sucuri)
+- Backup (e.g., UpdraftPlus)
+- Any scenario-specific needs
+
+### Phase 3: Implementation
+
+Build the site in LocalWP:
+
+**Core Setup:**
+
+- [ ] WordPress installed and configured
+- [ ] Permalinks set to "Post name"
+- [ ] Site title and tagline configured
+- [ ] Timezone correct
+- [ ] Admin user secured (strong password)
+
+**Theme Implementation:**
+
+- [ ] Theme installed and activated
+- [ ] Customiser settings configured (colours, fonts, logo)
+- [ ] Menus created and assigned
+- [ ] Homepage configured (static page or blog)
+- [ ] Child theme created for customisations
+
+**Content:**
+
+- [ ] All pages from site map created
+- [ ] All content types populated with realistic content
+- [ ] Images appropriately sized and with alt text
+- [ ] No placeholder/lorem ipsum text
+
+**Plugins:**
+
+- [ ] Essential plugins installed and configured
+- [ ] Contact forms working and tested
+- [ ] SEO plugin configured (titles, descriptions)
+- [ ] Security plugin configured
+- [ ] Backup plugin configured
+
+**Customisation (Child Theme):**
+
+- [ ] Child theme created and activated
+- [ ] At least one CSS customisation implemented
+- [ ] Customisation survives theme updates
+
+### Phase 4: Testing and Documentation
+
+**Testing Checklist:**
+
+- [ ] All pages load without errors
+- [ ] Navigation works correctly
+- [ ] Forms submit successfully
+- [ ] Mobile responsive (test at multiple sizes)
+- [ ] No JavaScript errors in console
+- [ ] Images load properly
+- [ ] Links not broken
+
+**Technical Documentation:**
+
+Create a handover document that includes:
+
+1. **Login credentials** (for a hypothetical client)
+2. **Theme information** (name, version, any modifications)
+3. **Plugin inventory** (name, purpose, configuration notes)
+4. **Content management guide** (how to add/edit content types)
+5. **Maintenance recommendations** (backups, updates, security)
 
 ## AI Collaboration Guidelines
 
-Document your technology decisions:
+### How to Use AI Effectively
 
-1. Why did you choose this theme?
-2. What plugins did you evaluate?
-3. How did AI help with customisation?
-4. What would you recommend to the "client"?
+Use AI as a consultant you're learning from:
+
+```
+Ask your AI:
+I'm choosing between Theme A and Theme B for a café website. Here's
+what I know about each... Help me think through the decision. What
+factors might I be missing?
+```
+
+```
+Ask your AI:
+I need to customise the footer in my child theme to include business
+hours. Walk me through how to do this safely, and explain each step
+so I understand what I'm doing.
+```
+
+### Documentation Requirements
+
+Keep an AI collaboration log documenting:
+
+1. **Technology decisions**: How did AI help evaluate options?
+2. **Implementation challenges**: What problems did you solve with AI help?
+3. **Modifications**: How did you adapt AI suggestions?
+4. **Learning moments**: What did you understand better after AI conversation?
+
+### Client Recommendation
+
+Write a summary (300-400 words) as if presenting to the client:
+
+- What did you build and why?
+- What are the key features?
+- How do they manage content?
+- What ongoing maintenance is needed?
+- What future enhancements might they consider?
 
 ## Evaluation Criteria
 
-[To be developed: Rubric]
+### Business Analysis (25%)
 
-## Submission
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Business case | Clear, comprehensive, demonstrates business understanding | Good overview with minor gaps | Basic understanding shown | Incomplete or superficial |
+| Stakeholder analysis | All stakeholders identified with clear needs | Most stakeholders covered | Some stakeholders identified | Missing or unclear |
+| Content strategy | Thorough, realistic, actionable | Good strategy with minor gaps | Basic strategy present | Missing or impractical |
+| Site map | Complete, logical hierarchy | Good structure, minor issues | Basic structure present | Incomplete or illogical |
 
-- WordPress export
-- Child theme files
-- Technical documentation
-- Business case document
-- AI collaboration log
+### Technology Decisions (25%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Theme evaluation | Systematic, documented, justified | Good evaluation with rationale | Basic comparison made | No clear evaluation |
+| Plugin selection | Evaluated options, documented trade-offs | Good selection with reasons | Functional choices made | Random or unjustified |
+| Decision documentation | Clear professional documentation | Good documentation | Basic documentation | Missing or poor |
+
+### Implementation (30%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| WordPress setup | Correct configuration, secure | Mostly correct | Functional but issues | Significant problems |
+| Theme/customisation | Well-configured, child theme works | Good customisation | Basic customisation | No customisation |
+| Content quality | Professional, realistic, complete | Good content | Basic content | Placeholder content |
+| Plugin configuration | All plugins properly configured | Most configured correctly | Basic configuration | Unconfigured or broken |
+| Mobile responsiveness | Excellent on all devices | Good responsive behaviour | Works but issues | Broken on mobile |
+
+### Documentation (20%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Technical docs | Complete handover-ready documentation | Good documentation | Basic documentation | Incomplete |
+| Client recommendation | Professional, clear, actionable | Good summary | Basic summary | Missing or poor |
+| AI collaboration log | Detailed, shows critical thinking | Good documentation | Basic log | Missing or superficial |
+
+## Submission Checklist
+
+**Business Analysis:**
+
+- [ ] Business case document (500-750 words)
+- [ ] Stakeholder analysis table
+- [ ] Content strategy document
+- [ ] Site map (visual or text)
+
+**Technical Deliverables:**
+
+- [ ] WordPress export file (.xml)
+- [ ] Child theme files (zipped)
+- [ ] Screenshot of completed site (homepage and two other pages)
+- [ ] Plugin list with configuration notes
+
+**Documentation:**
+
+- [ ] Technical handover document
+- [ ] Client recommendation summary (300-400 words)
+- [ ] AI collaboration log
+
+## What to Submit
+
+1. **Business analysis package** (PDF): Business case, stakeholder analysis, content strategy, site map
+2. **WordPress export** (.xml file): Content export from Tools → Export
+3. **Child theme** (.zip file): Your child theme folder
+4. **Technical documentation** (PDF): Handover document
+5. **Recommendations and reflection** (PDF): Client recommendation + AI collaboration log
+
+## Getting Started
+
+Begin with these conversations with your AI partner:
+
+```
+Ask your AI:
+I'm building a WordPress site for [your scenario]. Help me think
+through what questions I should be asking in the business analysis
+phase. What do I need to understand before making technology decisions?
+```
+
+```
+Ask your AI:
+For a [type of business] website, what are the essential plugins I
+should consider? Not just what's popular, but what this specific
+type of business actually needs.
+```
+
+```
+Ask your AI:
+I'm writing a handover document for a client. What should it include
+so they can manage their WordPress site independently? What do
+non-technical clients most need to know?
+```
+
+## Common Pitfalls to Avoid
+
+1. **Skipping business analysis**: Jumping to WordPress without understanding requirements leads to rework
+2. **Over-complicating**: Installing 20 plugins when 5 would suffice
+3. **Using placeholder content**: "Lorem ipsum" signals incomplete work
+4. **Ignoring mobile**: Always test responsive behaviour
+5. **No documentation**: A site without documentation isn't ready for handover
+6. **Copying AI output blindly**: AI helps you understand—you make the decisions
+7. **Forgetting security**: Security and backup plugins are non-negotiable
+
+## Professional Context
+
+This project mirrors real WordPress consulting work:
+
+1. **Discovery**: Understanding business needs before proposing solutions
+2. **Recommendation**: Evaluating options and justifying choices
+3. **Implementation**: Building the solution professionally
+4. **Handover**: Documenting for ongoing maintenance
+
+These skills are directly applicable to freelance work, agency positions, or managing WordPress sites in any organisation.
+
+## After Submission
+
+Your WordPress project demonstrates:
+
+- Business analysis skills
+- Technology evaluation and decision-making
+- Practical WordPress implementation
+- Professional documentation
+
+Consider these as portfolio pieces—they show employers you can think beyond just code.

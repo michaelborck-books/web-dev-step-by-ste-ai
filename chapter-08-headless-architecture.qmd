@@ -1,69 +1,670 @@
 # Headless Architecture {#sec-headless-architecture}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
-
 ## The Concept First
 
-Traditional WordPress handles both content management AND presentation. **Headless** architecture separates these: WordPress manages content, but a separate frontend (React, for example) handles display.
+In previous chapters, WordPress handled everything: it stored content, managed users, and generated the HTML visitors see. The content management and the website delivery were one unified system.
 
-This enables the best of both worlds.
+**Headless architecture** separates these concerns. WordPress becomes a *content backend*—storing and managing content—while a separate *frontend* application handles presentation. They communicate through APIs.
+
+Why would you do this? Because sometimes you want:
+
+- WordPress's excellent content management
+- A modern frontend built with React or other frameworks
+- Content delivered to multiple channels (web, mobile apps, kiosks)
+- The performance benefits of static or cached frontends
+- Complete design freedom unconstrained by WordPress themes
+
+This approach is increasingly common for larger projects, media companies, and organisations with sophisticated frontend needs.
 
 ## Understanding Through Separation
 
-Imagine a restaurant where the kitchen (content) and dining room (presentation) are in different buildings. Orders (API requests) travel between them. Each can be optimised independently.
+Imagine a restaurant operation:
+
+**Traditional restaurant** (traditional WordPress):
+
+- Kitchen and dining room in one building
+- Chefs prepare food, servers deliver it directly
+- Simple, everything coordinated, but limited to that one location
+
+**Central kitchen + multiple outlets** (headless):
+
+- Central kitchen prepares food (WordPress manages content)
+- Multiple dining locations serve customers (web, mobile, etc.)
+- Food travels via delivery (API)
+- Each outlet can have different ambiance (different frontends)
+- Kitchen changes don't require redesigning dining rooms
+
+The central kitchen can supply a fine dining restaurant, a casual café, and a food truck—each with completely different presentations of the same underlying food.
+
+::: {.callout-tip}
+## Headless = API-First
+"Headless" means the CMS has no "head"—no built-in frontend. It's all backend. Content exits only through APIs, and something else (the "head") must display it.
+:::
 
 ## Discovering Headless with Your AI Partner
 
 ### Exploration 1: Architecture Trade-offs
 
-```
-Ask your AI:
-Compare traditional WordPress vs headless WordPress. When would you choose each?
-```
-
-### Exploration 2: API Contracts
+Every architecture has trade-offs. Let's explore them:
 
 ```
 Ask your AI:
-Explain how the WordPress REST API works as a "contract" between backend and frontend
+Compare traditional WordPress versus headless WordPress architecture.
+What does each approach do well? What problems does each create?
+Create a decision matrix.
+```
+
+This should reveal:
+
+**Traditional WordPress advantages:**
+
+- Simpler to set up and maintain
+- Non-technical users can preview content
+- Huge ecosystem of themes
+- Lower technical barrier
+
+**Headless advantages:**
+
+- Frontend flexibility
+- Better performance potential
+- Multi-channel content delivery
+- Modern developer experience
+
+```
+Continue the conversation:
+When would a small business with limited technical resources choose
+headless? When would a tech company with developers still choose
+traditional WordPress?
+```
+
+### Exploration 2: APIs as Contracts
+
+The API is the contract between backend and frontend:
+
+```
+Ask your AI:
+Explain how the WordPress REST API works as a "contract" between the
+content backend and the frontend application. What does the frontend
+expect? What does WordPress promise to provide?
+```
+
+The API contract specifies:
+
+- What endpoints exist (`/wp-json/wp/v2/posts`)
+- What data format to expect (JSON)
+- What parameters can be sent (filters, pagination)
+- What errors might occur
+
+Frontend developers can build against this contract without needing to understand PHP or WordPress internals.
+
+```
+Continue the conversation:
+What happens if WordPress changes its API in an update? How do you
+manage API versioning and prevent breaking the frontend?
 ```
 
 ### Exploration 3: Business Cases
 
+Where does headless make practical sense?
+
 ```
 Ask your AI:
-Give me 3 real-world scenarios where headless WordPress makes business sense
+Give me three real-world scenarios where headless WordPress would
+be the right architecture choice, and explain why traditional
+WordPress wouldn't work as well.
+```
+
+Common scenarios include:
+
+- Media companies publishing to web, mobile apps, and smart devices
+- E-commerce with heavily customised, high-performance frontends
+- Organisations integrating content into existing applications
+- Sites requiring the fastest possible load times (static generation)
+
+```
+Continue the conversation:
+What about a local bakery's website? Would headless make sense there?
+Why or why not?
 ```
 
 ## From Concept to Code
 
-[To be developed: WordPress REST API, endpoints, authentication, fetching data]
+Let's explore the WordPress REST API and understand how to consume content from an external frontend.
+
+### The WordPress REST API
+
+WordPress includes a built-in REST API. Every WordPress site (version 4.7+) automatically exposes content through standardised endpoints.
+
+**Default endpoints:**
+
+| Endpoint | Returns |
+|----------|---------|
+| `/wp-json/wp/v2/posts` | Blog posts |
+| `/wp-json/wp/v2/pages` | Pages |
+| `/wp-json/wp/v2/categories` | Categories |
+| `/wp-json/wp/v2/tags` | Tags |
+| `/wp-json/wp/v2/media` | Media items |
+| `/wp-json/wp/v2/users` | Users (public info) |
+
+Try it yourself: If your local WordPress site is running, visit `http://your-site.local/wp-json/wp/v2/posts` in your browser. You'll see JSON data for your posts.
+
+### Fetching Posts from WordPress
+
+Using the JavaScript skills from @sec-connection:
+
+```javascript
+async function getWordPressPosts() {
+    const response = await fetch('http://your-site.local/wp-json/wp/v2/posts');
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch posts');
+    }
+
+    const posts = await response.json();
+    return posts;
+}
+```
+
+Each post object contains:
+
+```json
+{
+    "id": 1,
+    "date": "2024-01-15T10:30:00",
+    "title": {
+        "rendered": "Welcome to Our Blog"
+    },
+    "content": {
+        "rendered": "<p>This is the post content...</p>"
+    },
+    "excerpt": {
+        "rendered": "<p>A brief excerpt...</p>"
+    },
+    "slug": "welcome-to-our-blog",
+    "featured_media": 42,
+    "_links": { ... }
+}
+```
+
+Note: `title.rendered` and `content.rendered` contain the processed HTML, ready for display.
+
+### Filtering and Pagination
+
+The API supports query parameters:
+
+```javascript
+// Get only 5 posts
+fetch('/wp-json/wp/v2/posts?per_page=5')
+
+// Get page 2 of results
+fetch('/wp-json/wp/v2/posts?per_page=5&page=2')
+
+// Filter by category (ID)
+fetch('/wp-json/wp/v2/posts?categories=3')
+
+// Search posts
+fetch('/wp-json/wp/v2/posts?search=coffee')
+
+// Order by date descending
+fetch('/wp-json/wp/v2/posts?orderby=date&order=desc')
+```
+
+**Common parameters:**
+
+| Parameter | Purpose | Example |
+|-----------|---------|---------|
+| `per_page` | Results per page (max 100) | `?per_page=10` |
+| `page` | Page number | `?page=2` |
+| `search` | Search term | `?search=recipe` |
+| `categories` | Filter by category ID | `?categories=5` |
+| `tags` | Filter by tag ID | `?tags=12` |
+| `orderby` | Sort field | `?orderby=title` |
+| `order` | Sort direction | `?order=asc` |
+| `_embed` | Include related data | `?_embed` |
+
+### Getting Related Data with _embed
+
+By default, the API returns IDs for related content (like featured images). The `_embed` parameter includes that data directly:
+
+```javascript
+// Without _embed: featured_media is just an ID (42)
+// With _embed: full image data is embedded
+fetch('/wp-json/wp/v2/posts?_embed')
+```
+
+The embedded data appears in `_embedded`:
+
+```javascript
+const posts = await response.json();
+const firstPost = posts[0];
+
+// Access embedded featured image
+const featuredImage = firstPost._embedded?.['wp:featuredmedia']?.[0];
+if (featuredImage) {
+    console.log(featuredImage.source_url); // Image URL
+}
+
+// Access embedded author
+const author = firstPost._embedded?.['author']?.[0];
+if (author) {
+    console.log(author.name); // Author name
+}
+```
+
+### A Complete Example: Displaying Posts
+
+Let's build a simple frontend that displays WordPress posts:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Headless Blog</title>
+    <style>
+        .post-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        .post-card h2 {
+            margin-top: 0;
+        }
+        .loading, .error {
+            padding: 1rem;
+            text-align: center;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Latest Posts</h1>
+        <div id="posts-container">
+            <p class="loading">Loading posts...</p>
+        </div>
+    </main>
+
+    <script>
+        async function loadPosts() {
+            const container = document.querySelector('#posts-container');
+
+            try {
+                const response = await fetch(
+                    'http://your-site.local/wp-json/wp/v2/posts?_embed&per_page=5'
+                );
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error: ${response.status}`);
+                }
+
+                const posts = await response.json();
+
+                // Clear loading message
+                container.innerHTML = '';
+
+                // Render each post
+                posts.forEach(post => {
+                    const card = document.createElement('article');
+                    card.classList.add('post-card');
+
+                    // Get featured image if available
+                    const featuredImage = post._embedded?.['wp:featuredmedia']?.[0];
+                    const imageHtml = featuredImage
+                        ? `<img src="${featuredImage.source_url}" alt="${featuredImage.alt_text || ''}" style="max-width: 100%;">`
+                        : '';
+
+                    card.innerHTML = `
+                        ${imageHtml}
+                        <h2>${post.title.rendered}</h2>
+                        <div>${post.excerpt.rendered}</div>
+                        <a href="#">Read more</a>
+                    `;
+
+                    container.appendChild(card);
+                });
+
+            } catch (error) {
+                container.innerHTML = `
+                    <p class="error">Failed to load posts: ${error.message}</p>
+                `;
+                console.error('Error loading posts:', error);
+            }
+        }
+
+        loadPosts();
+    </script>
+</body>
+</html>
+```
+
+Save this as an HTML file and open it in a browser. It fetches posts from your local WordPress site and displays them—completely independently of WordPress themes.
+
+```
+Ask your AI:
+Walk me through this code. What happens at each step? How would I
+modify it to also show the post date and author name?
+```
+
+### Fetching a Single Post
+
+To get a specific post by ID or slug:
+
+```javascript
+// By ID
+fetch('/wp-json/wp/v2/posts/42')
+
+// By slug
+fetch('/wp-json/wp/v2/posts?slug=welcome-to-our-blog')
+```
+
+### Custom Post Types
+
+If WordPress has custom post types (like "products" or "events"), they may need to be exposed via the API. In a plugin or theme:
+
+```php
+// Register custom post type with REST API support
+register_post_type('product', array(
+    'public' => true,
+    'show_in_rest' => true,  // This exposes it to the API
+    'rest_base' => 'products', // Endpoint: /wp-json/wp/v2/products
+    // ... other arguments
+));
+```
+
+Once exposed, fetch them like any other content:
+
+```javascript
+fetch('/wp-json/wp/v2/products?_embed')
+```
+
+### Authentication for Protected Content
+
+Public content is accessible without authentication. For protected content or write operations, you need authentication.
+
+**Application Passwords** (WordPress 5.6+):
+
+1. In WordPress: Users → Your Profile → Application Passwords
+2. Generate a password for your application
+3. Use Basic Authentication in requests:
+
+```javascript
+const credentials = btoa('username:application-password');
+
+fetch('/wp-json/wp/v2/posts', {
+    headers: {
+        'Authorization': `Basic ${credentials}`
+    }
+});
+```
+
+::: {.callout-warning}
+## Security Note
+Never expose application passwords in frontend JavaScript—they'd be visible to anyone. Authentication is typically handled by a backend server that proxies requests to WordPress.
+:::
+
+### CORS Considerations
+
+If your frontend and WordPress are on different domains, you'll encounter CORS. WordPress needs to allow requests from your frontend's origin.
+
+A plugin or functions.php snippet can enable CORS:
+
+```php
+// Allow CORS from specific origin
+add_action('rest_api_init', function() {
+    remove_filter('rest_pre_serve_request', 'rest_send_cors_headers');
+    add_filter('rest_pre_serve_request', function($value) {
+        header('Access-Control-Allow-Origin: https://your-frontend-domain.com');
+        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+        header('Access-Control-Allow-Credentials: true');
+        return $value;
+    });
+});
+```
+
+For local development, both often run on localhost (different ports), which typically works without extra configuration.
+
+## Building Your Mental Model
+
+### Traditional vs Headless Architecture
+
+**Traditional WordPress:**
+
+```
+┌────────────────────────────────────────┐
+│             WordPress                   │
+│  ┌─────────────┐  ┌─────────────────┐  │
+│  │   Content   │──│     Theme       │  │
+│  │  Database   │  │  (Presentation) │  │
+│  └─────────────┘  └─────────────────┘  │
+└───────────────────────────┬────────────┘
+                            │ HTML
+                            ▼
+                        Browser
+```
+
+**Headless WordPress:**
+
+```
+┌──────────────────┐        ┌─────────────────┐
+│    WordPress     │        │    Frontend     │
+│  ┌────────────┐  │  API   │  (React, etc.)  │
+│  │  Content   │  │◄──────►│                 │
+│  │  Database  │  │  JSON  │                 │
+│  └────────────┘  │        └────────┬────────┘
+└──────────────────┘                 │ HTML
+                                     ▼
+                                 Browser
+```
+
+In headless, WordPress's theming layer isn't used. It's purely a content repository.
+
+### When Headless Makes Sense
+
+| Scenario | Why Headless? |
+|----------|---------------|
+| Multi-channel delivery | Same content to web, iOS app, Android app, smart displays |
+| Maximum performance | Static site generation, edge caching |
+| Complex frontend needs | Single-page applications, heavy JavaScript interactivity |
+| Developer preferences | Modern frontend frameworks, component architecture |
+| Integration requirements | Content feeds into existing applications |
+
+### When Traditional Makes Sense
+
+| Scenario | Why Traditional? |
+|----------|------------------|
+| Content editors need preview | See exactly what's published |
+| Simple sites | Blog, brochure site, small business |
+| Limited technical resources | No frontend developers available |
+| Plugin-dependent features | Many plugins expect traditional setup |
+| Budget constraints | Two systems cost more to maintain |
+
+### The Complexity Cost
+
+Headless adds complexity:
+
+- Two codebases instead of one
+- Two deployments to manage
+- Content preview is harder
+- Some WordPress plugins don't work
+- More technical expertise required
+
+This complexity has costs. Headless is a tool—use it when benefits outweigh costs.
 
 ## Business Applications
 
-- **Multi-channel**: Same content to web, mobile, displays
-- **Performance**: Static frontends are faster
-- **Security**: Reduced attack surface
-- **Developer experience**: Modern frontend tools
+### Multi-Channel Content
+
+Organisations increasingly need content everywhere:
+
+- Corporate website
+- Mobile applications
+- Internal dashboards
+- Digital signage
+- Partner integrations
+
+With headless, content is created once and consumed everywhere. WordPress becomes the "single source of truth."
+
+### Performance and SEO
+
+Headless frontends can be:
+
+- Statically generated (fastest possible)
+- Cached at the edge (CDN)
+- Optimised specifically for performance
+
+This matters for SEO and user experience—Google measures page speed.
+
+### Security Benefits
+
+In headless architecture:
+
+- WordPress can be hidden from the public (private network)
+- Attack surface is reduced
+- Frontend has no direct database access
+- Compromising the frontend doesn't compromise content
+
+For high-security needs, this separation is valuable.
+
+### Developer Experience
+
+Modern frontend developers often prefer:
+
+- React, Vue, or similar frameworks
+- Component-based architecture
+- TypeScript
+- Modern build tools
+
+Headless lets them use their preferred tools while leveraging WordPress's content management.
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 4** (selecting appropriate technologies) and **ULO 5** (evaluating emerging approaches). Headless architecture is a significant trend in web development. Understanding when it applies—and when it doesn't—demonstrates professional judgment.
+:::
 
 ## Practice Exercises
 
-[Exercises to be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 8.1: Explore the API (Level 1)
+
+Using your local WordPress site:
+
+1. Open a browser and visit `/wp-json/wp/v2/posts`
+2. Explore the JSON structure—identify title, content, date, and other fields
+3. Try different endpoints: `/pages`, `/categories`, `/media`
+4. Add `?_embed` and observe how the response changes
+
+Document your findings with screenshots.
+
+### Exercise 8.2: Build a Post List (Level 2)
+
+Create an HTML page that:
+
+1. Fetches the 3 most recent posts from your WordPress site
+2. Displays title, date, and excerpt for each
+3. Handles loading and error states
+4. Styles the output with basic CSS
+
+Test it in your browser.
+
+### Exercise 8.3: Filter and Search (Level 3)
+
+Extend your post list to include:
+
+1. A search input that filters posts by search term
+2. A category dropdown that filters by category
+3. Pagination (Next/Previous buttons)
+
+This combines API parameters with JavaScript event handling.
+
+### Exercise 8.4: Architecture Recommendation (Level 4)
+
+A regional newspaper wants to modernise their digital presence. They have:
+
+- A 15-year-old WordPress site with 10,000+ articles
+- A mobile app in development
+- Plans for a digital subscriber paywall
+- A team of journalists comfortable with WordPress
+- One full-stack developer
+
+Write a 400-word recommendation addressing:
+
+- Should they go headless, traditional, or hybrid?
+- What are the risks of each approach?
+- What would you implement first?
+- How would you handle the transition?
+
+### Exercise 8.5: Architecture Design (Level 5)
+
+Design a headless architecture for a restaurant group with:
+
+- 5 restaurant locations (different brands)
+- Shared menu items across some locations
+- Location-specific events and specials
+- A central marketing team
+- Mobile app plans for ordering
+
+Create a diagram showing:
+
+- What WordPress manages
+- What the API provides
+- What the frontend(s) display
+- How content flows from creation to display
+
+Write a 500-word explanation of your design decisions.
 
 ## Chapter Summary
 
-- Headless separates content from presentation
-- REST APIs enable this separation
-- Architecture choices have business implications
-- The right architecture depends on requirements
+- Headless architecture separates content management from presentation
+- The WordPress REST API exposes content as JSON data
+- Frontends fetch and display content independently
+- `_embed` includes related data like images and authors
+- Headless adds complexity but enables multi-channel delivery and modern frontends
+- Architecture choice depends on requirements, resources, and trade-offs
 
 ## Reflection
 
-[Checklist to be developed]
+Before moving to the Business Website Project, ensure you can:
+
+- [ ] Explain headless architecture without jargon
+- [ ] Fetch WordPress content using the REST API
+- [ ] Use API parameters to filter and paginate results
+- [ ] Access embedded data like featured images
+- [ ] Articulate when headless makes sense and when it doesn't
+- [ ] Describe the trade-offs of headless vs. traditional WordPress
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **Architecture Thinking**: When you visit websites, can you guess which might be using headless architecture? What clues suggest headless vs. traditional?
+
+2. **API Exploration**: What surprised you about the WordPress REST API? What data was available that you didn't expect?
+
+3. **AI Conversation Reflection**: What question about headless architecture did your AI partner help clarify?
+
+4. **Trade-off Assessment**: Think of a website you might build. Would headless be appropriate? Why or why not?
 
 ## Next Steps
 
-You've now mastered content management. In the Business Site Project, you'll build a complete WordPress site with custom functionality. Then we move to Part III, where we'll build a modern React frontend that consumes WordPress content.
+You've completed Part II: Content Management for Business. You understand:
+
+- Why CMS matters and when to use one
+- WordPress as a platform with an ecosystem
+- How to extend WordPress professionally
+- Headless architecture and the REST API
+
+In @sec-project-business-site, you'll build a complete WordPress business site, applying everything from this part. This project demonstrates your ability to make and implement technology decisions for real business needs.
+
+Then, in Part III, we'll build on the API knowledge from this chapter to create React frontends—bringing modern frontend development into your skillset.

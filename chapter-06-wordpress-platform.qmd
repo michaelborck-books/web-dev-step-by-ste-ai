@@ -1,69 +1,517 @@
 # WordPress as Platform {#sec-wordpress-platform}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
-
 ## The Concept First
 
-WordPress isn't just blogging software – it's a **platform** with an ecosystem of themes, plugins, and APIs. Understanding WordPress as a platform helps you make better technology decisions.
+WordPress powers over 40% of the web. That's an extraordinary number—nearly half of all websites run on a single platform. Understanding why reveals something important about how technology decisions are made in business.
+
+WordPress isn't just "blogging software." It's a **platform**—a foundation that others build upon. The distinction matters:
+
+- **Software** does specific things. You use it as-is.
+- **A platform** provides a foundation. An ecosystem builds on top of it.
+
+Your smartphone is a platform. The core provides basics (calls, settings), but the app ecosystem makes it powerful. You don't judge your phone by its built-in apps alone—you judge it by what you can do with the apps others have built.
+
+WordPress works the same way. The core handles content management. Themes control appearance. Plugins add functionality. The ecosystem—over 60,000 plugins, thousands of themes—is what makes WordPress suitable for almost any website.
+
+Learning WordPress means learning to evaluate and assemble these pieces professionally.
 
 ## Understanding Through Ecosystems
 
-Think of WordPress like a smartphone. The core provides basics, but the app ecosystem makes it powerful. Choosing the right "apps" (plugins/themes) is as important as the platform itself.
+Imagine opening a restaurant. You could:
+
+**Option A**: Build everything from scratch. Design your own stoves, create your own recipes, invent your own point-of-sale system.
+
+**Option B**: Use standard commercial kitchen equipment, adapt proven recipes, install established POS software, then focus your creativity on your unique menu and dining experience.
+
+Option B gets you open faster, with tested components, and lets you focus on what makes your restaurant special. This is platform thinking.
+
+WordPress provides the kitchen equipment. Themes provide the interior design. Plugins provide specialised tools (reservation systems, online ordering). You focus on your content and business logic.
+
+::: {.callout-tip}
+## The Platform Evaluation Question
+When evaluating any platform, ask: "How active is the ecosystem?" A platform with a dying ecosystem becomes a liability. WordPress's ecosystem is massive and active—a significant factor in its dominance.
+:::
 
 ## Discovering WordPress with Your AI Partner
 
-### Exploration 1: Platform Thinking
+### Exploration 1: Platform vs Software
+
+Let's clarify the distinction between platforms and ordinary software:
 
 ```
 Ask your AI:
-What makes something a "platform" vs just "software"? Use WordPress and Excel as examples.
+What makes something a "platform" versus just "software"? Compare
+WordPress and Microsoft Word. Both help create documents. Why is
+WordPress a platform while Word is (primarily) software?
 ```
 
-### Exploration 2: Ecosystem Evaluation
+This should reveal characteristics of platforms:
+
+- Third parties build on them
+- An ecosystem of extensions exists
+- The value increases as the ecosystem grows
+- Users can customise without changing the core
+
+```
+Continue the conversation:
+What risks come with choosing a platform? What happens if the
+ecosystem declines or the platform changes direction?
+```
+
+### Exploration 2: Theme and Plugin Evaluation
+
+The WordPress ecosystem contains gems and garbage. Professional evaluation skills are essential:
 
 ```
 Ask your AI:
-How do you evaluate whether a WordPress theme or plugin is trustworthy? What red flags should you watch for?
+How do I evaluate whether a WordPress theme or plugin is trustworthy
+and well-built? What specific signals indicate quality, and what red
+flags should make me cautious?
 ```
 
-### Exploration 3: Architecture
+Quality signals include:
+
+- Active development (recent updates)
+- Large install base with good reviews
+- Responsive support
+- Clean code (if you can inspect it)
+- Clear documentation
+
+Red flags include:
+
+- No updates in over a year
+- Few installations despite being old
+- Poor reviews mentioning security or support
+- Abandoned by developer
+- Excessive permission requests
+
+```
+Continue the conversation:
+If I find two plugins that do the same thing, one with 100,000
+installs and one with 1,000 installs, is the popular one always
+better? When might the less popular option be the right choice?
+```
+
+### Exploration 3: WordPress Architecture
+
+Understanding how WordPress is built helps with troubleshooting and customisation:
 
 ```
 Ask your AI:
-Explain WordPress's architecture (database, themes, plugins) using a restaurant analogy
+Explain WordPress's architecture using a restaurant analogy. The
+database stores something, themes do something, plugins do something,
+and the WordPress core coordinates. What's each part doing in
+restaurant terms?
+```
+
+A typical analogy might map:
+
+- Database = Storage (pantry, inventory, recipes)
+- Core = Kitchen operations (combining ingredients into dishes)
+- Themes = Dining room design (how food is presented)
+- Plugins = Specialised equipment (espresso machine, wine fridge)
+
+```
+Continue the conversation:
+When something goes wrong on a WordPress site, how does understanding
+architecture help diagnose the problem? Give me an example.
 ```
 
 ## From Concept to Code
 
-[To be developed: WordPress installation, admin interface, themes, basic customisation]
+Let's set up WordPress locally and understand its core components.
+
+### Local Development with LocalWP
+
+Never develop directly on a live website. Local development means:
+
+- You can experiment without breaking anything
+- You don't need internet access
+- Changes are instant (no upload time)
+- You can test risky changes safely
+
+**LocalWP** (formerly Local by Flywheel) is the simplest way to run WordPress locally:
+
+1. Download from localwp.com
+2. Install and open
+3. Click "Create a new site"
+4. Choose a name, username, and password
+5. Wait for setup to complete
+
+That's it. You now have a WordPress site running on your computer.
+
+LocalWP handles the complexity—PHP, MySQL, web server—behind a simple interface.
+
+::: {.callout-note}
+## Alternatives
+Other local development options include XAMPP, MAMP, and Docker-based setups. LocalWP is recommended for beginners because it's WordPress-specific and handles configuration automatically.
+:::
+
+### The WordPress Admin Interface
+
+Click "WP Admin" in LocalWP to access your site's dashboard. This is the content management interface—where non-developers spend their time.
+
+**Dashboard Areas:**
+
+| Area | Purpose |
+|------|---------|
+| Dashboard | Overview and quick actions |
+| Posts | Blog posts and news |
+| Media | Images, files, uploads |
+| Pages | Static pages (About, Contact) |
+| Comments | Reader comments (if enabled) |
+| Appearance | Themes, menus, widgets |
+| Plugins | Add functionality |
+| Users | Account management |
+| Settings | Site configuration |
+
+Spend time exploring each area. Understanding the admin interface is essential—this is what you'll train clients to use.
+
+### Posts vs Pages
+
+WordPress has two main content types by default:
+
+**Posts** are:
+
+- Time-based (have publish dates)
+- Categorised and tagged
+- Appear in feeds and archives
+- Good for: Blog articles, news, updates
+
+**Pages** are:
+
+- Timeless (no dates emphasised)
+- Hierarchical (can have parent pages)
+- Not categorised
+- Good for: About, Contact, Services, static content
+
+The distinction isn't technical capability—it's organisational. Posts answer "What's new?" Pages answer "What do we do?"
+
+### Understanding Themes
+
+A WordPress theme controls:
+
+- Visual appearance (colours, fonts, layout)
+- Template structure (what appears where)
+- Available features (some themes add functionality)
+
+The theme doesn't contain your content—it presents your content. Change themes, and content remains while appearance transforms.
+
+**Exploring Themes:**
+
+1. Go to Appearance → Themes
+2. Click "Add New"
+3. Browse featured, popular, or search for specific needs
+4. Use "Live Preview" to see a theme with your content
+5. Activate when ready
+
+**Theme Evaluation Criteria:**
+
+| Factor | Questions to Ask |
+|--------|-----------------|
+| Purpose fit | Is this designed for sites like yours? |
+| Responsiveness | Does it work well on mobile? |
+| Speed | Is it lightweight or bloated? |
+| Customisation | Can you change colours/fonts without code? |
+| Updates | Is it actively maintained? |
+| Reviews | What do other users say? |
+| Support | Can you get help if needed? |
+
+```
+Ask your AI:
+I'm building a site for a local bakery. What should I look for in a
+WordPress theme? What features matter, and what should I avoid?
+```
+
+### The Template Hierarchy
+
+WordPress uses a template hierarchy to determine which template file displays content. Understanding this helps when you need to customise.
+
+```
+Specific                                      General
+───────────────────────────────────────────────────────►
+
+Single Post:
+single-post-{slug}.php → single-post.php → single.php → singular.php → index.php
+
+Single Page:
+page-{slug}.php → page-{id}.php → page.php → singular.php → index.php
+
+Archive:
+category-{slug}.php → category.php → archive.php → index.php
+```
+
+WordPress looks for the most specific template first, falling back to more general ones. This allows themes to have special templates for specific pages while using defaults for everything else.
+
+```
+Ask your AI:
+If I want my "About" page to look different from other pages, what
+file would I create in my theme? Walk me through how WordPress
+determines which template to use.
+```
+
+### Basic Customisation
+
+Most modern themes include a Customiser (Appearance → Customise) for no-code adjustments:
+
+- Site identity (logo, tagline)
+- Colours
+- Typography (some themes)
+- Header/footer layout
+- Homepage settings
+- Menus
+
+The Customiser shows live previews—experiment freely before publishing changes.
+
+**Menus:**
+
+1. Appearance → Menus
+2. Create a new menu
+3. Add pages, posts, custom links, or categories
+4. Arrange by dragging
+5. Assign to a theme location (Primary, Footer, etc.)
+
+**Widgets (if your theme uses them):**
+
+1. Appearance → Widgets
+2. Drag widgets to sidebar/footer areas
+3. Configure each widget's settings
+
+### Settings That Matter
+
+In Settings, pay attention to:
+
+**General:**
+
+- Site Title and Tagline (appears in browser tabs, search results)
+- Timezone (affects scheduled posts)
+
+**Reading:**
+
+- Homepage displays: Latest posts vs. static page
+- Posts per page
+
+**Permalinks:**
+
+- URL structure: Choose "Post name" for clean URLs (`/about/` instead of `/?p=123`)
+- Change this early—changing later breaks existing links
+
+**Discussion:**
+
+- Comment settings (enable/disable, moderation rules)
+
+## Building Your Mental Model
+
+### The WordPress Stack
+
+```
+┌─────────────────────────────────────────┐
+│  Browser (What visitors see)             │
+├─────────────────────────────────────────┤
+│  Theme (Presentation layer)              │
+├─────────────────────────────────────────┤
+│  Plugins (Extended functionality)        │
+├─────────────────────────────────────────┤
+│  WordPress Core (Content engine)         │
+├─────────────────────────────────────────┤
+│  PHP + MySQL (Server technology)         │
+└─────────────────────────────────────────┘
+```
+
+When something goes wrong, think through these layers:
+
+- Display issue? Probably theme
+- Feature not working? Probably plugin
+- General malfunction? Possibly core or server
+- Can't log in? Database or user settings
+
+### Content Separation
+
+A key mental model: **content lives in the database, presentation lives in the theme**.
+
+```
+Database (content):
+├── Post: "Our Spring Menu"
+│   ├── Title
+│   ├── Body content
+│   ├── Featured image reference
+│   └── Categories, tags
+
+Theme (presentation):
+├── How to display a post
+│   ├── Where title appears
+│   ├── Image placement
+│   └── Typography, colours
+```
+
+This separation is why you can change themes without losing content.
+
+### The Hook System
+
+WordPress allows code to "hook" into specific points in the execution flow. While you won't write hooks yet, understanding they exist explains how plugins modify WordPress without changing core files:
+
+- Plugins register functions to run at specific points
+- WordPress calls these functions when reaching those points
+- Multiple plugins can hook into the same point
+
+This architecture is why WordPress is extensible without modification—a key platform characteristic.
 
 ## Business Applications
 
-*This develops ULO 4 – making and defending technology choices.*
+### Market Demand
 
-- **Market share**: WordPress skills are in demand
-- **Cost**: Open source reduces licensing costs
-- **Flexibility**: Thousands of plugins for specific needs
-- **Community**: Large support ecosystem
+WordPress skills are in demand. Whether freelancing, agency work, or in-house roles, WordPress knowledge is marketable because:
+
+- Huge market share means abundant projects
+- Businesses have existing WordPress sites needing maintenance
+- Lower barrier to entry than custom development
+- Clients often specifically request WordPress
+
+### Cost Structure
+
+For clients, WordPress offers:
+
+- No licensing fees (open source)
+- Lower development costs (existing ecosystem)
+- Reduced maintenance costs (client self-service)
+- Lower switching costs (many developers available)
+
+### Flexibility
+
+The plugin ecosystem means you rarely need custom development:
+
+- E-commerce: WooCommerce
+- Forms: Gravity Forms, WPForms, Contact Form 7
+- SEO: Yoast, RankMath
+- Security: Wordfence, Sucuri
+- Backup: UpdraftPlus, VaultPress
+- Caching: WP Super Cache, W3 Total Cache
+
+Often, the professional skill is knowing which plugins to combine—not building from scratch.
+
+### When WordPress Isn't Right
+
+Professional judgment includes knowing when *not* to use WordPress:
+
+- Highly custom web applications (better: custom framework)
+- Real-time features (better: specialised platforms)
+- Very simple one-page sites (better: static HTML or website builders)
+- Maximum performance requirements (better: headless architecture)
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 4** (making and defending technology choices) and **ULO 5** (evaluating technologies). Choosing WordPress requires evaluating its ecosystem, understanding its architecture, and articulating why it's appropriate (or not) for specific situations.
+:::
 
 ## Practice Exercises
 
-[Exercises to be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 6.1: Local Setup (Level 1)
+
+Install LocalWP and create a WordPress site called "Practice Site":
+
+1. Document the process with screenshots
+2. Log into the admin dashboard
+3. Create one page and one post
+4. Change the permalink structure to "Post name"
+5. Upload an image to the Media Library
+
+Verify everything works by viewing the site in your browser.
+
+### Exercise 6.2: Theme Exploration (Level 2)
+
+Using your Practice Site:
+
+1. Install and preview three different free themes
+2. For each theme, document:
+   - What kind of site it seems designed for
+   - What customisation options it offers
+   - How it handles responsiveness (test at different sizes)
+3. Choose one and activate it
+4. Use the Customiser to adjust site identity and colours
+
+### Exercise 6.3: Content Structure (Level 3)
+
+Create content for a fictional coffee shop on your Practice Site:
+
+1. Create pages: Home, About, Menu, Contact
+2. Create a menu in Appearance → Menus and assign it
+3. Set the homepage to display a static page
+4. Create three blog posts about coffee (news, events, tips)
+5. Assign the posts to categories you create
+
+Evaluate: Is the content discoverable? Can a visitor navigate easily?
+
+### Exercise 6.4: Theme Evaluation Report (Level 4)
+
+Research three WordPress themes suitable for a professional services business (lawyer, accountant, consultant). For each:
+
+1. Document key features
+2. Check last update date and developer responsiveness
+3. Read at least 5 reviews
+4. Test the demo for mobile responsiveness
+5. Identify potential limitations
+
+Write a 400-word recommendation explaining which theme you'd choose and why. Discuss trade-offs.
+
+### Exercise 6.5: Platform Comparison (Level 5)
+
+A client asks: "Should I use WordPress or Squarespace for my boutique hotel website?"
+
+Research both platforms and write a balanced comparison (500 words) addressing:
+
+1. Cost (initial and ongoing)
+2. Ease of use for the client
+3. Design flexibility
+4. Booking system integration options
+5. Long-term maintenance considerations
+6. Your recommendation with justification
+
+This exercise develops technology evaluation skills (ULO 5).
 
 ## Chapter Summary
 
-- WordPress is a platform, not just software
-- Ecosystem evaluation is a critical skill
-- Architecture understanding aids troubleshooting
-- Platform choice is a business decision
+- WordPress is a platform, not just software—its ecosystem is its value
+- Professional evaluation of themes and plugins is an essential skill
+- Local development with LocalWP provides a safe environment to learn
+- Understanding WordPress architecture (core, themes, plugins, database) aids troubleshooting
+- The template hierarchy determines which template displays content
+- WordPress isn't always the right choice—professional judgment matters
 
 ## Reflection
 
-[Checklist to be developed]
+Before moving to Chapter 7, ensure you can:
+
+- [ ] Explain the difference between a platform and software
+- [ ] Set up WordPress locally using LocalWP
+- [ ] Navigate the WordPress admin interface confidently
+- [ ] Explain the difference between posts and pages
+- [ ] Evaluate a theme's quality using specific criteria
+- [ ] Describe how the template hierarchy works
+- [ ] Articulate when WordPress is and isn't appropriate
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **Platform Thinking**: What other platforms do you use daily? What makes their ecosystems valuable? How does this inform your understanding of WordPress?
+
+2. **Theme Exploration**: What surprised you when exploring WordPress themes? What features seem most valuable for business sites?
+
+3. **AI Conversation Reflection**: What question about WordPress architecture or evaluation did your AI partner help clarify?
+
+4. **Professional Judgment**: If a client asked why they shouldn't just use Wix, how would you respond? When *would* Wix be the better choice?
 
 ## Next Steps
 
-In Chapter 7, we'll explore how to extend WordPress through plugins – both using existing ones and understanding how they work. This builds toward customising WordPress for specific business needs.
+You now understand WordPress as a platform and can set up and configure a basic site. In @sec-extending-platforms, we'll explore how to extend WordPress with plugins—both using existing plugins professionally and understanding how they work.
+
+This knowledge is essential for customising WordPress to meet specific business requirements without starting from scratch.

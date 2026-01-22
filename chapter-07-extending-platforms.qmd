@@ -132,6 +132,33 @@ If I inherited a WordPress site with 47 plugins, how would I audit
 which ones are actually needed? What's a safe process?
 ```
 
+### Exploration 4: AI-Assisted WordPress Development
+
+AI is particularly effective at writing WordPress PHP code:
+
+```
+Ask your AI:
+I want to add a feature to my WordPress site that displays "This
+post was updated X days ago" at the top of posts that have been
+modified in the last 30 days. Walk me through how to implement
+this with a filter in my child theme's functions.php. Explain
+each part of the code.
+```
+
+This conversation should demonstrate:
+
+- How to structure requests for WordPress PHP code
+- The importance of asking for explanations, not just code
+- How filters modify content in WordPress
+- Testing approach for custom PHP
+
+```
+Continue the conversation:
+Now I want to make this a simple plugin instead of putting it in
+functions.php. What changes are needed? What are the advantages
+of a plugin over functions.php for this feature?
+```
+
 ## From Concept to Code
 
 Let's learn to extend WordPress professionally.
@@ -319,6 +346,394 @@ add_image_size('featured-thumb', 400, 300, true);
 Syntax errors in functions.php can break your entire site. Test on staging, and consider a plugin like Code Snippets that isolates code pieces and lets you disable them if they cause problems.
 :::
 
+### PHP Fundamentals for WordPress
+
+WordPress is built on PHP. While you can accomplish a lot without writing PHP, understanding the basics opens up powerful customisation options—and AI is excellent at helping you write WordPress PHP code.
+
+**PHP basics:**
+
+PHP code runs on the server and generates HTML sent to the browser. PHP files mix HTML and PHP:
+
+```php
+<?php
+// PHP code goes between these tags
+$site_name = "My Business";
+$current_year = date('Y');
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?php echo $site_name; ?></title>
+</head>
+<body>
+    <footer>
+        <p>&copy; <?php echo $current_year; ?> <?php echo $site_name; ?></p>
+    </footer>
+</body>
+</html>
+```
+
+**Key PHP concepts:**
+
+```php
+<?php
+// Variables start with $
+$price = 29.99;
+$product_name = "Widget";
+$is_available = true;
+
+// Arrays hold multiple values
+$categories = ['Electronics', 'Home', 'Garden'];
+$product = [
+    'name' => 'Widget',
+    'price' => 29.99,
+    'stock' => 15
+];
+
+// Access array values
+echo $categories[0];        // Electronics
+echo $product['price'];     // 29.99
+
+// Conditionals
+if ($product['stock'] > 0) {
+    echo "In stock";
+} else {
+    echo "Out of stock";
+}
+
+// Loops
+foreach ($categories as $category) {
+    echo "<li>$category</li>";
+}
+
+// Functions
+function format_price($amount) {
+    return '$' . number_format($amount, 2);
+}
+echo format_price(29.99);  // $29.99
+```
+
+### WordPress Template Tags
+
+WordPress provides functions (called "template tags") that output common elements:
+
+```php
+<?php
+// Site information
+bloginfo('name');           // Site title
+bloginfo('description');    // Site tagline
+home_url();                 // Home page URL
+get_template_directory_uri(); // Theme folder URL
+
+// Current page/post
+the_title();               // Post/page title
+the_content();             // Post/page content
+the_excerpt();             // Post excerpt
+the_permalink();           // URL to current post
+the_post_thumbnail();      // Featured image
+
+// Conditional checks
+if (is_home()) { }         // Is this the blog page?
+if (is_single()) { }       // Is this a single post?
+if (is_page('about')) { }  // Is this the About page?
+if (is_logged_in()) { }    // Is user logged in?
+```
+
+### The WordPress Loop
+
+The Loop is how WordPress displays posts. It's the core pattern you'll see in every theme:
+
+```php
+<?php if (have_posts()) : ?>
+    <?php while (have_posts()) : the_post(); ?>
+        <article>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <div class="meta">
+                Posted on <?php the_date(); ?> by <?php the_author(); ?>
+            </div>
+            <div class="content">
+                <?php the_excerpt(); ?>
+            </div>
+            <a href="<?php the_permalink(); ?>">Read more</a>
+        </article>
+    <?php endwhile; ?>
+<?php else : ?>
+    <p>No posts found.</p>
+<?php endif; ?>
+```
+
+Understanding this pattern helps you customise how posts display.
+
+### Hooks: Actions and Filters
+
+WordPress uses "hooks" to let you modify behaviour without editing core files. There are two types:
+
+**Actions** – Do something at a specific point:
+
+```php
+<?php
+// Add code to the <head> section
+function add_custom_meta() {
+    echo '<meta name="author" content="My Company">';
+}
+add_action('wp_head', 'add_custom_meta');
+
+// Add code to the footer
+function add_footer_script() {
+    echo '<script>console.log("Page loaded");</script>';
+}
+add_action('wp_footer', 'add_footer_script');
+
+// Do something when a post is published
+function notify_on_publish($post_id) {
+    // Send notification, update external system, etc.
+}
+add_action('publish_post', 'notify_on_publish');
+```
+
+**Filters** – Modify data before it's used:
+
+```php
+<?php
+// Modify the excerpt length
+function custom_excerpt_length($length) {
+    return 30; // 30 words instead of default 55
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
+
+// Add content after every post
+function add_author_bio($content) {
+    if (is_single()) {
+        $content .= '<div class="author-bio">Written by ' . get_the_author() . '</div>';
+    }
+    return $content;
+}
+add_filter('the_content', 'add_author_bio');
+
+// Modify the page title
+function custom_title($title) {
+    return $title . ' | My Business';
+}
+add_filter('the_title', 'custom_title');
+```
+
+```
+Ask your AI:
+I want to add a "Last updated" date below each blog post title on
+my WordPress site. Walk me through how to do this with a filter in
+my child theme's functions.php.
+```
+
+### Building a Simple Plugin with AI
+
+AI excels at writing WordPress plugins. Here's how to approach it:
+
+**Example: A plugin to display business hours**
+
+```
+Ask your AI:
+I need a WordPress plugin that:
+1. Adds a settings page where I can enter business hours for each day
+2. Provides a shortcode [business_hours] to display the hours
+3. Shows "Open" or "Closed" based on current time
+
+Create this plugin with clear comments explaining each part.
+```
+
+AI might generate something like:
+
+```php
+<?php
+/**
+ * Plugin Name: Simple Business Hours
+ * Description: Display business hours with a shortcode
+ * Version: 1.0
+ * Author: Your Name
+ */
+
+// Prevent direct access
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+// Add settings page to admin menu
+function sbh_add_menu() {
+    add_options_page(
+        'Business Hours',           // Page title
+        'Business Hours',           // Menu title
+        'manage_options',           // Capability required
+        'business-hours',           // Menu slug
+        'sbh_settings_page'         // Function to display page
+    );
+}
+add_action('admin_menu', 'sbh_add_menu');
+
+// Display settings page
+function sbh_settings_page() {
+    ?>
+    <div class="wrap">
+        <h1>Business Hours Settings</h1>
+        <form method="post" action="options.php">
+            <?php
+            settings_fields('sbh_settings');
+            do_settings_sections('business-hours');
+            submit_button();
+            ?>
+        </form>
+    </div>
+    <?php
+}
+
+// Register settings
+function sbh_register_settings() {
+    register_setting('sbh_settings', 'sbh_hours');
+
+    add_settings_section(
+        'sbh_main_section',
+        'Weekly Hours',
+        null,
+        'business-hours'
+    );
+
+    $days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+    foreach ($days as $day) {
+        add_settings_field(
+            'sbh_' . strtolower($day),
+            $day,
+            'sbh_day_field',
+            'business-hours',
+            'sbh_main_section',
+            ['day' => strtolower($day)]
+        );
+    }
+}
+add_action('admin_init', 'sbh_register_settings');
+
+// Render day input field
+function sbh_day_field($args) {
+    $hours = get_option('sbh_hours', []);
+    $day = $args['day'];
+    $value = isset($hours[$day]) ? $hours[$day] : '9:00 AM - 5:00 PM';
+    echo '<input type="text" name="sbh_hours[' . $day . ']" value="' . esc_attr($value) . '" placeholder="e.g., 9:00 AM - 5:00 PM or Closed">';
+}
+
+// Shortcode to display hours
+function sbh_display_hours($atts) {
+    $hours = get_option('sbh_hours', []);
+    $days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+
+    $output = '<div class="business-hours">';
+    $output .= '<table>';
+
+    foreach ($days as $day) {
+        $display_hours = isset($hours[$day]) ? $hours[$day] : 'Not set';
+        $output .= '<tr>';
+        $output .= '<td><strong>' . ucfirst($day) . '</strong></td>';
+        $output .= '<td>' . esc_html($display_hours) . '</td>';
+        $output .= '</tr>';
+    }
+
+    $output .= '</table>';
+    $output .= '</div>';
+
+    return $output;
+}
+add_shortcode('business_hours', 'sbh_display_hours');
+```
+
+**To install this plugin:**
+
+1. Create a folder `simple-business-hours` in `/wp-content/plugins/`
+2. Save the code as `simple-business-hours.php` in that folder
+3. Activate in Plugins → Installed Plugins
+4. Configure in Settings → Business Hours
+5. Use `[business_hours]` shortcode in any page
+
+::: {.callout-tip}
+## AI Plugin Development
+When asking AI to write WordPress plugins:
+1. Be specific about functionality
+2. Request comments explaining the code
+3. Test thoroughly on a staging site
+4. Review the code—understand what it does before installing
+5. Ask AI to explain any parts you don't understand
+:::
+
+### Customising Theme Templates
+
+You can override any parent theme template by copying it to your child theme and modifying it.
+
+**Common templates to customise:**
+
+| Template | Purpose |
+|----------|---------|
+| `header.php` | Site header, navigation |
+| `footer.php` | Site footer |
+| `single.php` | Single blog post |
+| `page.php` | Individual pages |
+| `archive.php` | Post listing pages |
+| `functions.php` | Theme functions |
+
+**Example: Custom single post template**
+
+Copy `single.php` from parent theme to child theme, then modify:
+
+```php
+<?php get_header(); ?>
+
+<main class="site-content">
+    <?php while (have_posts()) : the_post(); ?>
+        <article class="post">
+            <?php if (has_post_thumbnail()) : ?>
+                <div class="featured-image">
+                    <?php the_post_thumbnail('large'); ?>
+                </div>
+            <?php endif; ?>
+
+            <header>
+                <h1><?php the_title(); ?></h1>
+                <p class="meta">
+                    Published <?php echo get_the_date(); ?>
+                    in <?php the_category(', '); ?>
+                </p>
+            </header>
+
+            <div class="content">
+                <?php the_content(); ?>
+            </div>
+
+            <footer class="post-footer">
+                <?php the_tags('<p class="tags">Tags: ', ', ', '</p>'); ?>
+
+                <div class="author-box">
+                    <?php echo get_avatar(get_the_author_meta('ID'), 64); ?>
+                    <div class="author-info">
+                        <h4><?php the_author(); ?></h4>
+                        <p><?php the_author_meta('description'); ?></p>
+                    </div>
+                </div>
+            </footer>
+        </article>
+
+        <?php comments_template(); ?>
+
+    <?php endwhile; ?>
+</main>
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
+```
+
+```
+Ask your AI:
+I want to modify the archive page template in my child theme to
+display posts in a grid layout instead of a list. Show me how
+to create a custom archive.php that uses CSS Grid and displays
+featured images with post titles.
+```
+
 ### When to Build Custom
 
 Consider custom development when:
@@ -464,7 +879,47 @@ Create a child theme for your local site:
 
 Document the process with screenshots.
 
-### Exercise 7.3: Plugin Audit (Level 3)
+### Exercise 7.3: PHP Customisation with AI (Level 3)
+
+Use AI to add a custom feature to your WordPress site:
+
+1. Choose one of these features (or propose your own):
+   - Display "Reading time: X minutes" above each post
+   - Add a "Back to top" button that appears when scrolling
+   - Show related posts at the end of each blog post
+   - Add a custom greeting based on time of day in the header
+
+2. Ask your AI to help you implement it in your child theme's functions.php
+
+3. For the code AI provides:
+   - Read through it and identify what each part does
+   - Ask AI to explain anything you don't understand
+   - Test it on your local site
+   - Document what you learned
+
+4. Write 200 words explaining: What did the code do? What PHP concepts were used? What would you modify?
+
+### Exercise 7.4: Build a Plugin with AI (Level 4)
+
+Create a simple WordPress plugin using AI assistance:
+
+1. Define a specific need (examples):
+   - A "Coming Soon" banner for selected pages
+   - Social media share buttons for posts
+   - A shortcode that displays a styled call-to-action box
+   - A widget that shows recent posts from a specific category
+
+2. Ask AI to create the plugin, requesting comments that explain the code
+
+3. Install and test the plugin on your local site
+
+4. Document:
+   - The prompts you used with AI
+   - How you tested the plugin
+   - Any modifications you made
+   - What you learned about WordPress plugin structure
+
+### Exercise 7.5: Plugin Audit (Level 3)
 
 Your local site probably has several plugins now. Conduct an audit:
 
@@ -474,7 +929,7 @@ Your local site probably has several plugins now. Conduct an audit:
 4. Identify any that should be replaced with better alternatives
 5. Create a recommendation document
 
-### Exercise 7.4: Build vs Buy Analysis (Level 4)
+### Exercise 7.6: Build vs Buy Analysis (Level 4)
 
 A client needs an event calendar for their community centre. Events have dates, times, locations, descriptions, and categories. Visitors should be able to filter by category and view a monthly calendar.
 
@@ -486,7 +941,7 @@ Research options and write a 400-word recommendation:
 4. Make a recommendation with justification
 5. Address risks and mitigation
 
-### Exercise 7.5: Extension Strategy (Level 5)
+### Exercise 7.7: Extension Strategy (Level 5)
 
 You're taking over a WordPress site for a small marketing agency. They need:
 
@@ -514,9 +969,11 @@ This exercise develops professional consulting skills.
 - Every extension decision weighs build vs. buy trade-offs
 - Plugin evaluation requires systematic criteria, not just feature lists
 - Child themes allow safe customisation that survives updates
+- PHP is WordPress's foundation—understanding basics enables deeper customisation
+- The Loop and hooks (actions/filters) are core WordPress patterns
+- AI excels at writing WordPress plugins and theme customisations
 - Technical debt from plugins accumulates silently
 - Professional judgment means recommending the *right* solution, not the most impressive one
-- Security, maintenance, and long-term costs matter as much as features
 
 ## Reflection
 
@@ -525,9 +982,12 @@ Before moving to Chapter 8, ensure you can:
 - [ ] Evaluate plugins using systematic criteria
 - [ ] Articulate build vs. buy trade-offs to a non-technical client
 - [ ] Create and use a child theme for customisation
+- [ ] Explain basic PHP syntax (variables, arrays, conditionals, loops)
+- [ ] Describe what the WordPress Loop does
+- [ ] Explain the difference between actions and filters
+- [ ] Use AI to help write simple WordPress plugins
 - [ ] Identify signs of a poorly maintained plugin
 - [ ] Explain technical debt in business terms
-- [ ] Recommend an appropriate number of plugins for a business site
 
 ## Your Learning Journal
 

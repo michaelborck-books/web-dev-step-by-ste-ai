@@ -70,4 +70,53 @@ Work through chapters in order. Each builds on the previous.
 
 This book aligns with ISYS3004: Business Web and Mobile Technologies at Curtin University, but stands alone as a complete learning resource.
 
+## Related Resources
+
+This book is part of a **"Learning with AI" collection** – resources designed to help you master modern development in the AI era.
+
+### The AI Methodology Guide
+
+**[Intentional Prompting: Mastering the Human-AI Development Process](https://github.com/michael-borck/intentional-prompting)** provides the deep methodology for AI collaboration that this book applies to web development. If you want to understand *why* certain prompting approaches work, Intentional Prompting is your guide.
+
+Key concepts from Intentional Prompting used throughout this book:
+
+- **The Six-Step Methodology**: Restate → Identify I/O → Work by Hand → Pseudocode → Convert → Test
+- **Design before coding**: Understanding problems before asking AI for solutions
+- **Intentional prompts**: Directing AI with clarity and purpose
+- **Critical evaluation**: Reviewing AI output with professional judgment
+
+### The Python Track
+
+If you're also interested in Python development, explore the Python learning path:
+
+- **Python Step by Step with AI**: For absolute beginners learning computational thinking
+- **Python Jumpstart**: Focused Python fundamentals with AI integration
+- **From Zero to Production**: Professional Python development practices
+
+### Book Progression
+
+```
+                    ┌─────────────────────┐
+                    │    INTENTIONAL      │
+                    │     PROMPTING       │
+                    │   (Methodology)     │
+                    └─────────────────────┘
+                           │
+            ┌──────────────┼──────────────┐
+            ▼              │              ▼
+    ┌───────────────┐      │      ┌───────────────┐
+    │  PYTHON TRACK │      │      │   WEB TRACK   │
+    │               │      │      │               │
+    │ Step by Step  │      │      │ Web Dev Step  │
+    │ Jumpstart     │      │      │ by Step       │
+    │ Zero to Prod  │      │      │ (this book)   │
+    └───────────────┘      │      └───────────────┘
+                           │
+                    (shared methodology)
+```
+
+Start wherever matches your goals. The methodology from Intentional Prompting enhances all paths.
+
+---
+
 Let's build something meaningful together.

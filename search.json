@@ -1,0 +1,2001 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Web Development Step by Step",
+    "section": "",
+    "text": "Preface",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#building-for-business-in-the-ai-era",
+    "href": "index.html#building-for-business-in-the-ai-era",
+    "title": "Web Development Step by Step",
+    "section": "Building for Business in the AI Era",
+    "text": "Building for Business in the AI Era\nWelcome to Web Development Step by Step: Building Business Solutions with AI – a practical guide to modern web development that embraces AI as your development partner while never losing sight of why we build: to solve real business problems.\n\nWhy This Book Is Different\nMost web development books teach you technologies. This book teaches you to think like a professional developer who happens to use specific technologies.\nIn a world where AI can generate code in seconds, the valuable skills are:\n\nUnderstanding what to build – translating business needs into technical requirements\nEvaluating technology choices – knowing when WordPress beats React, or vice versa\nCommunicating with stakeholders – explaining technical decisions in business terms\nIteratively improving – knowing when “good enough” ships and when quality matters\n\nThis book develops these skills while teaching you HTML, CSS, JavaScript, WordPress, and React.\n\n\nThe AI Partnership\nAI can write HTML, CSS, and JavaScript faster than you ever will. That’s not a threat – it’s a superpower.\nThis book teaches you to:\n\nArchitect solutions that AI helps you build\nEvaluate AI output with professional judgment\nCommunicate requirements clearly enough for AI to help\nDebug and improve AI-generated code\n\nYou’re learning to be the architect. AI is your highly skilled assistant.\n\n\nAbout This Book’s Creation\nIn the spirit of practicing what we teach, this book was created through human-AI collaboration. Every chapter represents a partnership between human expertise and AI assistance, with careful human oversight ensuring pedagogical quality and technical accuracy.\n\n\nYour Learning Journey\nOver 12 weeks (or at your own pace), you’ll progress from understanding web fundamentals to building integrated business applications. More importantly, you’ll develop the professional judgment that makes you valuable in any technology stack.\n\n\nWho This Book Is For\n\nStudents in business technology or web development courses\nCareer changers entering tech from business backgrounds\nProfessionals who need to understand web development for their roles\nAnyone who wants to build web solutions with AI assistance\n\n\n\nPrerequisites\n\nBasic computer literacy\nCuriosity about how websites work\nWillingness to experiment and learn from mistakes\nAccess to AI tools (ChatGPT, Claude, or similar)\n\nNo prior programming experience required. We start from scratch.\n\n\nHow to Use This Book\nEach chapter follows a consistent pattern:\n\nConcept First – Understand the idea before the syntax\nAI Exploration – Discover patterns with AI assistance\nHands-On Practice – Build something real\nBusiness Connection – Understand why this matters\nReflection – Consolidate your learning\n\nWork through chapters in order. Each builds on the previous.\n\n\nCompanion Course\nThis book aligns with ISYS3004: Business Web and Mobile Technologies at Curtin University, but stands alone as a complete learning resource.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#related-resources",
+    "href": "index.html#related-resources",
+    "title": "Web Development Step by Step",
+    "section": "Related Resources",
+    "text": "Related Resources\nThis book is part of a “Learning with AI” collection – resources designed to help you master modern development in the AI era.\n\nThe AI Methodology Guide\nIntentional Prompting: Mastering the Human-AI Development Process provides the deep methodology for AI collaboration that this book applies to web development. If you want to understand why certain prompting approaches work, Intentional Prompting is your guide.\nKey concepts from Intentional Prompting used throughout this book:\n\nThe Six-Step Methodology: Restate → Identify I/O → Work by Hand → Pseudocode → Convert → Test\nDesign before coding: Understanding problems before asking AI for solutions\nIntentional prompts: Directing AI with clarity and purpose\nCritical evaluation: Reviewing AI output with professional judgment\n\n\n\nThe Python Track\nIf you’re also interested in Python development, explore the Python learning path:\n\nPython Step by Step with AI: For absolute beginners learning computational thinking\nPython Jumpstart: Focused Python fundamentals with AI integration\nFrom Zero to Production: Professional Python development practices\n\n\n\nBook Progression\n                    ┌─────────────────────┐\n                    │    INTENTIONAL      │\n                    │     PROMPTING       │\n                    │   (Methodology)     │\n                    └─────────────────────┘\n                           │\n            ┌──────────────┼──────────────┐\n            ▼              │              ▼\n    ┌───────────────┐      │      ┌───────────────┐\n    │  PYTHON TRACK │      │      │   WEB TRACK   │\n    │               │      │      │               │\n    │ Step by Step  │      │      │ Web Dev Step  │\n    │ Jumpstart     │      │      │ by Step       │\n    │ Zero to Prod  │      │      │ (this book)   │\n    └───────────────┘      │      └───────────────┘\n                           │\n                    (shared methodology)\nStart wherever matches your goals. The methodology from Intentional Prompting enhances all paths.\n\nLet’s build something meaningful together.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "reading-list.html",
+    "href": "reading-list.html",
+    "title": "Weekly Reading List",
+    "section": "",
+    "text": "How to Use This List\nThis reading list accompanies the 12-week course structure, combining chapters from this book, methodology from Intentional Prompting, and curated external resources.\nEach week includes:",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#how-to-use-this-list",
+    "href": "reading-list.html#how-to-use-this-list",
+    "title": "Weekly Reading List",
+    "section": "",
+    "text": "Book Chapter: Primary reading from this book\nMethodology: Relevant chapter from Intentional Prompting\nEssential Reading: Must-read external resources\nDeeper Dive: Optional additional resources for those wanting more\n\n\n\n\n\n\n\nTipReading Strategy\n\n\n\nRead the book chapter first to understand concepts, then explore external resources for different perspectives and official documentation.",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-1-foundations-ai-partnership",
+    "href": "reading-list.html#week-1-foundations-ai-partnership",
+    "title": "Weekly Reading List",
+    "section": "Week 1: Foundations & AI Partnership",
+    "text": "Week 1: Foundations & AI Partnership\n\nFocus\nSetting up your development environment and establishing your AI partnership approach.\n\n\nBook Chapters\n\nChapter 0: Understanding Your AI Web Development Partner\n\n\n\nIntentional Prompting\n\nChapter 1: Introduction\nChapter 3: Intentional Prompting Principles\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nMDN\nGetting started with the web\nMDN: Getting Started\n\n\nweb.dev\nHow the web works\nweb.dev: How the web works\n\n\nW3Schools\nIntroduction to HTML\nW3Schools: HTML Introduction\n\n\n\n\n\nDeeper Dive\n\nHistory of the Web - W3C\nHow browsers work - Google Chrome Blog",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-2-html-structure",
+    "href": "reading-list.html#week-2-html-structure",
+    "title": "Weekly Reading List",
+    "section": "Week 2: HTML Structure",
+    "text": "Week 2: HTML Structure\n\nFocus\nSemantic HTML and document structure as information architecture.\n\n\nBook Chapters\n\nChapter 1: Structure: HTML as Information Architecture\n\n\n\nIntentional Prompting\n\nChapter 4: The Six-Step Methodology (overview)\nChapter 5: Restate and Identify\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nMDN\nHTML basics\nMDN: HTML Basics\n\n\nMDN\nDocument structure\nMDN: Document Structure\n\n\nweb.dev\nSemantic HTML\nweb.dev: Semantic HTML\n\n\nW3Schools\nHTML Elements\nW3Schools: HTML Elements\n\n\n\n\n\nDeeper Dive\n\nHTML Living Standard - WHATWG (reference)\nHTML Best Practices - Community guide",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-3-css-presentation",
+    "href": "reading-list.html#week-3-css-presentation",
+    "title": "Weekly Reading List",
+    "section": "Week 3: CSS Presentation",
+    "text": "Week 3: CSS Presentation\n\nFocus\nVisual design, responsive layouts, and mobile-first development.\n\n\nBook Chapters\n\nChapter 2: Presentation: CSS as Visual Communication\n\n\n\nIntentional Prompting\n\nChapter 6: Work by Hand\nChapter 7: Pseudocode\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nMDN\nCSS basics\nMDN: CSS Basics\n\n\nMDN\nCSS layout\nMDN: CSS Layout\n\n\nweb.dev\nLearn CSS\nweb.dev: Learn CSS\n\n\nweb.dev\nResponsive design\nweb.dev: Responsive Design\n\n\nW3Schools\nCSS Introduction\nW3Schools: CSS\n\n\n\n\n\nDeeper Dive\n\nCSS Tricks: A Complete Guide to Flexbox\nCSS Tricks: A Complete Guide to Grid\nEvery Layout - Layout patterns",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-4-javascript-behaviour",
+    "href": "reading-list.html#week-4-javascript-behaviour",
+    "title": "Weekly Reading List",
+    "section": "Week 4: JavaScript Behaviour",
+    "text": "Week 4: JavaScript Behaviour\n\nFocus\nAdding interactivity, DOM manipulation, and event handling.\n\n\nBook Chapters\n\nChapter 3: Behaviour: JavaScript as User Interaction\n\n\n\nIntentional Prompting\n\nChapter 8: Convert to Code\nChapter 11: Debugging with AI\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nMDN\nJavaScript basics\nMDN: JavaScript Basics\n\n\nMDN\nDOM Introduction\nMDN: DOM Introduction\n\n\nMDN\nEvents\nMDN: Introduction to Events\n\n\njavascript.info\nThe Modern JavaScript Tutorial\njavascript.info\n\n\nW3Schools\nJavaScript Tutorial\nW3Schools: JavaScript\n\n\n\n\n\nDeeper Dive\n\nEloquent JavaScript - Free online book\nYou Don’t Know JS - Deep dive series",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-5-apis-data",
+    "href": "reading-list.html#week-5-apis-data",
+    "title": "Weekly Reading List",
+    "section": "Week 5: APIs & Data",
+    "text": "Week 5: APIs & Data\n\nFocus\nConnecting to external services, fetching data, and working with JSON.\n\n\nBook Chapters\n\nChapter 4: Connection: APIs as Business Integration\n\n\n\nIntentional Prompting\n\nChapter 9: Test with Data\nChapter 10: Intentional Prompting Patterns\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nMDN\nFetching data\nMDN: Fetching Data\n\n\nMDN\nWorking with JSON\nMDN: Working with JSON\n\n\nMDN\nAsync JavaScript\nMDN: Asynchronous JavaScript\n\n\nweb.dev\nIntroduction to fetch\nweb.dev: Fetch API\n\n\n\n\n\nDeeper Dive\n\nREST API Tutorial - REST concepts\nJSONPlaceholder - Practice API\nPublic APIs List - APIs to explore",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-6-portfolio-project-accessibility",
+    "href": "reading-list.html#week-6-portfolio-project-accessibility",
+    "title": "Weekly Reading List",
+    "section": "Week 6: Portfolio Project & Accessibility",
+    "text": "Week 6: Portfolio Project & Accessibility\n\nFocus\nCompleting Assessment 1, accessibility fundamentals, and project review.\n\n\nBook Chapters\n\nProject: Portfolio Website\nReview Chapters 1-4\n\n\n\nIntentional Prompting\n\nChapter 12: Refactoring Strategies\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nweb.dev\nLearn Accessibility\nweb.dev: Learn Accessibility\n\n\nMDN\nAccessibility\nMDN: Accessibility\n\n\nW3C\nWCAG Quick Reference\nWCAG 2.1 Quick Ref\n\n\nWebAIM\nIntroduction to Accessibility\nWebAIM: Introduction\n\n\n\n\n\nDeeper Dive\n\nA11y Project Checklist\nInclusive Components - Accessible patterns",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-7-content-management-systems",
+    "href": "reading-list.html#week-7-content-management-systems",
+    "title": "Weekly Reading List",
+    "section": "Week 7: Content Management Systems",
+    "text": "Week 7: Content Management Systems\n\nFocus\nUnderstanding CMS value proposition and WordPress as a platform.\n\n\nBook Chapters\n\nChapter 5: Why CMS? The Business Value of Managed Content\nChapter 6: WordPress as Platform\n\n\n\nIntentional Prompting\n\nChapter 13: Case Studies (approach to complex projects)\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nWordPress.org\nGetting Started\nWordPress: Getting Started\n\n\nWordPress.org\nWordPress Features\nWordPress: Features\n\n\nW3Techs\nCMS Usage Statistics\nW3Techs: CMS\n\n\nWPBeginner\nWordPress Guide\nWPBeginner: Guide\n\n\n\n\n\nDeeper Dive\n\nWordPress Developer Resources\nWordPress TV - Video tutorials",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-8-extending-wordpress",
+    "href": "reading-list.html#week-8-extending-wordpress",
+    "title": "Weekly Reading List",
+    "section": "Week 8: Extending WordPress",
+    "text": "Week 8: Extending WordPress\n\nFocus\nPlugins, themes, and customisation strategies.\n\n\nBook Chapters\n\nChapter 7: Extending Platforms\n\n\n\nIntentional Prompting\n\nChapter 14: Scaling Complexity\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nWordPress.org\nTheme Handbook\nTheme Handbook\n\n\nWordPress.org\nPlugin Handbook\nPlugin Handbook\n\n\nWordPress.org\nChild Themes\nChild Themes\n\n\nWPBeginner\nMust Have Plugins\nEssential Plugins\n\n\n\n\n\nDeeper Dive\n\nWordPress Coding Standards\nTheme Unit Test",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-9-tuition-free-week",
+    "href": "reading-list.html#week-9-tuition-free-week",
+    "title": "Weekly Reading List",
+    "section": "Week 9: Tuition-Free Week",
+    "text": "Week 9: Tuition-Free Week\n\nFocus\nSelf-directed learning and project catch-up.\n\n\nSuggested Activities\n\nReview previous chapters\nComplete any outstanding exercises\nExplore Intentional Prompting deeper\nExperiment with WordPress customisation\n\n\n\nOptional Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nSmashing Magazine\nWordPress Articles\nSmashing: WordPress\n\n\nCSS Tricks\nVarious\nCSS Tricks\n\n\nDev.to\nWeb Development\nDev.to",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-10-wordpress-rest-api",
+    "href": "reading-list.html#week-10-wordpress-rest-api",
+    "title": "Weekly Reading List",
+    "section": "Week 10: WordPress REST API",
+    "text": "Week 10: WordPress REST API\n\nFocus\nHeadless architecture and API-first thinking.\n\n\nBook Chapters\n\nChapter 8: Headless Architecture\n\n\n\nIntentional Prompting\n\nReview Chapter 8-9: Convert to Code, Test with Data\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nWordPress.org\nREST API Handbook\nREST API Handbook\n\n\nWordPress.org\nREST API Reference\nREST API Reference\n\n\nCSS Tricks\nWP REST API\nCSS Tricks: WP REST\n\n\n\n\n\nDeeper Dive\n\nPostman - API testing tool\nWP REST API Demo",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-11-react-integration",
+    "href": "reading-list.html#week-11-react-integration",
+    "title": "Weekly Reading List",
+    "section": "Week 11: React Integration",
+    "text": "Week 11: React Integration\n\nFocus\nComponent-based thinking and connecting React to WordPress.\n\n\nBook Chapters\n\nChapter 9: Component Thinking: React\n\n\n\nIntentional Prompting\n\nChapter 12: Refactoring Strategies (component extraction)\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nReact.dev\nQuick Start\nReact: Quick Start\n\n\nReact.dev\nThinking in React\nThinking in React\n\n\nReact.dev\nTutorial\nReact Tutorial\n\n\nMDN\nReact Getting Started\nMDN: React\n\n\n\n\n\nDeeper Dive\n\nReact Patterns\nReact TypeScript Cheatsheet",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-12-frameworks-professional-practice",
+    "href": "reading-list.html#week-12-frameworks-professional-practice",
+    "title": "Weekly Reading List",
+    "section": "Week 12: Frameworks & Professional Practice",
+    "text": "Week 12: Frameworks & Professional Practice\n\nFocus\nCSS frameworks, code quality, and professional development practices.\n\n\nBook Chapters\n\nChapter 10: Rapid Development: CSS Frameworks\nChapter 11: Professional Practices\n\n\n\nIntentional Prompting\n\nChapter 15: Teaching and Learning (reflection)\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nBootstrap\nGetting Started\nBootstrap Docs\n\n\nTailwind CSS\nGetting Started\nTailwind Docs\n\n\nGit\nGit Handbook\nGitHub: Git Handbook\n\n\nweb.dev\nTesting\nweb.dev: Testing\n\n\n\n\n\nDeeper Dive\n\nAtlassian Git Tutorials\nTesting Library",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#week-13-future-career",
+    "href": "reading-list.html#week-13-future-career",
+    "title": "Weekly Reading List",
+    "section": "Week 13: Future & Career",
+    "text": "Week 13: Future & Career\n\nFocus\nEmerging technologies, portfolio building, and career positioning.\n\n\nBook Chapters\n\nChapter 12: Evaluating Emerging Technologies\nChapter 13: Your Development Career\nChapter 14: The AI-Era Developer\nProject: React Integration (final submission)\n\n\n\nIntentional Prompting\n\nChapter 16: Future Directions\n\n\n\nEssential Reading\n\n\n\nResource\nTopic\nLink\n\n\n\n\nweb.dev\nWeb Vitals\nweb.dev: Web Vitals\n\n\nweb.dev\nPWA\nweb.dev: Learn PWA\n\n\nState of JS\nSurvey Results\nState of JS\n\n\nState of CSS\nSurvey Results\nState of CSS\n\n\n\n\n\nDeeper Dive\n\nRoadmap.sh - Developer roadmaps\nThe Pragmatic Engineer - Career insights\nJosh W Comeau’s Blog - Modern CSS/React",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#quick-reference-external-resources",
+    "href": "reading-list.html#quick-reference-external-resources",
+    "title": "Weekly Reading List",
+    "section": "Quick Reference: External Resources",
+    "text": "Quick Reference: External Resources\n\nOfficial Documentation\n\n\n\nResource\nBest For\nURL\n\n\n\n\nMDN Web Docs\nComprehensive reference\ndeveloper.mozilla.org\n\n\nweb.dev\nModern best practices\nweb.dev\n\n\nW3Schools\nQuick examples\nw3schools.com\n\n\nWordPress.org\nWordPress reference\nwordpress.org\n\n\nReact.dev\nReact documentation\nreact.dev\n\n\n\n\n\nLearning Platforms\n\n\n\nResource\nType\nURL\n\n\n\n\nfreeCodeCamp\nInteractive tutorials\nfreecodecamp.org\n\n\nCodecademy\nInteractive courses\ncodecademy.com\n\n\nScrimba\nVideo + coding\nscrimba.com\n\n\nFrontend Masters\nVideo courses (paid)\nfrontendmasters.com\n\n\n\n\n\nCommunity & News\n\n\n\nResource\nType\nURL\n\n\n\n\nDev.to\nArticles & community\ndev.to\n\n\nCSS Tricks\nCSS & frontend\ncss-tricks.com\n\n\nSmashing Magazine\nWeb design & dev\nsmashingmagazine.com\n\n\nHacker News\nTech news\nnews.ycombinator.com\n\n\n\n\n\nTools\n\n\n\nTool\nPurpose\nURL\n\n\n\n\nCan I Use\nBrowser compatibility\ncaniuse.com\n\n\nCodePen\nCode playground\ncodepen.io\n\n\nGitHub\nCode hosting\ngithub.com\n\n\nLighthouse\nPerformance testing\nBuilt into Chrome DevTools",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "reading-list.html#reading-tips",
+    "href": "reading-list.html#reading-tips",
+    "title": "Weekly Reading List",
+    "section": "Reading Tips",
+    "text": "Reading Tips\n\nDon’t read everything - Focus on Essential Reading first\nHands-on over theory - Try examples as you read\nMDN is your friend - Best for accurate, detailed explanations\nweb.dev for modern practices - Google’s recommendations\nW3Schools for quick reference - Fast examples, less depth\nUse AI to explain - If an article is confusing, ask AI to explain it differently",
+    "crumbs": [
+      "Weekly Reading List"
+    ]
+  },
+  {
+    "objectID": "acknowledgments.html",
+    "href": "acknowledgments.html",
+    "title": "Acknowledgments",
+    "section": "",
+    "text": "Students\nThis book exists because of many people who believe that learning to build for the web should be accessible, practical, and connected to real-world purpose.\nTo the students of ISYS3004 at Curtin University who tested these ideas, asked hard questions, and showed me what actually helps people learn – thank you for your patience and feedback.",
+    "crumbs": [
+      "Acknowledgments"
+    ]
+  },
+  {
+    "objectID": "acknowledgments.html#colleagues",
+    "href": "acknowledgments.html#colleagues",
+    "title": "Acknowledgments",
+    "section": "Colleagues",
+    "text": "Colleagues\n[To be added]",
+    "crumbs": [
+      "Acknowledgments"
+    ]
+  },
+  {
+    "objectID": "acknowledgments.html#ai-collaboration",
+    "href": "acknowledgments.html#ai-collaboration",
+    "title": "Acknowledgments",
+    "section": "AI Collaboration",
+    "text": "AI Collaboration\nThis book was developed in partnership with AI assistants, demonstrating the very collaboration it teaches. The ideas, pedagogy, and judgment are human; the drafting and iteration benefited from AI assistance.",
+    "crumbs": [
+      "Acknowledgments"
+    ]
+  },
+  {
+    "objectID": "acknowledgments.html#open-source-community",
+    "href": "acknowledgments.html#open-source-community",
+    "title": "Acknowledgments",
+    "section": "Open Source Community",
+    "text": "Open Source Community\nThe web development community’s commitment to sharing knowledge freely makes resources like this possible. Special thanks to the maintainers of:\n\nMDN Web Docs\nWordPress.org documentation\nReact documentation\nQuarto publishing system",
+    "crumbs": [
+      "Acknowledgments"
+    ]
+  },
+  {
+    "objectID": "acknowledgments.html#family",
+    "href": "acknowledgments.html#family",
+    "title": "Acknowledgments",
+    "section": "Family",
+    "text": "Family\n[To be added]\n\nThis book is dedicated to everyone who has ever thought “I’m not technical enough” – you are.",
+    "crumbs": [
+      "Acknowledgments"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html",
+    "href": "chapter-00-ai-web-partner.html",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "",
+    "text": "1.1 A New Way to Build for the Web\nRight now, AI can write HTML, CSS, and JavaScript in seconds. It can create entire websites, debug code, and explain complex concepts. So why learn web development at all?\nHere’s the truth: AI is incredible at writing code, but it doesn’t understand what your business needs. You’re the architect, the translator between business requirements and technical solutions. AI is your highly skilled assistant who needs clear direction.\nThis book teaches you to be that architect.",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#the-partnership-experiment",
+    "href": "chapter-00-ai-web-partner.html#the-partnership-experiment",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.2 The Partnership Experiment",
+    "text": "1.2 The Partnership Experiment\nLet’s discover how AI really works as a web development partner. This experiment will shape how you learn throughout this book.\n\nRound 1: The Vague Request\nOpen your AI assistant (ChatGPT, Claude, or whatever you’re using). Type this exactly:\nMake a website\nWhat did you get? The AI probably asked questions or made assumptions. This is your first lesson: AI needs direction.\n\n\nRound 2: The Simple Request\nNow try:\nMake a business website\nYou likely got a massive amount of HTML, CSS, maybe JavaScript – a complete but generic template. This is AI’s default: give you everything at once.\n\n\nRound 3: The Learning Request\nNow try:\nI'm learning web development. Show me the absolute simplest HTML page that displays a business name and tagline. Nothing else.\nYou might get:\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n&lt;head&gt;\n    &lt;meta charset=\"UTF-8\"&gt;\n    &lt;title&gt;My Business&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;h1&gt;Sunrise Café&lt;/h1&gt;\n    &lt;p&gt;Fresh coffee, warm welcome&lt;/p&gt;\n&lt;/body&gt;\n&lt;/html&gt;\nMuch clearer! AI responds to your learning needs when you express them clearly.\n\n\nRound 4: The Concept Request\nFinally, try:\nExplain how a web page is structured, using a building analogy, before showing any code\nNow you’re using AI to build understanding, not just generate code.",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#what-this-experiment-teaches-us",
+    "href": "chapter-00-ai-web-partner.html#what-this-experiment-teaches-us",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.3 What This Experiment Teaches Us",
+    "text": "1.3 What This Experiment Teaches Us\n\nAI defaults to complexity – It assumes you want a “complete” solution\nYour prompts shape your learning – Clear learning goals get clearer responses\nConcepts before code – You can use AI to understand ideas before syntax\nYou’re in control – AI follows your lead, not the other way around",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#the-three-learning-strategies",
+    "href": "chapter-00-ai-web-partner.html#the-three-learning-strategies",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.4 The Three Learning Strategies",
+    "text": "1.4 The Three Learning Strategies\nThroughout this book, we’ll follow three core strategies:\n\nStrategy 1: Understand the Concept Before the Code\nEvery web development task follows patterns. Understand the pattern first, then learn how HTML/CSS/JavaScript expresses it.\nExample: Don’t ask “How do I make a navigation menu?” Instead, ask “What is the purpose of navigation on a website?” Then, “Show me the simplest HTML navigation.”\n\n\nStrategy 2: Use AI to Explore, Not to Avoid Learning\nAI is your exploration tool. Use it to:\n\nSee different approaches to the same problem\nUnderstand why code works\nCompare technologies\nDebug your understanding\n\n\n\nStrategy 3: Build Mental Models, Not Just Working Websites\nA working website isn’t the goal. Understanding how and why it works is. Use AI to build these mental models.\nExample: Ask “Draw a diagram showing how HTML, CSS, and JavaScript work together” or “Explain responsive design using a newspaper analogy.”",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#how-ai-thinks-vs-how-developers-think",
+    "href": "chapter-00-ai-web-partner.html#how-ai-thinks-vs-how-developers-think",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.5 How AI Thinks vs How Developers Think",
+    "text": "1.5 How AI Thinks vs How Developers Think\n\nAI Thinks in Patterns\n\nIt has seen millions of websites\nIt pattern-matches to give you a “typical” solution\nIt doesn’t understand your specific business context\nIt can’t know what you don’t know yet\n\n\n\nDevelopers Think in Problems\n\nWhat exactly needs to be solved?\nWho is the user?\nWhat’s the simplest solution?\nHow will this be maintained?\nWhat could go wrong?\n\nYour job is to bridge this gap: Think like a developer, then guide AI to help you implement.",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#your-progressive-ai-journey",
+    "href": "chapter-00-ai-web-partner.html#your-progressive-ai-journey",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.6 Your Progressive AI Journey",
+    "text": "1.6 Your Progressive AI Journey\n\nPart I (Chapters 1-4): AI as Concept Explorer\nExample prompts:\n- \"Explain semantic HTML using a library analogy\"\n- \"Show me 5 ways CSS can position elements, simplest first\"\n- \"What happens when a user clicks a button? Explain the event flow\"\n\n\nPart II (Chapters 5-8): AI as Implementation Assistant\nExample prompts:\n- \"I need a WordPress theme for a café. What questions should I ask before choosing?\"\n- \"Compare these two plugins for contact forms. What are the trade-offs?\"\n- \"Explain REST APIs as if I'm explaining to a business stakeholder\"\n\n\nPart III (Chapters 9-11): AI as Code Producer\nExample prompts:\n- \"Create a React component that displays a list of products. Here's my design...\"\n- \"Convert this WordPress post display to a React component\"\n- \"Review this code for accessibility issues\"\n\n\nPart IV (Chapters 12-14): AI as Strategic Advisor\nExample prompts:\n- \"Compare PWAs vs native apps for a small retail business\"\n- \"What should a junior developer's portfolio demonstrate?\"\n- \"What web technologies should I learn next, given I know X, Y, Z?\"",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#the-honest-truth",
+    "href": "chapter-00-ai-web-partner.html#the-honest-truth",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.7 The Honest Truth",
+    "text": "1.7 The Honest Truth\nBy the end of this book:\n\nAI will still write code faster than you ✓\nBut you’ll know what to ask for ✓\nYou’ll understand what it gives you ✓\nYou’ll fix it when it’s wrong ✓\nYou’ll explain it to stakeholders ✓\nYou’ll be the architect, not the typist ✓\n\nThis is not a consolation prize. This is the actual job of a modern web developer.",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#exercises",
+    "href": "chapter-00-ai-web-partner.html#exercises",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.8 Exercises",
+    "text": "1.8 Exercises\n\n\n\n\n\n\nNoteExercise Levels\n\n\n\n\nLevel 1: Direct application\nLevel 2: Minor modifications\nLevel 3: Combining concepts\nLevel 4: Problem-solving\nLevel 5: Open-ended design\n\n\n\n\nExercise 0.1: Prompt Evolution (Level 1)\nStart with “website” and evolve your prompt through 4 iterations to get the simplest possible “About Us” page. Document each iteration and what changed.\n\n\nExercise 0.2: Concept Extraction (Level 2)\nAsk AI to explain “responsive design” three different ways: 1. Using a technical explanation 2. Using a real-world analogy 3. Using a business justification\nWhich helped you understand best? Why?\n\n\nExercise 0.3: AI Comparison (Level 3)\nAsk the same question to two different AI tools (or the same tool twice). Compare the responses. What’s consistent? What differs? What does this tell you about using AI?\n\n\nExercise 0.4: Business Translation (Level 4)\nA client says: “I want a website that looks professional and works on phones.”\nWrite three different AI prompts that would help you: 1. Clarify what “professional” means 2. Understand their mobile requirements 3. Explore technology options\n\n\nExercise 0.5: AI Learning Plan (Level 5)\nDesign your personal AI learning strategy for this book: 1. What kinds of prompts will you start with? 2. How will you verify AI’s answers? 3. What questions will you ask to deepen understanding? 4. How will you track what you’ve learned?\nCreate a “My AI Partnership Plan” document.",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#chapter-summary",
+    "href": "chapter-00-ai-web-partner.html#chapter-summary",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.9 Chapter Summary",
+    "text": "1.9 Chapter Summary\n\nAI is your learning partner, not your replacement\nClear prompts lead to clear learning\nUnderstanding concepts matters more than memorising syntax\nYou’re learning to be an architect who uses AI as a tool\nBusiness context shapes everything in web development",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#reflection",
+    "href": "chapter-00-ai-web-partner.html#reflection",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.10 Reflection",
+    "text": "1.10 Reflection\nBefore moving to Chapter 1, ensure you:\n\nCompleted the Partnership Experiment\nUnderstand why AI overcomplicates by default\nCan evolve prompts from vague to learning-focused\nSee yourself as an architect, not a code typist\nHave a plan for using AI as a learning partner",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#your-learning-journal",
+    "href": "chapter-00-ai-web-partner.html#your-learning-journal",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.11 Your Learning Journal",
+    "text": "1.11 Your Learning Journal\nStart your learning journal now. For this chapter, record:\n\nPartnership Experiment Results: What surprised you about AI’s responses?\nBest Prompt: Which prompt got you the most useful response?\nMental Model: How do you now think about AI as a development partner?\nBusiness Question: What kind of web solutions do you want to build?",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-ai-web-partner.html#next-steps",
+    "href": "chapter-00-ai-web-partner.html#next-steps",
+    "title": "1  Understanding Your AI Web Development Partner",
+    "section": "1.12 Next Steps",
+    "text": "1.12 Next Steps\nIn Chapter 1, we’ll explore how web pages are structured using HTML. You’ll use your new prompt skills to discover semantic markup – the foundation of everything we build. We’ll start with the concept of “documents as structured information” before writing a single line of code.\nRemember: You’re not learning to code. You’re learning to think like a web professional who directs AI to help build solutions. Let’s begin!",
+    "crumbs": [
+      "Part 0: Your AI Development Partnership",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Understanding Your AI Web Development Partner</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html",
+    "href": "chapter-01-structure.html",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "",
+    "text": "2.1 The Concept First\nBefore we write any HTML, let’s understand what we’re really doing: organising information so both humans and machines can understand it.\nA web page is a document. Like any document – a book, a report, a menu – it has structure. HTML is simply the language we use to describe that structure.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html#understanding-through-architecture",
+    "href": "chapter-01-structure.html#understanding-through-architecture",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "2.2 Understanding Through Architecture",
+    "text": "2.2 Understanding Through Architecture\nThink of a building:\n\nThe foundation supports everything\nWalls divide space into meaningful areas\nSigns tell you what each area is for\nDoors connect different spaces\n\nHTML works the same way. Elements create structure. Tags label what things are.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html#discovering-structure-with-your-ai-partner",
+    "href": "chapter-01-structure.html#discovering-structure-with-your-ai-partner",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "2.3 Discovering Structure with Your AI Partner",
+    "text": "2.3 Discovering Structure with Your AI Partner\n\nExploration 1: Document Anatomy\nAsk your AI:\nIf I showed you a restaurant menu, what structural elements would you identify? Don't use any HTML terms yet.\n\n\nExploration 2: Semantic Meaning\nAsk your AI:\nExplain \"semantic HTML\" using a library catalog analogy\n\n\nExploration 3: Simplest Page\nAsk your AI:\nShow me the absolute simplest valid HTML page with just a heading and paragraph",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html#from-concept-to-code",
+    "href": "chapter-01-structure.html#from-concept-to-code",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "2.4 From Concept to Code",
+    "text": "2.4 From Concept to Code\n[To be developed: Basic HTML structure, semantic elements]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html#business-applications",
+    "href": "chapter-01-structure.html#business-applications",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "2.5 Business Applications",
+    "text": "2.5 Business Applications\nWhy structure matters for business:\n\nSEO: Search engines understand structured content\nAccessibility: Screen readers navigate structure\nMaintenance: Well-structured pages are easier to update\nProfessionalism: Structure reflects organisational thinking",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html#practice-exercises",
+    "href": "chapter-01-structure.html#practice-exercises",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "2.6 Practice Exercises",
+    "text": "2.6 Practice Exercises\n\nExercise 1.1 (Level 1)\n[To be developed]\n\n\nExercise 1.2 (Level 2)\n[To be developed]\n\n\nExercise 1.3 (Level 3)\n[To be developed]\n\n\nExercise 1.4 (Level 4)\n[To be developed]\n\n\nExercise 1.5 (Level 5)\n[To be developed]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html#chapter-summary",
+    "href": "chapter-01-structure.html#chapter-summary",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "2.7 Chapter Summary",
+    "text": "2.7 Chapter Summary\n\nHTML describes document structure\nSemantic elements convey meaning\nStructure serves both humans and machines\nGood structure is a business asset",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html#reflection",
+    "href": "chapter-01-structure.html#reflection",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "2.8 Reflection",
+    "text": "2.8 Reflection\n\nCan explain HTML’s purpose without using technical jargon\nUnderstand semantic vs. presentational markup\nCan identify structural elements in any document\nSee how structure serves business goals",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html#your-learning-journal",
+    "href": "chapter-01-structure.html#your-learning-journal",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "2.9 Your Learning Journal",
+    "text": "2.9 Your Learning Journal\n[Prompts to be developed]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-structure.html#next-steps",
+    "href": "chapter-01-structure.html#next-steps",
+    "title": "2  Structure: HTML as Information Architecture",
+    "section": "2.10 Next Steps",
+    "text": "2.10 Next Steps\nIn Chapter 2, we’ll explore CSS – how to control the visual presentation of our structured content. Structure and presentation are deliberately separate, and understanding why is key to professional web development.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structure: HTML as Information Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-presentation.html",
+    "href": "chapter-02-presentation.html",
+    "title": "3  Presentation: CSS as Visual Communication",
+    "section": "",
+    "text": "3.1 The Concept First\nCSS controls how structured content looks. But it’s more than decoration – it’s visual communication. Colours, spacing, and layout convey meaning, guide attention, and build trust.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Presentation: CSS as Visual Communication</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-presentation.html#understanding-through-design",
+    "href": "chapter-02-presentation.html#understanding-through-design",
+    "title": "3  Presentation: CSS as Visual Communication",
+    "section": "3.2 Understanding Through Design",
+    "text": "3.2 Understanding Through Design\nThink of two cafés with identical menus but different interiors. The food is the same (content), but the atmosphere (presentation) creates completely different experiences.\nCSS is your atmosphere.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Presentation: CSS as Visual Communication</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-presentation.html#discovering-presentation-with-your-ai-partner",
+    "href": "chapter-02-presentation.html#discovering-presentation-with-your-ai-partner",
+    "title": "3  Presentation: CSS as Visual Communication",
+    "section": "3.3 Discovering Presentation with Your AI Partner",
+    "text": "3.3 Discovering Presentation with Your AI Partner\n\nExploration 1: Separation of Concerns\nAsk your AI:\nWhy do we separate HTML (structure) from CSS (presentation)? Explain using a newspaper analogy.\n\n\nExploration 2: Mobile-First\nAsk your AI:\nExplain mobile-first design as a business strategy, not just a technical approach\n\n\nExploration 3: Visual Hierarchy\nAsk your AI:\nHow does visual hierarchy guide user attention? Show me with a simple example.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Presentation: CSS as Visual Communication</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-presentation.html#from-concept-to-code",
+    "href": "chapter-02-presentation.html#from-concept-to-code",
+    "title": "3  Presentation: CSS as Visual Communication",
+    "section": "3.4 From Concept to Code",
+    "text": "3.4 From Concept to Code\n[To be developed: CSS basics, selectors, box model, flexbox, responsive design]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Presentation: CSS as Visual Communication</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-presentation.html#business-applications",
+    "href": "chapter-02-presentation.html#business-applications",
+    "title": "3  Presentation: CSS as Visual Communication",
+    "section": "3.5 Business Applications",
+    "text": "3.5 Business Applications\n\nBrand consistency: CSS enforces visual standards\nUser experience: Good design builds trust\nMobile reach: Responsive design serves all devices\nConversion: Visual hierarchy guides users to action",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Presentation: CSS as Visual Communication</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-presentation.html#practice-exercises",
+    "href": "chapter-02-presentation.html#practice-exercises",
+    "title": "3  Presentation: CSS as Visual Communication",
+    "section": "3.6 Practice Exercises",
+    "text": "3.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Presentation: CSS as Visual Communication</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-presentation.html#chapter-summary",
+    "href": "chapter-02-presentation.html#chapter-summary",
+    "title": "3  Presentation: CSS as Visual Communication",
+    "section": "3.7 Chapter Summary",
+    "text": "3.7 Chapter Summary\n\nCSS controls visual presentation\nMobile-first is a business strategy\nVisual hierarchy guides user attention\nPresentation and structure serve different purposes",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Presentation: CSS as Visual Communication</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-presentation.html#reflection",
+    "href": "chapter-02-presentation.html#reflection",
+    "title": "3  Presentation: CSS as Visual Communication",
+    "section": "3.8 Reflection",
+    "text": "3.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Presentation: CSS as Visual Communication</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-presentation.html#next-steps",
+    "href": "chapter-02-presentation.html#next-steps",
+    "title": "3  Presentation: CSS as Visual Communication",
+    "section": "3.9 Next Steps",
+    "text": "3.9 Next Steps\nIn Chapter 3, we’ll add behaviour with JavaScript – making pages respond to user actions. Structure, presentation, and behaviour form the three pillars of web development.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Presentation: CSS as Visual Communication</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-behaviour.html",
+    "href": "chapter-03-behaviour.html",
+    "title": "4  Behaviour: JavaScript as User Interaction",
+    "section": "",
+    "text": "4.1 The Concept First\nHTML provides structure. CSS provides presentation. JavaScript provides behaviour – the ability to respond to user actions, update content dynamically, and create interactive experiences.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Behaviour: JavaScript as User Interaction</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-behaviour.html#understanding-through-conversation",
+    "href": "chapter-03-behaviour.html#understanding-through-conversation",
+    "title": "4  Behaviour: JavaScript as User Interaction",
+    "section": "4.2 Understanding Through Conversation",
+    "text": "4.2 Understanding Through Conversation\nA static page is like a poster. JavaScript makes your page more like a conversation – it listens, responds, and adapts.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Behaviour: JavaScript as User Interaction</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-behaviour.html#discovering-behaviour-with-your-ai-partner",
+    "href": "chapter-03-behaviour.html#discovering-behaviour-with-your-ai-partner",
+    "title": "4  Behaviour: JavaScript as User Interaction",
+    "section": "4.3 Discovering Behaviour with Your AI Partner",
+    "text": "4.3 Discovering Behaviour with Your AI Partner\n\nExploration 1: Event-Driven Thinking\nAsk your AI:\nExplain event-driven programming using a restaurant service analogy\n\n\nExploration 2: DOM Manipulation\nAsk your AI:\nWhat is the DOM? Explain it as if describing how a librarian rearranges books.\n\n\nExploration 3: Progressive Enhancement\nAsk your AI:\nWhy should websites work without JavaScript? Explain the business case.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Behaviour: JavaScript as User Interaction</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-behaviour.html#from-concept-to-code",
+    "href": "chapter-03-behaviour.html#from-concept-to-code",
+    "title": "4  Behaviour: JavaScript as User Interaction",
+    "section": "4.4 From Concept to Code",
+    "text": "4.4 From Concept to Code\n[To be developed: Variables, functions, events, DOM manipulation, async basics]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Behaviour: JavaScript as User Interaction</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-behaviour.html#business-applications",
+    "href": "chapter-03-behaviour.html#business-applications",
+    "title": "4  Behaviour: JavaScript as User Interaction",
+    "section": "4.5 Business Applications",
+    "text": "4.5 Business Applications\n\nUser engagement: Interactive features increase engagement\nForm validation: Prevent errors before submission\nDynamic content: Update without page reload\nAnalytics: Track user behaviour",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Behaviour: JavaScript as User Interaction</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-behaviour.html#practice-exercises",
+    "href": "chapter-03-behaviour.html#practice-exercises",
+    "title": "4  Behaviour: JavaScript as User Interaction",
+    "section": "4.6 Practice Exercises",
+    "text": "4.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Behaviour: JavaScript as User Interaction</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-behaviour.html#chapter-summary",
+    "href": "chapter-03-behaviour.html#chapter-summary",
+    "title": "4  Behaviour: JavaScript as User Interaction",
+    "section": "4.7 Chapter Summary",
+    "text": "4.7 Chapter Summary\n\nJavaScript enables interaction\nEvent-driven thinking is fundamental\nProgressive enhancement ensures accessibility\nBehaviour enhances but shouldn’t replace structure",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Behaviour: JavaScript as User Interaction</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-behaviour.html#reflection",
+    "href": "chapter-03-behaviour.html#reflection",
+    "title": "4  Behaviour: JavaScript as User Interaction",
+    "section": "4.8 Reflection",
+    "text": "4.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Behaviour: JavaScript as User Interaction</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-behaviour.html#next-steps",
+    "href": "chapter-03-behaviour.html#next-steps",
+    "title": "4  Behaviour: JavaScript as User Interaction",
+    "section": "4.9 Next Steps",
+    "text": "4.9 Next Steps\nIn Chapter 4, we’ll connect to the world through APIs – fetching data from other services and sending data to servers. This transforms standalone pages into connected applications.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Behaviour: JavaScript as User Interaction</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-connection.html",
+    "href": "chapter-04-connection.html",
+    "title": "5  Connection: APIs as Business Integration",
+    "section": "",
+    "text": "5.1 The Concept First\nNo system exists in isolation. APIs (Application Programming Interfaces) allow different systems to communicate – your website can display weather data, process payments, or sync with inventory systems.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Connection: APIs as Business Integration</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-connection.html#understanding-through-contracts",
+    "href": "chapter-04-connection.html#understanding-through-contracts",
+    "title": "5  Connection: APIs as Business Integration",
+    "section": "5.2 Understanding Through Contracts",
+    "text": "5.2 Understanding Through Contracts\nAn API is like a contract between systems. It says: “If you send me this, I’ll give you that.” Both sides agree on the format, and communication flows.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Connection: APIs as Business Integration</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-connection.html#discovering-connection-with-your-ai-partner",
+    "href": "chapter-04-connection.html#discovering-connection-with-your-ai-partner",
+    "title": "5  Connection: APIs as Business Integration",
+    "section": "5.3 Discovering Connection with Your AI Partner",
+    "text": "5.3 Discovering Connection with Your AI Partner\n\nExploration 1: API Analogy\nAsk your AI:\nExplain REST APIs using a restaurant ordering system analogy\n\n\nExploration 2: Data Formats\nAsk your AI:\nWhy is JSON the standard format for API data? What problem does it solve?\n\n\nExploration 3: Error Handling\nAsk your AI:\nWhat can go wrong when calling an API? How should a professional application handle each case?",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Connection: APIs as Business Integration</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-connection.html#from-concept-to-code",
+    "href": "chapter-04-connection.html#from-concept-to-code",
+    "title": "5  Connection: APIs as Business Integration",
+    "section": "5.4 From Concept to Code",
+    "text": "5.4 From Concept to Code\n[To be developed: fetch(), JSON, async/await, error handling, CORS basics]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Connection: APIs as Business Integration</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-connection.html#business-applications",
+    "href": "chapter-04-connection.html#business-applications",
+    "title": "5  Connection: APIs as Business Integration",
+    "section": "5.5 Business Applications",
+    "text": "5.5 Business Applications\n\nData integration: Connect to business systems\nThird-party services: Payments, maps, analytics\nReal-time updates: Live data without refresh\nScalability: Separate frontend from backend",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Connection: APIs as Business Integration</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-connection.html#practice-exercises",
+    "href": "chapter-04-connection.html#practice-exercises",
+    "title": "5  Connection: APIs as Business Integration",
+    "section": "5.6 Practice Exercises",
+    "text": "5.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Connection: APIs as Business Integration</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-connection.html#chapter-summary",
+    "href": "chapter-04-connection.html#chapter-summary",
+    "title": "5  Connection: APIs as Business Integration",
+    "section": "5.7 Chapter Summary",
+    "text": "5.7 Chapter Summary\n\nAPIs enable system integration\nHTTP methods have specific purposes\nError handling is professional practice\nJSON is the common language",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Connection: APIs as Business Integration</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-connection.html#reflection",
+    "href": "chapter-04-connection.html#reflection",
+    "title": "5  Connection: APIs as Business Integration",
+    "section": "5.8 Reflection",
+    "text": "5.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Connection: APIs as Business Integration</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-04-connection.html#next-steps",
+    "href": "chapter-04-connection.html#next-steps",
+    "title": "5  Connection: APIs as Business Integration",
+    "section": "5.9 Next Steps",
+    "text": "5.9 Next Steps\nYou’ve now covered the foundations: HTML (structure), CSS (presentation), JavaScript (behaviour), and APIs (connection). In the Portfolio Project, you’ll combine these skills to build a complete portfolio website. Then we move to Part II, where we explore content management systems.",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Connection: APIs as Business Integration</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-portfolio.html",
+    "href": "projects/project-portfolio.html",
+    "title": "6  Project: Portfolio Website",
+    "section": "",
+    "text": "6.1 Project Overview\nBuild a personal portfolio website demonstrating your mastery of HTML, CSS, JavaScript, and API integration.\nAligned with: Assessment 1 in ISYS3004",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Project: Portfolio Website</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-portfolio.html#learning-outcomes-addressed",
+    "href": "projects/project-portfolio.html#learning-outcomes-addressed",
+    "title": "6  Project: Portfolio Website",
+    "section": "6.2 Learning Outcomes Addressed",
+    "text": "6.2 Learning Outcomes Addressed\n\nULO 1: Design and implement effective web applications\nULO 3: Analyse requirements to inform design\nULO 5: Evaluate web technologies",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Project: Portfolio Website</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-portfolio.html#requirements",
+    "href": "projects/project-portfolio.html#requirements",
+    "title": "6  Project: Portfolio Website",
+    "section": "6.3 Requirements",
+    "text": "6.3 Requirements\n\nFunctional Requirements\n\nHome page with introduction\nAbout page with background\nProjects/Work showcase\nContact information\nResponsive design (mobile, tablet, desktop)\nAPI integration (e.g., GitHub projects, weather widget)\n\n\n\nTechnical Requirements\n\nSemantic HTML5\nCSS with mobile-first approach\nJavaScript for interactivity\nAPI data fetching\nAccessibility basics (WCAG 2.1 AA)",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Project: Portfolio Website</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-portfolio.html#ai-collaboration-guidelines",
+    "href": "projects/project-portfolio.html#ai-collaboration-guidelines",
+    "title": "6  Project: Portfolio Website",
+    "section": "6.4 AI Collaboration Guidelines",
+    "text": "6.4 AI Collaboration Guidelines\nDocument your AI collaboration:\n\nWhat prompts helped most?\nWhat did you modify from AI suggestions?\nWhat did AI get wrong?\nWhat did you learn through the collaboration?",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Project: Portfolio Website</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-portfolio.html#evaluation-criteria",
+    "href": "projects/project-portfolio.html#evaluation-criteria",
+    "title": "6  Project: Portfolio Website",
+    "section": "6.5 Evaluation Criteria",
+    "text": "6.5 Evaluation Criteria\n[To be developed: Rubric]",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Project: Portfolio Website</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-portfolio.html#submission",
+    "href": "projects/project-portfolio.html#submission",
+    "title": "6  Project: Portfolio Website",
+    "section": "6.6 Submission",
+    "text": "6.6 Submission\n\nLive URL (GitHub Pages or similar)\nSource code repository\nAI collaboration log\nReflection document",
+    "crumbs": [
+      "Part I: Web Foundations",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Project: Portfolio Website</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-why-cms.html",
+    "href": "chapter-05-why-cms.html",
+    "title": "7  Why CMS? The Business Value of Managed Content",
+    "section": "",
+    "text": "7.1 The Concept First\nIn Part I, you built pages by writing code. But who updates that content? A CMS (Content Management System) separates content from code, allowing non-technical users to manage their own websites.\nThis is a business decision, not just a technical one.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why CMS? The Business Value of Managed Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-why-cms.html#understanding-through-roles",
+    "href": "chapter-05-why-cms.html#understanding-through-roles",
+    "title": "7  Why CMS? The Business Value of Managed Content",
+    "section": "7.2 Understanding Through Roles",
+    "text": "7.2 Understanding Through Roles\nThink about a newspaper. Writers create content. Editors review it. Designers create templates. Each role focuses on what they do best.\nA CMS enables this separation for websites.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why CMS? The Business Value of Managed Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-why-cms.html#discovering-cms-with-your-ai-partner",
+    "href": "chapter-05-why-cms.html#discovering-cms-with-your-ai-partner",
+    "title": "7  Why CMS? The Business Value of Managed Content",
+    "section": "7.3 Discovering CMS with Your AI Partner",
+    "text": "7.3 Discovering CMS with Your AI Partner\n\nExploration 1: Build vs Buy\nAsk your AI:\nWhen should a business build a custom website vs use a CMS? Create a decision framework.\n\n\nExploration 2: Stakeholder Analysis\nAsk your AI:\nWho are the stakeholders in a website project? What does each need from a CMS?\n\n\nExploration 3: Content Strategy\nAsk your AI:\nExplain content strategy for a small business website. What questions should we answer first?",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why CMS? The Business Value of Managed Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-why-cms.html#from-concept-to-code",
+    "href": "chapter-05-why-cms.html#from-concept-to-code",
+    "title": "7  Why CMS? The Business Value of Managed Content",
+    "section": "7.4 From Concept to Code",
+    "text": "7.4 From Concept to Code\n[To be developed: CMS types, WordPress overview, content modelling]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why CMS? The Business Value of Managed Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-why-cms.html#business-applications",
+    "href": "chapter-05-why-cms.html#business-applications",
+    "title": "7  Why CMS? The Business Value of Managed Content",
+    "section": "7.5 Business Applications",
+    "text": "7.5 Business Applications\nThis develops ULO 3 – translating stakeholder needs into requirements.\n\nClient handoff: Clients can update their own content\nReduced maintenance: Content changes don’t require developers\nGovernance: Control who can change what\nScalability: Add content without code changes",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why CMS? The Business Value of Managed Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-why-cms.html#practice-exercises",
+    "href": "chapter-05-why-cms.html#practice-exercises",
+    "title": "7  Why CMS? The Business Value of Managed Content",
+    "section": "7.6 Practice Exercises",
+    "text": "7.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why CMS? The Business Value of Managed Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-why-cms.html#chapter-summary",
+    "href": "chapter-05-why-cms.html#chapter-summary",
+    "title": "7  Why CMS? The Business Value of Managed Content",
+    "section": "7.7 Chapter Summary",
+    "text": "7.7 Chapter Summary\n\nCMS separates content from code\nStakeholder needs drive CMS choice\nContent strategy precedes technology\nThe right CMS reduces long-term costs",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why CMS? The Business Value of Managed Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-why-cms.html#reflection",
+    "href": "chapter-05-why-cms.html#reflection",
+    "title": "7  Why CMS? The Business Value of Managed Content",
+    "section": "7.8 Reflection",
+    "text": "7.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why CMS? The Business Value of Managed Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-05-why-cms.html#next-steps",
+    "href": "chapter-05-why-cms.html#next-steps",
+    "title": "7  Why CMS? The Business Value of Managed Content",
+    "section": "7.9 Next Steps",
+    "text": "7.9 Next Steps\nIn Chapter 6, we’ll dive into WordPress – the CMS powering over 40% of the web. We’ll understand it as a platform, not just a blogging tool.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Why CMS? The Business Value of Managed Content</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-wordpress-platform.html",
+    "href": "chapter-06-wordpress-platform.html",
+    "title": "8  WordPress as Platform",
+    "section": "",
+    "text": "8.1 The Concept First\nWordPress isn’t just blogging software – it’s a platform with an ecosystem of themes, plugins, and APIs. Understanding WordPress as a platform helps you make better technology decisions.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>WordPress as Platform</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-wordpress-platform.html#understanding-through-ecosystems",
+    "href": "chapter-06-wordpress-platform.html#understanding-through-ecosystems",
+    "title": "8  WordPress as Platform",
+    "section": "8.2 Understanding Through Ecosystems",
+    "text": "8.2 Understanding Through Ecosystems\nThink of WordPress like a smartphone. The core provides basics, but the app ecosystem makes it powerful. Choosing the right “apps” (plugins/themes) is as important as the platform itself.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>WordPress as Platform</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-wordpress-platform.html#discovering-wordpress-with-your-ai-partner",
+    "href": "chapter-06-wordpress-platform.html#discovering-wordpress-with-your-ai-partner",
+    "title": "8  WordPress as Platform",
+    "section": "8.3 Discovering WordPress with Your AI Partner",
+    "text": "8.3 Discovering WordPress with Your AI Partner\n\nExploration 1: Platform Thinking\nAsk your AI:\nWhat makes something a \"platform\" vs just \"software\"? Use WordPress and Excel as examples.\n\n\nExploration 2: Ecosystem Evaluation\nAsk your AI:\nHow do you evaluate whether a WordPress theme or plugin is trustworthy? What red flags should you watch for?\n\n\nExploration 3: Architecture\nAsk your AI:\nExplain WordPress's architecture (database, themes, plugins) using a restaurant analogy",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>WordPress as Platform</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-wordpress-platform.html#from-concept-to-code",
+    "href": "chapter-06-wordpress-platform.html#from-concept-to-code",
+    "title": "8  WordPress as Platform",
+    "section": "8.4 From Concept to Code",
+    "text": "8.4 From Concept to Code\n[To be developed: WordPress installation, admin interface, themes, basic customisation]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>WordPress as Platform</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-wordpress-platform.html#business-applications",
+    "href": "chapter-06-wordpress-platform.html#business-applications",
+    "title": "8  WordPress as Platform",
+    "section": "8.5 Business Applications",
+    "text": "8.5 Business Applications\nThis develops ULO 4 – making and defending technology choices.\n\nMarket share: WordPress skills are in demand\nCost: Open source reduces licensing costs\nFlexibility: Thousands of plugins for specific needs\nCommunity: Large support ecosystem",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>WordPress as Platform</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-wordpress-platform.html#practice-exercises",
+    "href": "chapter-06-wordpress-platform.html#practice-exercises",
+    "title": "8  WordPress as Platform",
+    "section": "8.6 Practice Exercises",
+    "text": "8.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>WordPress as Platform</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-wordpress-platform.html#chapter-summary",
+    "href": "chapter-06-wordpress-platform.html#chapter-summary",
+    "title": "8  WordPress as Platform",
+    "section": "8.7 Chapter Summary",
+    "text": "8.7 Chapter Summary\n\nWordPress is a platform, not just software\nEcosystem evaluation is a critical skill\nArchitecture understanding aids troubleshooting\nPlatform choice is a business decision",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>WordPress as Platform</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-wordpress-platform.html#reflection",
+    "href": "chapter-06-wordpress-platform.html#reflection",
+    "title": "8  WordPress as Platform",
+    "section": "8.8 Reflection",
+    "text": "8.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>WordPress as Platform</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-06-wordpress-platform.html#next-steps",
+    "href": "chapter-06-wordpress-platform.html#next-steps",
+    "title": "8  WordPress as Platform",
+    "section": "8.9 Next Steps",
+    "text": "8.9 Next Steps\nIn Chapter 7, we’ll explore how to extend WordPress through plugins – both using existing ones and understanding how they work. This builds toward customising WordPress for specific business needs.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>WordPress as Platform</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-07-extending-platforms.html",
+    "href": "chapter-07-extending-platforms.html",
+    "title": "9  Extending Platforms",
+    "section": "",
+    "text": "9.1 The Concept First\nPlatforms become powerful through extensions. WordPress plugins add functionality without changing core code. But when do you use an existing plugin vs build custom? This is a critical business decision.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Extending Platforms</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-07-extending-platforms.html#understanding-through-build-vs-buy",
+    "href": "chapter-07-extending-platforms.html#understanding-through-build-vs-buy",
+    "title": "9  Extending Platforms",
+    "section": "9.2 Understanding Through Build vs Buy",
+    "text": "9.2 Understanding Through Build vs Buy\nEvery extension decision weighs:\n\nTime: How long to build vs install?\nCost: Development vs licensing?\nMaintenance: Who updates it?\nFit: Does it solve 80% or 100% of the need?",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Extending Platforms</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-07-extending-platforms.html#discovering-extensions-with-your-ai-partner",
+    "href": "chapter-07-extending-platforms.html#discovering-extensions-with-your-ai-partner",
+    "title": "9  Extending Platforms",
+    "section": "9.3 Discovering Extensions with Your AI Partner",
+    "text": "9.3 Discovering Extensions with Your AI Partner\n\nExploration 1: Plugin Evaluation\nAsk your AI:\nI need a contact form for WordPress. Create a framework for evaluating the top 3 options.\n\n\nExploration 2: Build vs Buy\nAsk your AI:\nA client needs a booking system. Walk me through the decision process for using a plugin vs building custom.\n\n\nExploration 3: Technical Debt\nAsk your AI:\nWhat is \"plugin bloat\"? How do too many plugins create technical debt?",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Extending Platforms</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-07-extending-platforms.html#from-concept-to-code",
+    "href": "chapter-07-extending-platforms.html#from-concept-to-code",
+    "title": "9  Extending Platforms",
+    "section": "9.4 From Concept to Code",
+    "text": "9.4 From Concept to Code\n[To be developed: Plugin installation, evaluation, basic customisation, child themes, functions.php]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Extending Platforms</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-07-extending-platforms.html#business-applications",
+    "href": "chapter-07-extending-platforms.html#business-applications",
+    "title": "9  Extending Platforms",
+    "section": "9.5 Business Applications",
+    "text": "9.5 Business Applications\nThis develops ULO 4 – making and defending technology choices.\n\nROI calculation: Development cost vs plugin cost\nRisk assessment: Plugin abandonment, security\nClient communication: Explaining trade-offs\nLong-term thinking: Maintenance burden",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Extending Platforms</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-07-extending-platforms.html#practice-exercises",
+    "href": "chapter-07-extending-platforms.html#practice-exercises",
+    "title": "9  Extending Platforms",
+    "section": "9.6 Practice Exercises",
+    "text": "9.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Extending Platforms</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-07-extending-platforms.html#chapter-summary",
+    "href": "chapter-07-extending-platforms.html#chapter-summary",
+    "title": "9  Extending Platforms",
+    "section": "9.7 Chapter Summary",
+    "text": "9.7 Chapter Summary\n\nExtensions multiply platform value\nBuild vs buy is a business decision\nEvaluation frameworks reduce risk\nTechnical debt accumulates silently",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Extending Platforms</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-07-extending-platforms.html#reflection",
+    "href": "chapter-07-extending-platforms.html#reflection",
+    "title": "9  Extending Platforms",
+    "section": "9.8 Reflection",
+    "text": "9.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Extending Platforms</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-07-extending-platforms.html#next-steps",
+    "href": "chapter-07-extending-platforms.html#next-steps",
+    "title": "9  Extending Platforms",
+    "section": "9.9 Next Steps",
+    "text": "9.9 Next Steps\nIn Chapter 8, we’ll explore headless architecture – using WordPress as a content backend while building custom frontends. This bridges your CMS knowledge with modern frontend development.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Extending Platforms</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-08-headless-architecture.html",
+    "href": "chapter-08-headless-architecture.html",
+    "title": "10  Headless Architecture",
+    "section": "",
+    "text": "10.1 The Concept First\nTraditional WordPress handles both content management AND presentation. Headless architecture separates these: WordPress manages content, but a separate frontend (React, for example) handles display.\nThis enables the best of both worlds.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Headless Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-08-headless-architecture.html#understanding-through-separation",
+    "href": "chapter-08-headless-architecture.html#understanding-through-separation",
+    "title": "10  Headless Architecture",
+    "section": "10.2 Understanding Through Separation",
+    "text": "10.2 Understanding Through Separation\nImagine a restaurant where the kitchen (content) and dining room (presentation) are in different buildings. Orders (API requests) travel between them. Each can be optimised independently.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Headless Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-08-headless-architecture.html#discovering-headless-with-your-ai-partner",
+    "href": "chapter-08-headless-architecture.html#discovering-headless-with-your-ai-partner",
+    "title": "10  Headless Architecture",
+    "section": "10.3 Discovering Headless with Your AI Partner",
+    "text": "10.3 Discovering Headless with Your AI Partner\n\nExploration 1: Architecture Trade-offs\nAsk your AI:\nCompare traditional WordPress vs headless WordPress. When would you choose each?\n\n\nExploration 2: API Contracts\nAsk your AI:\nExplain how the WordPress REST API works as a \"contract\" between backend and frontend\n\n\nExploration 3: Business Cases\nAsk your AI:\nGive me 3 real-world scenarios where headless WordPress makes business sense",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Headless Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-08-headless-architecture.html#from-concept-to-code",
+    "href": "chapter-08-headless-architecture.html#from-concept-to-code",
+    "title": "10  Headless Architecture",
+    "section": "10.4 From Concept to Code",
+    "text": "10.4 From Concept to Code\n[To be developed: WordPress REST API, endpoints, authentication, fetching data]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Headless Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-08-headless-architecture.html#business-applications",
+    "href": "chapter-08-headless-architecture.html#business-applications",
+    "title": "10  Headless Architecture",
+    "section": "10.5 Business Applications",
+    "text": "10.5 Business Applications\n\nMulti-channel: Same content to web, mobile, displays\nPerformance: Static frontends are faster\nSecurity: Reduced attack surface\nDeveloper experience: Modern frontend tools",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Headless Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-08-headless-architecture.html#practice-exercises",
+    "href": "chapter-08-headless-architecture.html#practice-exercises",
+    "title": "10  Headless Architecture",
+    "section": "10.6 Practice Exercises",
+    "text": "10.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Headless Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-08-headless-architecture.html#chapter-summary",
+    "href": "chapter-08-headless-architecture.html#chapter-summary",
+    "title": "10  Headless Architecture",
+    "section": "10.7 Chapter Summary",
+    "text": "10.7 Chapter Summary\n\nHeadless separates content from presentation\nREST APIs enable this separation\nArchitecture choices have business implications\nThe right architecture depends on requirements",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Headless Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-08-headless-architecture.html#reflection",
+    "href": "chapter-08-headless-architecture.html#reflection",
+    "title": "10  Headless Architecture",
+    "section": "10.8 Reflection",
+    "text": "10.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Headless Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-08-headless-architecture.html#next-steps",
+    "href": "chapter-08-headless-architecture.html#next-steps",
+    "title": "10  Headless Architecture",
+    "section": "10.9 Next Steps",
+    "text": "10.9 Next Steps\nYou’ve now mastered content management. In the Business Site Project, you’ll build a complete WordPress site with custom functionality. Then we move to Part III, where we’ll build a modern React frontend that consumes WordPress content.",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Headless Architecture</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-business-site.html",
+    "href": "projects/project-business-site.html",
+    "title": "11  Project: Business Website with WordPress",
+    "section": "",
+    "text": "11.1 Project Overview\nBuild a complete WordPress website for a fictional (or real) business, demonstrating CMS configuration, theme customisation, and plugin integration.\nAligned with: Assessment 2 Part A in ISYS3004",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Project: Business Website with WordPress</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-business-site.html#learning-outcomes-addressed",
+    "href": "projects/project-business-site.html#learning-outcomes-addressed",
+    "title": "11  Project: Business Website with WordPress",
+    "section": "11.2 Learning Outcomes Addressed",
+    "text": "11.2 Learning Outcomes Addressed\n\nULO 2: Demonstrate project management and professional skills\nULO 3: Analyse stakeholder requirements\nULO 4: Select and integrate technologies",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Project: Business Website with WordPress</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-business-site.html#business-scenario",
+    "href": "projects/project-business-site.html#business-scenario",
+    "title": "11  Project: Business Website with WordPress",
+    "section": "11.3 Business Scenario",
+    "text": "11.3 Business Scenario\nChoose or create a business scenario:\n\nLocal café or restaurant\nProfessional services firm\nRetail shop\nNon-profit organisation\nYour own venture",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Project: Business Website with WordPress</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-business-site.html#requirements",
+    "href": "projects/project-business-site.html#requirements",
+    "title": "11  Project: Business Website with WordPress",
+    "section": "11.4 Requirements",
+    "text": "11.4 Requirements\n\nBusiness Requirements\n\nClear business case documentation\nStakeholder analysis\nContent strategy\nSite map\n\n\n\nTechnical Requirements\n\nWordPress installation (LocalWP)\nTheme selection and customisation\nEssential plugins (contact form, SEO, security)\nCustom functionality (child theme)\nREST API endpoints exposed",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Project: Business Website with WordPress</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-business-site.html#ai-collaboration-guidelines",
+    "href": "projects/project-business-site.html#ai-collaboration-guidelines",
+    "title": "11  Project: Business Website with WordPress",
+    "section": "11.5 AI Collaboration Guidelines",
+    "text": "11.5 AI Collaboration Guidelines\nDocument your technology decisions:\n\nWhy did you choose this theme?\nWhat plugins did you evaluate?\nHow did AI help with customisation?\nWhat would you recommend to the “client”?",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Project: Business Website with WordPress</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-business-site.html#evaluation-criteria",
+    "href": "projects/project-business-site.html#evaluation-criteria",
+    "title": "11  Project: Business Website with WordPress",
+    "section": "11.6 Evaluation Criteria",
+    "text": "11.6 Evaluation Criteria\n[To be developed: Rubric]",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Project: Business Website with WordPress</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-business-site.html#submission",
+    "href": "projects/project-business-site.html#submission",
+    "title": "11  Project: Business Website with WordPress",
+    "section": "11.7 Submission",
+    "text": "11.7 Submission\n\nWordPress export\nChild theme files\nTechnical documentation\nBusiness case document\nAI collaboration log",
+    "crumbs": [
+      "Part II: Content Management for Business",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Project: Business Website with WordPress</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-09-component-thinking.html",
+    "href": "chapter-09-component-thinking.html",
+    "title": "12  Component Thinking: React",
+    "section": "",
+    "text": "12.1 The Concept First\nReact introduces component thinking – building interfaces from reusable, self-contained pieces. This isn’t just a technology choice; it’s a different way of thinking about user interfaces.",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Component Thinking: React</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-09-component-thinking.html#understanding-through-lego",
+    "href": "chapter-09-component-thinking.html#understanding-through-lego",
+    "title": "12  Component Thinking: React",
+    "section": "12.2 Understanding Through LEGO",
+    "text": "12.2 Understanding Through LEGO\nThink of LEGO bricks. Each brick is self-contained. Complex structures emerge from combining simple pieces. React components work the same way.\nA page isn’t a monolith – it’s a composition of components.",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Component Thinking: React</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-09-component-thinking.html#discovering-components-with-your-ai-partner",
+    "href": "chapter-09-component-thinking.html#discovering-components-with-your-ai-partner",
+    "title": "12  Component Thinking: React",
+    "section": "12.3 Discovering Components with Your AI Partner",
+    "text": "12.3 Discovering Components with Your AI Partner\n\nExploration 1: Decomposition\nAsk your AI:\nLook at a typical e-commerce product page. How would you break it into components? Draw a diagram.\n\n\nExploration 2: State Thinking\nAsk your AI:\nExplain React state using a light switch analogy. Then a shopping cart analogy.\n\n\nExploration 3: Props Flow\nAsk your AI:\nExplain how data flows through React components using a family tree analogy",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Component Thinking: React</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-09-component-thinking.html#from-concept-to-code",
+    "href": "chapter-09-component-thinking.html#from-concept-to-code",
+    "title": "12  Component Thinking: React",
+    "section": "12.4 From Concept to Code",
+    "text": "12.4 From Concept to Code\n[To be developed: JSX, components, props, state, hooks, fetching data]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Component Thinking: React</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-09-component-thinking.html#business-applications",
+    "href": "chapter-09-component-thinking.html#business-applications",
+    "title": "12  Component Thinking: React",
+    "section": "12.5 Business Applications",
+    "text": "12.5 Business Applications\n\nReusability: Build once, use everywhere\nMaintainability: Change one component, update everywhere\nTeam collaboration: Different developers own different components\nTesting: Test components in isolation",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Component Thinking: React</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-09-component-thinking.html#practice-exercises",
+    "href": "chapter-09-component-thinking.html#practice-exercises",
+    "title": "12  Component Thinking: React",
+    "section": "12.6 Practice Exercises",
+    "text": "12.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Component Thinking: React</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-09-component-thinking.html#chapter-summary",
+    "href": "chapter-09-component-thinking.html#chapter-summary",
+    "title": "12  Component Thinking: React",
+    "section": "12.7 Chapter Summary",
+    "text": "12.7 Chapter Summary\n\nComponents are reusable UI building blocks\nState represents what can change\nProps pass data between components\nComponent thinking is a transferable skill",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Component Thinking: React</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-09-component-thinking.html#reflection",
+    "href": "chapter-09-component-thinking.html#reflection",
+    "title": "12  Component Thinking: React",
+    "section": "12.8 Reflection",
+    "text": "12.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Component Thinking: React</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-09-component-thinking.html#next-steps",
+    "href": "chapter-09-component-thinking.html#next-steps",
+    "title": "12  Component Thinking: React",
+    "section": "12.9 Next Steps",
+    "text": "12.9 Next Steps\nIn Chapter 10, we’ll explore CSS frameworks like Bootstrap and Tailwind – tools that accelerate development by providing pre-built components and utility classes. Combined with React, these enable rapid professional development.",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Component Thinking: React</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-rapid-development.html",
+    "href": "chapter-10-rapid-development.html",
+    "title": "13  Rapid Development: CSS Frameworks",
+    "section": "",
+    "text": "13.1 The Concept First\nCSS frameworks (Bootstrap, Tailwind, etc.) provide pre-built styles and components. They’re constraints that enable speed. Instead of designing every button, you use consistent, tested patterns.",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Rapid Development: CSS Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-rapid-development.html#understanding-through-design-systems",
+    "href": "chapter-10-rapid-development.html#understanding-through-design-systems",
+    "title": "13  Rapid Development: CSS Frameworks",
+    "section": "13.2 Understanding Through Design Systems",
+    "text": "13.2 Understanding Through Design Systems\nProfessional design teams use design systems – documented patterns for consistency. CSS frameworks are design systems you can adopt immediately.",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Rapid Development: CSS Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-rapid-development.html#discovering-frameworks-with-your-ai-partner",
+    "href": "chapter-10-rapid-development.html#discovering-frameworks-with-your-ai-partner",
+    "title": "13  Rapid Development: CSS Frameworks",
+    "section": "13.3 Discovering Frameworks with Your AI Partner",
+    "text": "13.3 Discovering Frameworks with Your AI Partner\n\nExploration 1: Framework Comparison\nAsk your AI:\nCompare Bootstrap and Tailwind CSS. When would you choose each?\n\n\nExploration 2: Constraints as Features\nAsk your AI:\nHow do constraints help creativity? Apply this to CSS frameworks.\n\n\nExploration 3: Customisation\nAsk your AI:\nA client says their Bootstrap site \"looks like every other site.\" How do you respond?",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Rapid Development: CSS Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-rapid-development.html#from-concept-to-code",
+    "href": "chapter-10-rapid-development.html#from-concept-to-code",
+    "title": "13  Rapid Development: CSS Frameworks",
+    "section": "13.4 From Concept to Code",
+    "text": "13.4 From Concept to Code\n[To be developed: Bootstrap/Tailwind basics, responsive utilities, component libraries, customisation]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Rapid Development: CSS Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-rapid-development.html#business-applications",
+    "href": "chapter-10-rapid-development.html#business-applications",
+    "title": "13  Rapid Development: CSS Frameworks",
+    "section": "13.5 Business Applications",
+    "text": "13.5 Business Applications\nThis develops ULO 4 – making and defending technology choices.\n\nSpeed: Faster development time\nConsistency: Uniform look and feel\nResponsiveness: Built-in mobile support\nMaintenance: Updates from community",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Rapid Development: CSS Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-rapid-development.html#practice-exercises",
+    "href": "chapter-10-rapid-development.html#practice-exercises",
+    "title": "13  Rapid Development: CSS Frameworks",
+    "section": "13.6 Practice Exercises",
+    "text": "13.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Rapid Development: CSS Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-rapid-development.html#chapter-summary",
+    "href": "chapter-10-rapid-development.html#chapter-summary",
+    "title": "13  Rapid Development: CSS Frameworks",
+    "section": "13.7 Chapter Summary",
+    "text": "13.7 Chapter Summary\n\nFrameworks trade flexibility for speed\nDesign systems enable consistency\nFramework choice depends on project needs\nCustomisation prevents generic appearance",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Rapid Development: CSS Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-rapid-development.html#reflection",
+    "href": "chapter-10-rapid-development.html#reflection",
+    "title": "13  Rapid Development: CSS Frameworks",
+    "section": "13.8 Reflection",
+    "text": "13.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Rapid Development: CSS Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-rapid-development.html#next-steps",
+    "href": "chapter-10-rapid-development.html#next-steps",
+    "title": "13  Rapid Development: CSS Frameworks",
+    "section": "13.9 Next Steps",
+    "text": "13.9 Next Steps\nIn Chapter 11, we’ll cover professional practices – testing, version control, and code quality. These practices separate hobbyist projects from professional work.",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Rapid Development: CSS Frameworks</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-professional-practices.html",
+    "href": "chapter-11-professional-practices.html",
+    "title": "14  Professional Practices",
+    "section": "",
+    "text": "14.1 The Concept First\nWriting code that works is one thing. Writing code that works reliably, can be maintained, and collaborates well is professional practice. This chapter covers the practices that distinguish professional developers.",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Professional Practices</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-professional-practices.html#understanding-through-craftsmanship",
+    "href": "chapter-11-professional-practices.html#understanding-through-craftsmanship",
+    "title": "14  Professional Practices",
+    "section": "14.2 Understanding Through Craftsmanship",
+    "text": "14.2 Understanding Through Craftsmanship\nA carpenter’s table might function whether it’s measured once or twice. But professional carpenters measure twice because they’ve learned the cost of mistakes. Professional practices are your “measure twice.”",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Professional Practices</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-professional-practices.html#discovering-professionalism-with-your-ai-partner",
+    "href": "chapter-11-professional-practices.html#discovering-professionalism-with-your-ai-partner",
+    "title": "14  Professional Practices",
+    "section": "14.3 Discovering Professionalism with Your AI Partner",
+    "text": "14.3 Discovering Professionalism with Your AI Partner\n\nExploration 1: Version Control\nAsk your AI:\nExplain Git to someone who has never used version control. Why should they care?\n\n\nExploration 2: Testing Philosophy\nAsk your AI:\nWhy do professional developers write tests? What's the business case?\n\n\nExploration 3: Code Quality\nAsk your AI:\nWhat makes code \"good\"? Create a checklist for reviewing your own code.",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Professional Practices</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-professional-practices.html#from-concept-to-code",
+    "href": "chapter-11-professional-practices.html#from-concept-to-code",
+    "title": "14  Professional Practices",
+    "section": "14.4 From Concept to Code",
+    "text": "14.4 From Concept to Code\n[To be developed: Git workflow, testing basics, code review, documentation]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Professional Practices</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-professional-practices.html#business-applications",
+    "href": "chapter-11-professional-practices.html#business-applications",
+    "title": "14  Professional Practices",
+    "section": "14.5 Business Applications",
+    "text": "14.5 Business Applications\nThis develops ULO 2 – demonstrating professional project management practices.\n\nRisk reduction: Version control prevents disasters\nQuality assurance: Testing catches bugs early\nCollaboration: Good practices enable teamwork\nMaintainability: Future you will thank present you",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Professional Practices</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-professional-practices.html#practice-exercises",
+    "href": "chapter-11-professional-practices.html#practice-exercises",
+    "title": "14  Professional Practices",
+    "section": "14.6 Practice Exercises",
+    "text": "14.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Professional Practices</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-professional-practices.html#chapter-summary",
+    "href": "chapter-11-professional-practices.html#chapter-summary",
+    "title": "14  Professional Practices",
+    "section": "14.7 Chapter Summary",
+    "text": "14.7 Chapter Summary\n\nVersion control is non-negotiable\nTesting is a professional investment\nCode quality serves future maintainers\nProfessional practices reduce risk",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Professional Practices</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-professional-practices.html#reflection",
+    "href": "chapter-11-professional-practices.html#reflection",
+    "title": "14  Professional Practices",
+    "section": "14.8 Reflection",
+    "text": "14.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Professional Practices</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-professional-practices.html#next-steps",
+    "href": "chapter-11-professional-practices.html#next-steps",
+    "title": "14  Professional Practices",
+    "section": "14.9 Next Steps",
+    "text": "14.9 Next Steps\nYou’ve now covered modern frontend development. In the React Integration Project, you’ll build a React frontend that consumes WordPress content. Then we move to Part IV, where we look ahead to emerging technologies and your development career.",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Professional Practices</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-react-integration.html",
+    "href": "projects/project-react-integration.html",
+    "title": "15  Project: React Integration",
+    "section": "",
+    "text": "15.1 Project Overview\nBuild a React frontend that consumes content from your WordPress site via the REST API, demonstrating headless architecture and modern frontend development.\nAligned with: Assessment 2 Part B in ISYS3004",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project: React Integration</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-react-integration.html#learning-outcomes-addressed",
+    "href": "projects/project-react-integration.html#learning-outcomes-addressed",
+    "title": "15  Project: React Integration",
+    "section": "15.2 Learning Outcomes Addressed",
+    "text": "15.2 Learning Outcomes Addressed\n\nULO 1: Design and implement effective web applications\nULO 4: Select and integrate technologies\nULO 5: Evaluate emerging technologies",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project: React Integration</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-react-integration.html#requirements",
+    "href": "projects/project-react-integration.html#requirements",
+    "title": "15  Project: React Integration",
+    "section": "15.3 Requirements",
+    "text": "15.3 Requirements\n\nFunctional Requirements\n\nDisplay WordPress posts in React\nPost list and detail views\nLoading and error states\nResponsive design\nNavigation between views\n\n\n\nTechnical Requirements\n\nReact (create-react-app or Vite)\nWordPress REST API integration\nCSS framework (Bootstrap or Tailwind)\nError handling\nComponent architecture",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project: React Integration</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-react-integration.html#ai-collaboration-guidelines",
+    "href": "projects/project-react-integration.html#ai-collaboration-guidelines",
+    "title": "15  Project: React Integration",
+    "section": "15.4 AI Collaboration Guidelines",
+    "text": "15.4 AI Collaboration Guidelines\nDocument your React journey:\n\nHow did AI help you understand React concepts?\nWhat components did you create vs generate?\nHow did you debug issues?\nWhat patterns did you learn?",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project: React Integration</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-react-integration.html#evaluation-criteria",
+    "href": "projects/project-react-integration.html#evaluation-criteria",
+    "title": "15  Project: React Integration",
+    "section": "15.5 Evaluation Criteria",
+    "text": "15.5 Evaluation Criteria\n[To be developed: Rubric]",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project: React Integration</span>"
+    ]
+  },
+  {
+    "objectID": "projects/project-react-integration.html#submission",
+    "href": "projects/project-react-integration.html#submission",
+    "title": "15  Project: React Integration",
+    "section": "15.6 Submission",
+    "text": "15.6 Submission\n\nReact source code (not node_modules)\nDocumentation\nScreenshots/demo\nAI collaboration log\nReflection on headless architecture",
+    "crumbs": [
+      "Part III: Modern Frontend Development",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Project: React Integration</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-emerging-technologies.html",
+    "href": "chapter-12-emerging-technologies.html",
+    "title": "16  Evaluating Emerging Technologies",
+    "section": "",
+    "text": "16.1 The Concept First\nTechnology changes constantly. The valuable skill isn’t knowing today’s tools – it’s systematically evaluating new technologies to make informed recommendations. This chapter teaches you how to assess any technology, not just current ones.",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Evaluating Emerging Technologies</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-emerging-technologies.html#understanding-through-frameworks",
+    "href": "chapter-12-emerging-technologies.html#understanding-through-frameworks",
+    "title": "16  Evaluating Emerging Technologies",
+    "section": "16.2 Understanding Through Frameworks",
+    "text": "16.2 Understanding Through Frameworks\nDon’t ask “Is X good?” Ask:\n\nWhat problem does it solve?\nWhat trade-offs does it make?\nWho is using it successfully?\nWhat’s the total cost of adoption?",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Evaluating Emerging Technologies</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-emerging-technologies.html#discovering-evaluation-with-your-ai-partner",
+    "href": "chapter-12-emerging-technologies.html#discovering-evaluation-with-your-ai-partner",
+    "title": "16  Evaluating Emerging Technologies",
+    "section": "16.3 Discovering Evaluation with Your AI Partner",
+    "text": "16.3 Discovering Evaluation with Your AI Partner\n\nExploration 1: Evaluation Framework\nAsk your AI:\nCreate a framework for evaluating whether a business should adopt a new web technology\n\n\nExploration 2: Hype vs Reality\nAsk your AI:\nHow do you distinguish technology hype from genuine value? Give examples from web development history.\n\n\nExploration 3: Current Landscape\nAsk your AI:\nWhat web technologies are gaining adoption in 2025? For each, what problem does it solve?",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Evaluating Emerging Technologies</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-emerging-technologies.html#from-concept-to-code",
+    "href": "chapter-12-emerging-technologies.html#from-concept-to-code",
+    "title": "16  Evaluating Emerging Technologies",
+    "section": "16.4 From Concept to Code",
+    "text": "16.4 From Concept to Code\n[To be developed: PWAs, TypeScript, SSR, evaluation case studies]",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Evaluating Emerging Technologies</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-emerging-technologies.html#business-applications",
+    "href": "chapter-12-emerging-technologies.html#business-applications",
+    "title": "16  Evaluating Emerging Technologies",
+    "section": "16.5 Business Applications",
+    "text": "16.5 Business Applications\nThis develops ULO 5 – assessing emerging technologies through systematic evaluation.\n\nStrategic planning: Informed technology roadmaps\nRisk management: Understanding adoption risks\nClient advisory: Recommending appropriate solutions\nCareer development: Knowing what to learn next",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Evaluating Emerging Technologies</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-emerging-technologies.html#practice-exercises",
+    "href": "chapter-12-emerging-technologies.html#practice-exercises",
+    "title": "16  Evaluating Emerging Technologies",
+    "section": "16.6 Practice Exercises",
+    "text": "16.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Evaluating Emerging Technologies</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-emerging-technologies.html#chapter-summary",
+    "href": "chapter-12-emerging-technologies.html#chapter-summary",
+    "title": "16  Evaluating Emerging Technologies",
+    "section": "16.7 Chapter Summary",
+    "text": "16.7 Chapter Summary\n\nEvaluation frameworks outlast specific technologies\nTrade-offs matter more than features\nAdoption context determines suitability\nUncertainty is normal – acknowledge it",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Evaluating Emerging Technologies</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-emerging-technologies.html#reflection",
+    "href": "chapter-12-emerging-technologies.html#reflection",
+    "title": "16  Evaluating Emerging Technologies",
+    "section": "16.8 Reflection",
+    "text": "16.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Evaluating Emerging Technologies</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-emerging-technologies.html#next-steps",
+    "href": "chapter-12-emerging-technologies.html#next-steps",
+    "title": "16  Evaluating Emerging Technologies",
+    "section": "16.9 Next Steps",
+    "text": "16.9 Next Steps\nIn Chapter 13, we’ll focus on your development career – building a portfolio, positioning yourself professionally, and planning continuous growth.",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Evaluating Emerging Technologies</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-development-career.html",
+    "href": "chapter-13-development-career.html",
+    "title": "17  Your Development Career",
+    "section": "",
+    "text": "17.1 The Concept First\nTechnical skills get you interviews. Professional skills get you hired and promoted. This chapter covers the non-technical aspects of a development career: portfolios, networking, communication, and continuous growth.",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Your Development Career</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-development-career.html#understanding-through-positioning",
+    "href": "chapter-13-development-career.html#understanding-through-positioning",
+    "title": "17  Your Development Career",
+    "section": "17.2 Understanding Through Positioning",
+    "text": "17.2 Understanding Through Positioning\nYou’re not just a developer – you’re a professional who solves business problems with technology. How you position yourself matters as much as your technical skills.",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Your Development Career</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-development-career.html#discovering-career-with-your-ai-partner",
+    "href": "chapter-13-development-career.html#discovering-career-with-your-ai-partner",
+    "title": "17  Your Development Career",
+    "section": "17.3 Discovering Career with Your AI Partner",
+    "text": "17.3 Discovering Career with Your AI Partner\n\nExploration 1: Portfolio Strategy\nAsk your AI:\nWhat should a junior web developer's portfolio demonstrate? Quality vs quantity?\n\n\nExploration 2: Professional Communication\nAsk your AI:\nHow do you explain technical decisions to non-technical stakeholders? Give examples.\n\n\nExploration 3: Learning Path\nAsk your AI:\nI know HTML, CSS, JavaScript, WordPress, and React. What should I learn next? How do I decide?",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Your Development Career</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-development-career.html#from-concept-to-code",
+    "href": "chapter-13-development-career.html#from-concept-to-code",
+    "title": "17  Your Development Career",
+    "section": "17.4 From Concept to Code",
+    "text": "17.4 From Concept to Code\n[To be developed: Portfolio development, GitHub profile, LinkedIn, networking, interview prep]",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Your Development Career</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-development-career.html#business-applications",
+    "href": "chapter-13-development-career.html#business-applications",
+    "title": "17  Your Development Career",
+    "section": "17.5 Business Applications",
+    "text": "17.5 Business Applications\nThis develops ULO 2 – communicating effectively with stakeholders.\n\nCareer progression: From junior to senior roles\nFreelance/consulting: Building a client base\nInternal advocacy: Getting technical projects approved\nLeadership: Moving into management",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Your Development Career</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-development-career.html#practice-exercises",
+    "href": "chapter-13-development-career.html#practice-exercises",
+    "title": "17  Your Development Career",
+    "section": "17.6 Practice Exercises",
+    "text": "17.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Your Development Career</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-development-career.html#chapter-summary",
+    "href": "chapter-13-development-career.html#chapter-summary",
+    "title": "17  Your Development Career",
+    "section": "17.7 Chapter Summary",
+    "text": "17.7 Chapter Summary\n\nPortfolio demonstrates capability\nCommunication multiplies technical value\nNetworking opens opportunities\nContinuous learning is expected",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Your Development Career</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-development-career.html#reflection",
+    "href": "chapter-13-development-career.html#reflection",
+    "title": "17  Your Development Career",
+    "section": "17.8 Reflection",
+    "text": "17.8 Reflection\n[Checklist to be developed]",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Your Development Career</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-development-career.html#next-steps",
+    "href": "chapter-13-development-career.html#next-steps",
+    "title": "17  Your Development Career",
+    "section": "17.9 Next Steps",
+    "text": "17.9 Next Steps\nIn Chapter 14, we’ll reflect on what it means to be a developer in the AI era – what won’t change, what’s evolving, and how to thrive in partnership with AI.",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Your Development Career</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html",
+    "href": "chapter-14-ai-era-developer.html",
+    "title": "18  The AI-Era Developer",
+    "section": "",
+    "text": "18.1 The Concept First\nAI is transforming development. But some things won’t change: understanding problems, communicating with stakeholders, making trade-offs, and exercising judgment. This chapter explores what it means to be a developer when AI can write code.",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html#understanding-through-partnership",
+    "href": "chapter-14-ai-era-developer.html#understanding-through-partnership",
+    "title": "18  The AI-Era Developer",
+    "section": "18.2 Understanding Through Partnership",
+    "text": "18.2 Understanding Through Partnership\nWe started this book by establishing AI as your partner. Now let’s reflect: What did you learn that AI couldn’t learn for you? What can you do that AI can’t?",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html#discovering-the-future-with-your-ai-partner",
+    "href": "chapter-14-ai-era-developer.html#discovering-the-future-with-your-ai-partner",
+    "title": "18  The AI-Era Developer",
+    "section": "18.3 Discovering the Future with Your AI Partner",
+    "text": "18.3 Discovering the Future with Your AI Partner\n\nExploration 1: What Won’t Change\nAsk your AI:\nWhat aspects of software development won't be automated by AI? Why?\n\n\nExploration 2: Your Unique Value\nAsk your AI:\nWhat can a human developer do that AI cannot? Be specific.\n\n\nExploration 3: Future Partnership\nAsk your AI:\nHow might human-AI collaboration in development evolve over the next 5 years?",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html#from-concept-to-code",
+    "href": "chapter-14-ai-era-developer.html#from-concept-to-code",
+    "title": "18  The AI-Era Developer",
+    "section": "18.4 From Concept to Code",
+    "text": "18.4 From Concept to Code\n[To be developed: AI collaboration patterns, prompt engineering, quality control, ethical considerations]",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html#business-applications",
+    "href": "chapter-14-ai-era-developer.html#business-applications",
+    "title": "18  The AI-Era Developer",
+    "section": "18.5 Business Applications",
+    "text": "18.5 Business Applications\n\nProductivity: Leveraging AI effectively\nQuality control: Reviewing AI output critically\nInnovation: Using AI for exploration\nLeadership: Guiding AI-assisted teams",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html#practice-exercises",
+    "href": "chapter-14-ai-era-developer.html#practice-exercises",
+    "title": "18  The AI-Era Developer",
+    "section": "18.6 Practice Exercises",
+    "text": "18.6 Practice Exercises\n[Exercises to be developed]",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html#chapter-summary",
+    "href": "chapter-14-ai-era-developer.html#chapter-summary",
+    "title": "18  The AI-Era Developer",
+    "section": "18.7 Chapter Summary",
+    "text": "18.7 Chapter Summary\n\nAI amplifies, doesn’t replace, human judgment\nUnderstanding problems remains essential\nCommunication skills gain value\nContinuous adaptation is the new normal",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html#reflection",
+    "href": "chapter-14-ai-era-developer.html#reflection",
+    "title": "18  The AI-Era Developer",
+    "section": "18.8 Reflection",
+    "text": "18.8 Reflection\nLooking back on your journey:\n\nCan you articulate what you learned that AI couldn’t learn for you?\nDo you understand your unique value as a developer?\nHave you developed judgment about when to use AI and when not to?\nAre you ready to continue learning independently?",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html#your-final-learning-journal-entry",
+    "href": "chapter-14-ai-era-developer.html#your-final-learning-journal-entry",
+    "title": "18  The AI-Era Developer",
+    "section": "18.9 Your Final Learning Journal Entry",
+    "text": "18.9 Your Final Learning Journal Entry\nRecord your thoughts on:\n\nYour journey: What surprised you most about learning web development?\nAI partnership: How did your relationship with AI tools evolve?\nBusiness thinking: How do you now think about technology decisions?\nFuture goals: Where will you go from here?",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-14-ai-era-developer.html#looking-forward",
+    "href": "chapter-14-ai-era-developer.html#looking-forward",
+    "title": "18  The AI-Era Developer",
+    "section": "18.10 Looking Forward",
+    "text": "18.10 Looking Forward\nThis book ends, but your learning continues. You now have:\n\nTechnical foundations in web development\nBusiness thinking about technology decisions\nAI collaboration skills for the modern era\nProfessional practices for quality work\n\nUse these foundations. Build things. Break things. Learn from mistakes. Partner with AI. Create value.\nWelcome to your career as a web professional.",
+    "crumbs": [
+      "Part IV: The Professional Developer",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>The AI-Era Developer</span>"
+    ]
+  }
+]

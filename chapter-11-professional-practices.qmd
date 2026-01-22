@@ -1,69 +1,696 @@
 # Professional Practices {#sec-professional-practices}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
-
 ## The Concept First
 
-Writing code that works is one thing. Writing code that **works reliably, can be maintained, and collaborates well** is professional practice. This chapter covers the practices that distinguish professional developers.
+In @sec-rapid-development, you learned to build interfaces quickly with CSS frameworks. But professional development isn't just about building features—it's about building **sustainable, reliable, collaborative systems**.
+
+Consider the difference:
+
+- **Hobbyist**: Gets the feature working, moves on
+- **Professional**: Gets the feature working, ensures it stays working, makes it easy for others to understand and modify
+
+Professional practices aren't bureaucracy—they're **risk management**. Every project eventually faces:
+
+- "It was working yesterday. What changed?"
+- "I can't remember why I wrote this code."
+- "Someone else needs to fix this while I'm on holiday."
+- "The client changed their mind. Can we undo this?"
+
+Professional practices answer these questions before they become crises. They're the difference between code that works today and code that **keeps working** tomorrow.
 
 ## Understanding Through Craftsmanship
 
-A carpenter's table might function whether it's measured once or twice. But professional carpenters measure twice because they've learned the cost of mistakes. Professional practices are your "measure twice."
+Consider two furniture makers:
 
-## Discovering Professionalism with Your AI Partner
+**The first** measures wood, cuts it, assembles pieces. If something doesn't fit, they shave a bit here, add a shim there. The table works, but any later modification requires figuring out all the adjustments again.
 
-### Exploration 1: Version Control
+**The second** measures twice, documents the cuts, keeps offcuts labelled, photographs each stage. If something doesn't fit, they can trace exactly where the deviation started. Years later, they can build a matching chair.
+
+Both produce functional furniture. But the second can:
+
+- Train apprentices using their documentation
+- Reproduce work reliably
+- Fix problems systematically
+- Collaborate with other craftspeople
+
+Software development is the same. Version control is measuring twice. Testing is quality checks before delivery. Documentation is the labelled workshop.
+
+::: {.callout-tip}
+## Professional Practice Serves Future You
+In six months, you won't remember why you made certain decisions. Professional practices create a trail for "future you" to follow. That's not extra work—it's insurance.
+:::
+
+## Discovering Professional Practices with Your AI Partner
+
+### Exploration 1: Why Version Control Matters
 
 ```
 Ask your AI:
-Explain Git to someone who has never used version control. Why should they care?
+Imagine a team of four developers working on the same website without
+version control. What problems would they face? How would they handle
+conflicts when two people change the same file?
 ```
 
-### Exploration 2: Testing Philosophy
+This should reveal:
+
+- Overwriting each other's work
+- No way to revert mistakes
+- "Which version is the real one?"
+- Fear of making changes
+- No history of what changed or why
+
+```
+Continue the conversation:
+Now explain how Git solves each of these problems. What mental model
+should I have for how Git works?
+```
+
+### Exploration 2: The Testing Mindset
+
+Testing isn't about distrust—it's about **confidence**.
 
 ```
 Ask your AI:
-Why do professional developers write tests? What's the business case?
+A developer says "I tested it manually, it works." Why isn't that
+enough for professional work? What's the difference between manual
+testing and automated tests?
 ```
 
-### Exploration 3: Code Quality
+Key insights:
+
+- Manual testing doesn't scale
+- Humans miss things, especially when tired
+- Automated tests run every time, consistently
+- Tests document expected behaviour
+- Regression testing catches "breaking old stuff while adding new"
+
+```
+Continue the conversation:
+For a simple e-commerce site, what would be the most valuable things
+to test automatically? Where would you start?
+```
+
+### Exploration 3: Code as Communication
+
+Code is read far more than it's written. Every piece of code is communication with:
+
+- Future you
+- Teammates
+- Future maintainers
 
 ```
 Ask your AI:
-What makes code "good"? Create a checklist for reviewing your own code.
+What makes code "readable"? Show me an example of unreadable code and
+the same functionality written readably. What changed?
 ```
+
+This reveals:
+
+- Meaningful variable names
+- Logical structure
+- Appropriate comments (why, not what)
+- Consistent formatting
+- Small, focused functions
+
+```
+Continue the conversation:
+When should I write comments, and when does the code speak for itself?
+Give me guidelines for useful commenting.
+```
+
+### Exploration 4: Documentation Purpose
+
+```
+Ask your AI:
+What's the difference between code comments, README files, and
+technical documentation? When do I need each, and what goes in each?
+```
+
+Different documentation serves different audiences:
+
+- **Code comments**: Future developers modifying the code
+- **README**: Anyone encountering the project for the first time
+- **Technical docs**: Users of your code (API consumers, library users)
+- **User docs**: Non-technical end users
 
 ## From Concept to Code
 
-[To be developed: Git workflow, testing basics, code review, documentation]
+### Git: Version Control Fundamentals
+
+Git tracks changes to files over time. The mental model:
+
+```
+Working Directory → Staging Area → Repository
+    (your files)     (ready to commit)  (permanent history)
+```
+
+**Initial setup:**
+
+```bash
+# Configure your identity (once per machine)
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+**Starting a project:**
+
+```bash
+# Create a new repository
+git init
+
+# Or clone an existing one
+git clone https://github.com/username/repo.git
+```
+
+**Basic workflow:**
+
+```bash
+# See what's changed
+git status
+
+# Stage changes (prepare to commit)
+git add filename.js
+git add .  # Stage all changes
+
+# Commit (save to history)
+git commit -m "Add user login feature"
+
+# View history
+git log --oneline
+```
+
+**Understanding the commands:**
+
+| Command | What it does |
+|---------|-------------|
+| `git status` | Shows changed, staged, and untracked files |
+| `git add` | Moves changes to staging area |
+| `git commit` | Creates permanent snapshot with message |
+| `git log` | Shows commit history |
+| `git diff` | Shows what changed (unstaged changes) |
+
+::: {.callout-note}
+## Commit Messages Matter
+Good: "Fix login timeout on slow connections"
+Bad: "Fixed bug" or "Updates"
+
+The message should explain **why** you made the change, not what files you touched. Future you needs to understand the intent.
+:::
+
+**Working with branches:**
+
+Branches let you work on features without affecting the main code:
+
+```bash
+# Create and switch to a new branch
+git checkout -b feature/user-profiles
+
+# Work, commit, work, commit...
+
+# Switch back to main
+git checkout main
+
+# Merge the feature branch
+git merge feature/user-profiles
+```
+
+```
+Ask your AI:
+What's the difference between merging and rebasing in Git? When would
+I use each? I want to understand the trade-offs.
+```
+
+**Working with GitHub:**
+
+```bash
+# Connect to remote repository
+git remote add origin https://github.com/username/repo.git
+
+# Push commits to GitHub
+git push origin main
+
+# Pull changes from GitHub
+git pull origin main
+```
+
+### Testing: Starting Simple
+
+Testing verifies your code does what you expect. Start simple:
+
+**Manual test file (for learning):**
+
+```javascript
+// math.js
+function add(a, b) {
+    return a + b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+// Simple tests (learning only)
+console.log("Testing add:");
+console.log(add(2, 3) === 5 ? "PASS" : "FAIL");
+console.log(add(-1, 1) === 0 ? "PASS" : "FAIL");
+console.log(add(0, 0) === 0 ? "PASS" : "FAIL");
+
+console.log("Testing multiply:");
+console.log(multiply(2, 3) === 6 ? "PASS" : "FAIL");
+console.log(multiply(-2, 3) === -6 ? "PASS" : "FAIL");
+```
+
+**Using a testing framework (Vitest with React/Vite):**
+
+```bash
+npm install -D vitest
+```
+
+```javascript
+// math.test.js
+import { describe, it, expect } from 'vitest';
+import { add, multiply } from './math.js';
+
+describe('add', () => {
+    it('adds positive numbers', () => {
+        expect(add(2, 3)).toBe(5);
+    });
+
+    it('handles negative numbers', () => {
+        expect(add(-1, 1)).toBe(0);
+    });
+
+    it('handles zero', () => {
+        expect(add(0, 0)).toBe(0);
+    });
+});
+
+describe('multiply', () => {
+    it('multiplies positive numbers', () => {
+        expect(multiply(2, 3)).toBe(6);
+    });
+
+    it('handles negative numbers', () => {
+        expect(multiply(-2, 3)).toBe(-6);
+    });
+});
+```
+
+Run tests:
+
+```bash
+npx vitest
+```
+
+**What to test:**
+
+Focus on behaviour, not implementation:
+
+```javascript
+// Testing a React component's behaviour
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import Counter from './Counter';
+
+describe('Counter', () => {
+    it('starts at zero', () => {
+        render(<Counter />);
+        expect(screen.getByText('Count: 0')).toBeInTheDocument();
+    });
+
+    it('increments when button clicked', async () => {
+        render(<Counter />);
+        await userEvent.click(screen.getByRole('button'));
+        expect(screen.getByText('Count: 1')).toBeInTheDocument();
+    });
+});
+```
+
+```
+Ask your AI:
+I've heard of unit tests, integration tests, and end-to-end tests.
+What's the difference? As a beginner, where should I focus my
+testing efforts for maximum value?
+```
+
+### Code Quality Practices
+
+**Meaningful names:**
+
+```javascript
+// Poor names
+const d = new Date();
+const x = users.filter(u => u.a > 18);
+
+// Better names
+const currentDate = new Date();
+const adultUsers = users.filter(user => user.age > 18);
+```
+
+**Small, focused functions:**
+
+```javascript
+// Too much in one function
+function processOrder(order) {
+    // Validate order (20 lines)
+    // Calculate total (15 lines)
+    // Apply discount (10 lines)
+    // Process payment (25 lines)
+    // Send confirmation (15 lines)
+}
+
+// Better: separate concerns
+function validateOrder(order) { /* ... */ }
+function calculateTotal(items) { /* ... */ }
+function applyDiscount(total, discount) { /* ... */ }
+function processPayment(amount, paymentMethod) { /* ... */ }
+function sendConfirmation(order, customer) { /* ... */ }
+
+function processOrder(order) {
+    validateOrder(order);
+    const total = calculateTotal(order.items);
+    const discountedTotal = applyDiscount(total, order.discount);
+    processPayment(discountedTotal, order.paymentMethod);
+    sendConfirmation(order, order.customer);
+}
+```
+
+**Comments that explain why:**
+
+```javascript
+// Poor comment (explains what)
+// Loop through users
+for (const user of users) {
+
+// Better comment (explains why)
+// Process users oldest-first to prioritise long-term customers
+const sortedUsers = users.sort((a, b) => a.joinDate - b.joinDate);
+for (const user of sortedUsers) {
+```
+
+**Consistent formatting:**
+
+Use a formatter like Prettier:
+
+```bash
+npm install -D prettier
+npx prettier --write "src/**/*.{js,jsx}"
+```
+
+Use a linter like ESLint:
+
+```bash
+npm install -D eslint
+npx eslint --init
+npx eslint src/
+```
+
+These tools enforce consistency automatically—no arguments about tabs vs spaces.
+
+### Documentation Essentials
+
+**README.md (project overview):**
+
+```markdown
+# Project Name
+
+Brief description of what this project does.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or higher
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Running Locally
+
+```bash
+npm run dev
+```
+
+## Usage
+
+Basic usage examples here.
+
+## Contributing
+
+How others can contribute.
+
+## License
+
+MIT License
+```
+
+**Code documentation (JSDoc):**
+
+```javascript
+/**
+ * Calculates the total price including tax.
+ *
+ * @param {number} subtotal - The pre-tax total
+ * @param {number} taxRate - Tax rate as decimal (e.g., 0.1 for 10%)
+ * @returns {number} The total including tax
+ * @example
+ * calculateTotal(100, 0.1) // Returns 110
+ */
+function calculateTotal(subtotal, taxRate) {
+    return subtotal * (1 + taxRate);
+}
+```
+
+## Building Your Mental Model
+
+### The Professional Practice Pyramid
+
+```
+                   ┌──────────────────┐
+                   │  Code Review     │  (Team quality)
+                   ├──────────────────┤
+                 │ │  Documentation   │  (Knowledge sharing)
+               │   ├──────────────────┤
+             │     │  Testing         │  (Confidence)
+           │       ├──────────────────┤
+         │         │  Version Control │  (Safety net)
+       │           ├──────────────────┤
+     │             │  Clean Code      │  (Foundation)
+   ────────────────────────────────────────
+```
+
+Each layer builds on the one below. You can't effectively review code that isn't in version control. You can't confidently test code that's poorly structured. Start from the foundation.
+
+### The Cost of Skipping Practices
+
+```
+                    │
+    Time spent      │         ████ Technical Debt
+    debugging /     │      ████████
+    fixing          │   ████████████████
+                    │████████████████████████████
+                    └─────────────────────────────────►
+                    Early in     Time      Later in
+                    project                project
+
+    vs.
+
+                    │
+    Time spent      │ ███████████████████████████████
+    with good       │ (Steady, predictable)
+    practices       │
+                    └─────────────────────────────────►
+                    Early in     Time      Later in
+                    project                project
+```
+
+Professional practices have upfront cost but prevent exponential debugging later.
+
+### When Each Practice Matters Most
+
+| Practice | Solo Project | Team Project | Long-term Maintenance |
+|----------|-------------|--------------|----------------------|
+| Version Control | Essential | Critical | Critical |
+| Testing | Valuable | Essential | Critical |
+| Code Quality | Valuable | Essential | Critical |
+| Documentation | Helpful | Essential | Critical |
+| Code Review | N/A | Essential | Essential |
+
+Even solo projects benefit from version control and testing. The "team" includes future you.
 
 ## Business Applications
 
-*This develops ULO 2 – demonstrating professional project management practices.*
+### Risk Reduction
 
-- **Risk reduction**: Version control prevents disasters
-- **Quality assurance**: Testing catches bugs early
-- **Collaboration**: Good practices enable teamwork
-- **Maintainability**: Future you will thank present you
+Version control isn't just convenience—it's business continuity:
+
+- Roll back problematic deployments
+- Trace when bugs were introduced
+- Prove what was deployed when
+- Recover from disasters (laptop theft, hardware failure)
+
+For clients: "Your entire codebase is safely stored with complete history. If anything goes wrong, we can restore any previous version."
+
+### Quality Assurance
+
+Testing provides business confidence:
+
+- Catch bugs before customers do
+- Verify features work after changes
+- Reduce manual testing costs
+- Enable faster, safer deployments
+
+For clients: "Before any release, automated tests verify the critical functionality. This catches problems before your customers see them."
+
+### Collaboration and Onboarding
+
+Good practices enable team growth:
+
+- New developers understand the codebase faster
+- Documentation reduces "tribal knowledge" dependency
+- Consistent style means anyone can work on any file
+- Code review spreads knowledge across the team
+
+For clients: "If a developer leaves, their work is documented and reviewable. You're not dependent on any single person."
+
+### Long-term Maintainability
+
+Code lives longer than developers expect:
+
+- "Quick fix" becomes permanent
+- "Temporary project" runs for years
+- "Solo project" gets a team
+
+Professional practices from the start prevent painful migrations later.
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 2** (professional project management) and **ULO 1** (iteratively improving solutions). Professional practices aren't separate from development—they're how professionals develop. These skills are expected in any development role.
+:::
 
 ## Practice Exercises
 
-[Exercises to be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 11.1: Git Fundamentals (Level 1)
+
+Create a new project with Git:
+
+1. Create a folder with an `index.html` file
+2. Initialise a Git repository
+3. Stage and commit the file with a meaningful message
+4. Make changes to the file
+5. View the diff, then commit the changes
+6. View the commit history
+
+Document the commands you used and what each did.
+
+### Exercise 11.2: Branching Workflow (Level 2)
+
+Extend Exercise 11.1:
+
+1. Create a branch called `feature/styling`
+2. Add a `styles.css` file and link it in HTML
+3. Commit the changes on the branch
+4. Switch back to main
+5. Verify the CSS file isn't there
+6. Merge the feature branch into main
+7. Verify the CSS file now exists on main
+
+Document when you'd use this workflow in a real project.
+
+### Exercise 11.3: First Tests (Level 3)
+
+Create a JavaScript module with tests:
+
+1. Create a `utils.js` file with these functions:
+   - `capitalise(string)` - capitalises the first letter
+   - `truncate(string, length)` - shortens string to length with "..."
+   - `slugify(string)` - converts to URL-safe slug
+2. Install Vitest
+3. Write tests for each function covering:
+   - Normal cases
+   - Edge cases (empty string, already capitalised)
+   - Error cases (invalid input)
+4. Run tests and ensure they pass
+
+### Exercise 11.4: Testing a Component (Level 4)
+
+Create a React component with tests:
+
+1. Build a `SearchFilter` component that:
+   - Shows an input field
+   - Displays a list of items
+   - Filters items as user types
+2. Write tests that verify:
+   - Component renders with provided items
+   - Typing filters the displayed items
+   - Clearing input shows all items
+   - Empty state displays appropriately
+
+Focus on testing behaviour from the user's perspective.
+
+### Exercise 11.5: Professional Project Setup (Level 5)
+
+Set up a complete project with professional practices:
+
+1. Create a React project with Vite
+2. Initialise Git repository
+3. Create meaningful `.gitignore`
+4. Set up ESLint and Prettier
+5. Configure Vitest for testing
+6. Write a comprehensive README
+7. Create an initial commit with good message
+8. Push to GitHub
+
+Write 300 words explaining each decision you made and why these practices matter.
 
 ## Chapter Summary
 
-- Version control is non-negotiable
-- Testing is a professional investment
-- Code quality serves future maintainers
-- Professional practices reduce risk
+- Version control (Git) tracks changes and enables collaboration
+- Testing provides confidence that code works correctly
+- Code quality practices make code readable and maintainable
+- Documentation serves future developers (including yourself)
+- Professional practices have upfront cost but prevent exponential debugging later
+- These practices are expected in professional development roles
 
 ## Reflection
 
-[Checklist to be developed]
+Before moving to the React Integration Project, ensure you can:
+
+- [ ] Initialise a Git repository and make commits
+- [ ] Create branches and merge them
+- [ ] Write basic automated tests
+- [ ] Explain why testing matters beyond "it works"
+- [ ] Identify ways to make code more readable
+- [ ] Create useful README documentation
+- [ ] Articulate the business value of professional practices
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **Practice Value**: Which professional practice do you think will have the most impact on your work? Why?
+
+2. **Real Experience**: Think of a time you lost work or couldn't remember why you made a decision. How would version control or documentation have helped?
+
+3. **AI Conversation Reflection**: What professional practice concept was hardest to grasp? What question to your AI partner helped clarify it?
+
+4. **Team Perspective**: If you were hiring a junior developer, which of these practices would you most want them to understand?
 
 ## Next Steps
 
-You've now covered modern frontend development. In the React Integration Project, you'll build a React frontend that consumes WordPress content. Then we move to Part IV, where we look ahead to emerging technologies and your development career.
+You now have both the technical skills (HTML, CSS, JavaScript, React, CSS frameworks) and professional practices (version control, testing, documentation) to build production-quality applications.
+
+In the **React Integration Project** (@sec-project-react-integration), you'll bring everything together: build a React frontend that consumes WordPress content via API, styled with a CSS framework, using professional version control and documentation practices. This capstone project demonstrates your complete frontend development capabilities.

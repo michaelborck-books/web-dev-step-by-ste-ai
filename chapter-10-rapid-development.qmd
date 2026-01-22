@@ -1,69 +1,596 @@
 # Rapid Development: CSS Frameworks {#sec-rapid-development}
 
-::: {.callout-note}
-## Chapter Status: Stub
-This chapter needs full content development.
-:::
-
 ## The Concept First
 
-CSS frameworks (Bootstrap, Tailwind, etc.) provide pre-built styles and components. They're **constraints that enable speed**. Instead of designing every button, you use consistent, tested patterns.
+In @sec-presentation, you learned CSS from scratch—selectors, box model, flexbox, media queries. That foundation matters. But building every project from zero is slow, and consistency across large applications is hard.
+
+**CSS frameworks** solve this by providing pre-built styles, components, and design decisions. Instead of designing every button, input, and card yourself, you adopt tested patterns that work together.
+
+This isn't laziness—it's **leverage**. Professional developers use frameworks to move faster while maintaining quality. The skill is knowing when to use them, which to choose, and how to customise them for specific needs.
 
 ## Understanding Through Design Systems
 
-Professional design teams use design systems – documented patterns for consistency. CSS frameworks are design systems you can adopt immediately.
+Large organisations don't let every designer create their own button styles. They create **design systems**—documented collections of components, colours, typography, and patterns that ensure consistency.
+
+Google has Material Design. Apple has Human Interface Guidelines. Salesforce has Lightning Design System. These define how interfaces should look and behave across products.
+
+CSS frameworks are design systems you can adopt immediately:
+
+- **Bootstrap**: Component-focused system with pre-built UI elements
+- **Tailwind CSS**: Utility-focused system with building blocks for custom designs
+- **Foundation**, **Bulma**, **Chakra UI**: Other popular options
+
+Each makes different trade-offs. Understanding those trade-offs is how you choose wisely.
+
+::: {.callout-tip}
+## Constraints Enable Speed
+Paradoxically, constraints often speed up creative work. When you don't have to decide every colour, spacing, and font size, you can focus on structure and user experience. Frameworks provide productive constraints.
+:::
 
 ## Discovering Frameworks with Your AI Partner
 
-### Exploration 1: Framework Comparison
+### Exploration 1: Framework Philosophies
+
+Bootstrap and Tailwind represent fundamentally different approaches:
 
 ```
 Ask your AI:
-Compare Bootstrap and Tailwind CSS. When would you choose each?
+Compare the philosophies behind Bootstrap and Tailwind CSS. Bootstrap
+gives you pre-built components. Tailwind gives you utility classes.
+When would you choose each approach? What are the trade-offs?
+```
+
+This should reveal:
+
+**Bootstrap approach:**
+
+- "Here's a button: `.btn .btn-primary`"
+- Faster to start
+- Consistent out of the box
+- Can look generic without customisation
+
+**Tailwind approach:**
+
+- "Build your button: `bg-blue-500 text-white px-4 py-2 rounded`"
+- More markup
+- Maximum flexibility
+- Requires more design decisions
+
+```
+Continue the conversation:
+I'm building a dashboard for a startup with tight deadlines. Which
+framework would you recommend and why?
 ```
 
 ### Exploration 2: Constraints as Features
 
-```
-Ask your AI:
-How do constraints help creativity? Apply this to CSS frameworks.
-```
-
-### Exploration 3: Customisation
+How do limitations help?
 
 ```
 Ask your AI:
-A client says their Bootstrap site "looks like every other site." How do you respond?
+How do constraints help creativity? Apply this concept to CSS
+frameworks. Why might having fewer choices actually improve outcomes?
 ```
+
+Constraints reduce decision fatigue. When a framework says "primary buttons are this colour, secondary buttons are that colour," you're not spending mental energy on decisions that don't differentiate your product.
+
+```
+Continue the conversation:
+When do framework constraints become limiting? At what point should
+a project move away from a framework?
+```
+
+### Exploration 3: The "Generic" Problem
+
+```
+Ask your AI:
+A client says their Bootstrap site "looks like every other Bootstrap
+site." How would you respond? What can be done?
+```
+
+This reveals that frameworks are starting points, not endpoints. Customisation—colours, typography, spacing—transforms a generic framework site into something unique.
 
 ## From Concept to Code
 
-[To be developed: Bootstrap/Tailwind basics, responsive utilities, component libraries, customisation]
+Let's explore both Bootstrap and Tailwind practically.
+
+### Bootstrap: Component-Based Framework
+
+Bootstrap provides pre-styled components you assemble.
+
+**Setup in HTML:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Your content -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
+
+**Buttons:**
+
+```html
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-secondary">Secondary</button>
+<button class="btn btn-outline-danger">Danger Outline</button>
+<button class="btn btn-lg btn-success">Large Green</button>
+```
+
+**Cards:**
+
+```html
+<div class="card" style="width: 18rem;">
+    <img src="image.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card Title</h5>
+        <p class="card-text">Some descriptive text here.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+</div>
+```
+
+**Grid System:**
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">Column 1</div>
+        <div class="col-md-4">Column 2</div>
+        <div class="col-md-4">Column 3</div>
+    </div>
+</div>
+```
+
+The grid is 12 columns wide. `col-md-4` means "4 columns wide on medium screens and up." On smaller screens, columns stack vertically.
+
+**Responsive utilities:**
+
+```html
+<div class="d-none d-md-block">Hidden on mobile, visible on medium+</div>
+<div class="d-block d-md-none">Visible on mobile, hidden on medium+</div>
+```
+
+```
+Ask your AI:
+I want a navigation bar that collapses into a hamburger menu on
+mobile. Show me how to build this with Bootstrap.
+```
+
+### Tailwind CSS: Utility-First Framework
+
+Tailwind provides low-level utility classes you combine.
+
+**Setup (simplest via CDN for learning):**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tailwind Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Your content -->
+</body>
+</html>
+```
+
+::: {.callout-note}
+## Production Setup
+For production, install Tailwind via npm and build a custom CSS file. The CDN is for learning and prototyping only.
+:::
+
+**Buttons (you design them):**
+
+```html
+<button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    Primary Button
+</button>
+
+<button class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300">
+    Secondary Button
+</button>
+
+<button class="border border-red-500 text-red-500 px-4 py-2 rounded hover:bg-red-500 hover:text-white">
+    Danger Outline
+</button>
+```
+
+**Understanding the classes:**
+
+| Class | Meaning |
+|-------|---------|
+| `bg-blue-500` | Background colour (blue, shade 500) |
+| `text-white` | Text colour white |
+| `px-4` | Padding horizontal (left/right), size 4 |
+| `py-2` | Padding vertical (top/bottom), size 2 |
+| `rounded` | Border radius |
+| `hover:bg-blue-600` | On hover, darker blue |
+
+**Cards:**
+
+```html
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <img class="w-full" src="image.jpg" alt="...">
+    <div class="px-6 py-4">
+        <h2 class="font-bold text-xl mb-2">Card Title</h2>
+        <p class="text-gray-700 text-base">
+            Some descriptive text here.
+        </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">
+            Learn More
+        </button>
+    </div>
+</div>
+```
+
+**Flexbox layout:**
+
+```html
+<div class="flex gap-4">
+    <div class="flex-1 bg-gray-100 p-4">Column 1</div>
+    <div class="flex-1 bg-gray-100 p-4">Column 2</div>
+    <div class="flex-1 bg-gray-100 p-4">Column 3</div>
+</div>
+```
+
+**Responsive design:**
+
+```html
+<!-- Single column on mobile, three columns on medium screens -->
+<div class="flex flex-col md:flex-row gap-4">
+    <div class="flex-1">Column 1</div>
+    <div class="flex-1">Column 2</div>
+    <div class="flex-1">Column 3</div>
+</div>
+```
+
+Tailwind's breakpoint prefixes: `sm:`, `md:`, `lg:`, `xl:`, `2xl:`.
+
+```
+Ask your AI:
+Build me a responsive navigation bar with Tailwind that has a logo
+on the left and links on the right, and stacks vertically on mobile.
+```
+
+### Using Frameworks with React
+
+Both frameworks work well with React.
+
+**Bootstrap with React:**
+
+```bash
+npm install bootstrap
+```
+
+```jsx
+// In your main.jsx or App.jsx
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function ProductCard({ title, price }) {
+    return (
+        <div className="card" style={{ width: '18rem' }}>
+            <div className="card-body">
+                <h5 className="card-title">{title}</h5>
+                <p className="card-text">${price}</p>
+                <button className="btn btn-primary">Add to Cart</button>
+            </div>
+        </div>
+    );
+}
+```
+
+For components with JavaScript (modals, dropdowns), consider `react-bootstrap`:
+
+```bash
+npm install react-bootstrap bootstrap
+```
+
+```jsx
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
+function ProductCard({ title, price }) {
+    return (
+        <Card style={{ width: '18rem' }}>
+            <Card.Body>
+                <Card.Title>{title}</Card.Title>
+                <Card.Text>${price}</Card.Text>
+                <Button variant="primary">Add to Cart</Button>
+            </Card.Body>
+        </Card>
+    );
+}
+```
+
+**Tailwind with React:**
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Configure `tailwind.config.js`:
+
+```javascript
+export default {
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+}
+```
+
+Add to your CSS file:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Use in components:
+
+```jsx
+function ProductCard({ title, price }) {
+    return (
+        <div className="max-w-sm rounded shadow-lg p-4">
+            <h2 className="font-bold text-xl mb-2">{title}</h2>
+            <p className="text-gray-700">${price}</p>
+            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Add to Cart
+            </button>
+        </div>
+    );
+}
+```
+
+### Customisation
+
+**Bootstrap customisation** (via Sass):
+
+```scss
+// Override variables before importing Bootstrap
+$primary: #your-brand-color;
+$font-family-base: 'Your Font', sans-serif;
+$border-radius: 0.5rem;
+
+@import "bootstrap/scss/bootstrap";
+```
+
+**Tailwind customisation** (via config):
+
+```javascript
+// tailwind.config.js
+export default {
+    theme: {
+        extend: {
+            colors: {
+                'brand': '#your-brand-color',
+                'brand-dark': '#darker-version',
+            },
+            fontFamily: {
+                'sans': ['Your Font', 'sans-serif'],
+            },
+        },
+    },
+}
+```
+
+Then use: `bg-brand`, `text-brand-dark`, etc.
+
+## Building Your Mental Model
+
+### The Abstraction Spectrum
+
+```
+More Abstraction                            Less Abstraction
+(faster, less control)                      (slower, more control)
+────────────────────────────────────────────────────────────────
+Component Libraries  →  Bootstrap  →  Tailwind  →  Custom CSS
+(MUI, Chakra)           (pre-built)    (utilities)   (from scratch)
+```
+
+Move right for more control, left for more speed. Project needs determine the right position.
+
+### When to Choose What
+
+| Situation | Consider |
+|-----------|----------|
+| Rapid prototyping | Bootstrap or component library |
+| Admin dashboards | Bootstrap (consistent patterns) |
+| Marketing sites | Tailwind (unique designs) |
+| Highly custom UI | Tailwind or custom CSS |
+| Team with designers | Tailwind (matches design tokens) |
+| Team without designers | Bootstrap (built-in design decisions) |
+| Learning CSS | Start custom, add frameworks later |
+
+### The Class Explosion Concern
+
+Tailwind markup can look verbose:
+
+```html
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+    Submit
+</button>
+```
+
+Solutions:
+
+1. **Extract components** (in React, this is natural)
+2. **Use @apply in CSS** (creates reusable classes)
+3. **Accept the trade-off** (markup complexity vs CSS complexity)
+
+```
+Ask your AI:
+When does Tailwind's utility approach become unmanageable? How do
+teams keep Tailwind codebases maintainable on large projects?
+```
 
 ## Business Applications
 
-*This develops ULO 4 – making and defending technology choices.*
+### Development Speed
 
-- **Speed**: Faster development time
-- **Consistency**: Uniform look and feel
-- **Responsiveness**: Built-in mobile support
-- **Maintenance**: Updates from community
+Frameworks dramatically reduce time-to-market:
+
+- Pre-built responsive grids
+- Tested browser compatibility
+- Accessible components (often)
+- Documentation and examples
+
+What takes days in custom CSS takes hours with frameworks.
+
+### Consistency at Scale
+
+Large applications need consistent interfaces. Frameworks enforce consistency:
+
+- All buttons look like buttons
+- All cards have the same shadow
+- Spacing follows a system
+- Typography is unified
+
+This consistency improves user experience and reduces maintenance.
+
+### Team Efficiency
+
+New team members can contribute faster when using standard frameworks:
+
+- Well-documented
+- Familiar patterns
+- Searchable solutions online
+- Reduced onboarding time
+
+### Mobile-First by Default
+
+Modern frameworks are mobile-responsive out of the box. Bootstrap's grid and Tailwind's responsive prefixes handle responsive design that would take significant custom CSS.
+
+::: {.callout-note}
+## ULO Connection
+This develops **ULO 4** (selecting and integrating technologies) and **ULO 1** (effective web applications). Framework selection is a business decision—speed vs. customisation, team skills, project timeline. Professional judgment means choosing appropriately, not defaulting to what you know.
+:::
 
 ## Practice Exercises
 
-[Exercises to be developed]
+::: {.callout-note}
+## Exercise Levels
+- **Level 1**: Direct application
+- **Level 2**: Minor modifications
+- **Level 3**: Combining concepts
+- **Level 4**: Problem-solving
+- **Level 5**: Open-ended design
+:::
+
+### Exercise 10.1: Bootstrap Basics (Level 1)
+
+Create an HTML page using Bootstrap that includes:
+
+1. A navigation bar with a brand name and three links
+2. A hero section with a heading, paragraph, and button
+3. A three-column grid of cards
+4. A footer with centred text
+
+Use only Bootstrap classes—no custom CSS.
+
+### Exercise 10.2: Tailwind Basics (Level 2)
+
+Recreate the same layout from Exercise 10.1 using Tailwind:
+
+1. Navigation bar
+2. Hero section
+3. Three-column responsive grid
+4. Footer
+
+Compare the experience. Which felt faster? Which gave more control?
+
+### Exercise 10.3: React + Framework (Level 3)
+
+In a React project:
+
+1. Choose either Bootstrap or Tailwind
+2. Create a `ProductCard` component
+3. Create a `ProductGrid` component that displays multiple cards
+4. Make it responsive (single column on mobile, grid on desktop)
+5. Add a "Featured" variant of the card with different styling
+
+### Exercise 10.4: Customisation (Level 4)
+
+Take your Exercise 10.3 project and customise the framework:
+
+1. Change the primary colour to a custom brand colour
+2. Adjust the border radius across components
+3. Modify the default font family
+4. Document the customisation process
+
+Write 200 words explaining how customisation changes the "generic" feel.
+
+### Exercise 10.5: Framework Recommendation (Level 5)
+
+A startup is building a SaaS product dashboard. They have:
+
+- Two developers (full-stack, not design-focused)
+- Tight three-month deadline
+- Need for admin panels, data tables, forms, charts
+- Plans to hire a designer in six months
+
+Write a 500-word recommendation:
+
+1. Which framework would you recommend?
+2. What's the trade-off they're accepting?
+3. How should they approach customisation?
+4. What happens when the designer arrives?
+5. What alternatives did you consider?
 
 ## Chapter Summary
 
-- Frameworks trade flexibility for speed
-- Design systems enable consistency
-- Framework choice depends on project needs
-- Customisation prevents generic appearance
+- CSS frameworks provide pre-built styles and design systems
+- Bootstrap offers component-based development with pre-styled elements
+- Tailwind offers utility-based development with maximum flexibility
+- Both work well with React
+- Framework choice depends on project needs, team skills, and timeline
+- Customisation transforms generic frameworks into branded experiences
 
 ## Reflection
 
-[Checklist to be developed]
+Before moving to Chapter 11, ensure you can:
+
+- [ ] Explain the difference between component and utility frameworks
+- [ ] Use Bootstrap to create responsive layouts and components
+- [ ] Use Tailwind to style elements with utility classes
+- [ ] Integrate either framework with React
+- [ ] Customise framework colours, fonts, and spacing
+- [ ] Articulate when to choose each framework
+
+## Your Learning Journal
+
+Record your responses to these prompts:
+
+1. **Preference Exploration**: After trying both Bootstrap and Tailwind, which felt more natural to you? Why might someone prefer the other?
+
+2. **Trade-off Analysis**: Think of a project you might build. Which framework would you choose and what trade-offs would you accept?
+
+3. **AI Conversation Reflection**: What framework concept was hardest to grasp? What question to your AI partner helped clarify it?
+
+4. **Professional Judgment**: A client asks "Why don't we just use custom CSS?" How would you respond?
 
 ## Next Steps
 
-In Chapter 11, we'll cover professional practices – testing, version control, and code quality. These practices separate hobbyist projects from professional work.
+You now have tools for rapid, consistent UI development. But professional work requires more than just building features—it requires practices that ensure quality, collaboration, and maintainability.
+
+In @sec-professional-practices, we'll cover version control with Git, testing basics, and code quality practices. These professional practices separate hobby projects from production-ready work and are expected in any development role.

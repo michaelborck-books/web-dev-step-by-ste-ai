@@ -1,57 +1,431 @@
 # Project: React Integration {#sec-project-react-integration}
 
-::: {.callout-note}
-## Project Status: Stub
-This project needs full specification development.
-:::
-
 ## Project Overview
 
-Build a React frontend that consumes content from your WordPress site via the REST API, demonstrating headless architecture and modern frontend development.
+Part III taught you component thinking, CSS frameworks, and professional practices. Now you'll bring it together: build a React frontend that consumes content from WordPress via the REST API, demonstrating headless architecture in action.
 
-**Aligned with**: Assessment 2 Part B in ISYS3004
+This project bridges backend content management with modern frontend development. You'll make architectural decisions, implement a complete application, and document your approach—skills that directly translate to professional frontend development roles.
+
+**Aligned with**: Assessment 3 in ISYS3004
 
 ## Learning Outcomes Addressed
 
 - **ULO 1**: Design and implement effective web applications
-- **ULO 4**: Select and integrate technologies
-- **ULO 5**: Evaluate emerging technologies
+- **ULO 4**: Select and integrate appropriate technologies
+- **ULO 5**: Evaluate emerging technologies and approaches
+
+## Technical Context
+
+In @sec-headless-architecture, you learned that headless WordPress separates content management (WordPress) from content presentation (your frontend). This project implements that architecture:
+
+```
+┌────────────────┐     REST API     ┌────────────────┐
+│   WordPress    │ ───────────────► │   React App    │
+│   (Backend)    │    JSON Data     │   (Frontend)   │
+│                │                  │                │
+│ - Content      │                  │ - Components   │
+│ - Media        │                  │ - Styling      │
+│ - Users        │                  │ - Routing      │
+└────────────────┘                  └────────────────┘
+```
+
+Your React application will fetch and display content that's managed in WordPress—the same content model used by major publishers, e-commerce sites, and enterprise applications.
+
+## Project Scenarios
+
+Choose one scenario that builds on your WordPress site from the Business Site Project, or create new content:
+
+### Option A: Blog Frontend
+
+Transform your WordPress blog into a modern React single-page application:
+
+- Post listing with categories
+- Individual post pages
+- Author information display
+- Search functionality
+- Category filtering
+
+### Option B: Portfolio Showcase
+
+Display portfolio items or projects from WordPress:
+
+- Grid/list view of projects
+- Project detail pages with images
+- Category or technology filtering
+- Contact form integration
+
+### Option C: Business Directory
+
+Create a directory interface for business listings:
+
+- Searchable listing grid
+- Individual business pages
+- Location or category filtering
+- Featured listings section
+
+### Option D: Custom Application
+
+Propose your own application that:
+
+- Consumes WordPress REST API content
+- Has at least two distinct views (list and detail)
+- Includes meaningful filtering or search
+- Demonstrates component architecture
 
 ## Requirements
 
-### Functional Requirements
+### Phase 1: Planning and Setup
 
-- Display WordPress posts in React
-- Post list and detail views
-- Loading and error states
-- Responsive design
-- Navigation between views
+Before writing code, document your approach:
 
-### Technical Requirements
+**Application Design Document** (300-500 words):
 
-- React (create-react-app or Vite)
-- WordPress REST API integration
-- CSS framework (Bootstrap or Tailwind)
-- Error handling
-- Component architecture
+1. **Scenario Overview**: Which scenario did you choose and why?
+2. **Component Architecture**: What components will you need? Draw a component tree.
+3. **Data Requirements**: What WordPress content will you fetch? What endpoints?
+4. **User Interface**: Sketch or describe the main views
+5. **Technology Choices**: Which CSS framework? Why?
+
+**Component Tree Example:**
+
+```
+App
+├── Header
+│   ├── Logo
+│   └── Navigation
+├── Main
+│   ├── PostList (or)
+│   │   └── PostCard (×n)
+│   └── PostDetail
+│       ├── PostContent
+│       └── AuthorInfo
+└── Footer
+```
+
+### Phase 2: React Implementation
+
+Build the application with these requirements:
+
+**Core Setup:**
+
+- [ ] React project created with Vite
+- [ ] Git repository initialised
+- [ ] CSS framework installed and configured
+- [ ] Project structure organised logically
+- [ ] README with setup instructions
+
+**Component Architecture:**
+
+- [ ] At least 5 distinct components
+- [ ] Proper use of props for data passing
+- [ ] State management with useState
+- [ ] Side effects with useEffect
+- [ ] Components are reusable where appropriate
+
+**WordPress Integration:**
+
+- [ ] Fetch posts from WordPress REST API
+- [ ] Handle loading states (spinner, skeleton, or message)
+- [ ] Handle error states gracefully
+- [ ] Display at least 3 post fields (title, content, excerpt, author, date, etc.)
+- [ ] Images loaded from WordPress media
+
+**User Interface:**
+
+- [ ] List view showing multiple items
+- [ ] Detail view showing single item
+- [ ] Navigation between views (useState or React Router)
+- [ ] Responsive design (works on mobile and desktop)
+- [ ] Consistent styling with chosen CSS framework
+
+**Professional Practices:**
+
+- [ ] Meaningful Git commits throughout development
+- [ ] Code formatted consistently (Prettier recommended)
+- [ ] No console errors or warnings in final version
+- [ ] Comments where logic isn't self-evident
+
+### Phase 3: Enhanced Features
+
+Implement at least TWO of the following:
+
+**Search/Filter:**
+
+- [ ] Search posts by title or content
+- [ ] Filter by category or tag
+- [ ] Clear filters to show all
+
+**Pagination:**
+
+- [ ] Load more posts on demand
+- [ ] Or implement traditional pagination
+- [ ] Handle edge cases (no more posts, first page)
+
+**Routing:**
+
+- [ ] React Router for URL-based navigation
+- [ ] Direct links to individual posts
+- [ ] Back navigation works correctly
+
+**Additional Content:**
+
+- [ ] Display WordPress pages (not just posts)
+- [ ] Show author information with avatar
+- [ ] Display featured images properly
+
+### Phase 4: Documentation and Reflection
+
+**Technical Documentation:**
+
+Create a README.md that includes:
+
+1. **Project Description**: What the application does
+2. **Setup Instructions**: How to run locally
+3. **WordPress Configuration**: Required WordPress setup
+4. **Architecture Overview**: How components fit together
+5. **API Endpoints Used**: Which WordPress endpoints and why
+
+**Reflection Document** (500-700 words):
+
+1. **Headless Architecture**: What are the advantages and disadvantages of this approach compared to traditional WordPress themes?
+
+2. **Component Decisions**: Describe two components you created. Why did you structure them that way? What data do they receive and display?
+
+3. **State Management**: Where does state live in your application? Why did you put it there?
+
+4. **Challenges and Solutions**: What was the hardest part of this project? How did you solve it?
+
+5. **Future Improvements**: If you had more time, what would you add or change?
 
 ## AI Collaboration Guidelines
 
-Document your React journey:
+### Effective AI Partnership
 
-1. How did AI help you understand React concepts?
-2. What components did you create vs generate?
-3. How did you debug issues?
-4. What patterns did you learn?
+Use AI as a thinking partner, not a code generator:
+
+```
+Ask your AI:
+I'm fetching WordPress posts but the featured images aren't showing.
+Here's my code... Help me understand what's happening. What am I
+missing about how WordPress returns image data?
+```
+
+```
+Ask your AI:
+I have a PostList component and a PostDetail component. When the user
+clicks a post, I need to show the detail. What are my options for
+handling this navigation? Walk me through the trade-offs.
+```
+
+```
+Ask your AI:
+My component is getting complex with loading, error, and data states.
+Is there a pattern for handling this more cleanly? Show me options
+and explain when each makes sense.
+```
+
+### AI Collaboration Log
+
+Document your AI interactions:
+
+| Challenge | Question Asked | AI Response Summary | How I Applied It |
+|-----------|---------------|---------------------|------------------|
+| (e.g., Images not loading) | ... | ... | ... |
+
+For each significant interaction:
+
+1. What problem were you solving?
+2. What did you ask?
+3. What did the AI explain?
+4. How did you adapt the suggestion to your specific situation?
+5. What did you learn that you'll use again?
+
+### Attribution Requirements
+
+Be clear about AI involvement:
+
+- Code you wrote yourself vs. code adapted from AI suggestions
+- Concepts you learned through AI conversation
+- Documentation created with AI assistance
+
+This isn't about restricting AI use—it's about demonstrating that you **understood** what you built.
 
 ## Evaluation Criteria
 
-[To be developed: Rubric]
+### Planning and Design (15%)
 
-## Submission
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Application design | Clear architecture, thoughtful component breakdown | Good planning with minor gaps | Basic planning present | Incomplete or unclear |
+| Technology justification | Clear reasoning for all choices | Good justification for most | Basic reasoning provided | No justification |
+| Component tree | Complete, logical hierarchy | Good structure, minor issues | Basic structure shown | Missing or illogical |
 
-- React source code (not node_modules)
-- Documentation
-- Screenshots/demo
-- AI collaboration log
-- Reflection on headless architecture
+### React Implementation (35%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Component architecture | Well-structured, reusable, single responsibility | Good structure with minor issues | Functional but not well organised | Poor structure or monolithic |
+| Props and state | Correct use, appropriate lifting | Mostly correct usage | Basic usage, some issues | Incorrect or missing |
+| API integration | Robust fetching, proper error handling | Good integration, minor gaps | Basic fetching works | Broken or incomplete |
+| useEffect usage | Correct dependencies, no unnecessary calls | Mostly correct | Functional but issues | Incorrect or missing |
+
+### User Interface (25%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Visual design | Professional, consistent, polished | Good design, minor inconsistencies | Functional but basic | Broken or unstyled |
+| Responsive design | Excellent on all screen sizes | Good responsive behaviour | Works but issues | Broken on mobile |
+| Loading/error states | Clear, helpful, consistent | Present and functional | Basic handling | Missing or broken |
+| Navigation | Intuitive, works correctly | Good navigation, minor issues | Functional but awkward | Broken or missing |
+
+### Professional Practices (10%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Git usage | Meaningful commits throughout | Good commit history | Some commits | No commits or single commit |
+| Code quality | Clean, consistent, readable | Good quality, minor issues | Functional but messy | Poor quality |
+| README | Complete, clear, helpful | Good documentation | Basic documentation | Missing or incomplete |
+
+### Reflection and AI Collaboration (15%)
+
+| Criteria | Excellent (4) | Good (3) | Adequate (2) | Needs Work (1) |
+|----------|--------------|----------|--------------|----------------|
+| Headless architecture reflection | Deep understanding demonstrated | Good understanding shown | Basic understanding | Missing or superficial |
+| Component decisions | Clear reasoning, shows learning | Good explanations | Basic explanations | Missing or unclear |
+| AI collaboration log | Detailed, shows critical thinking | Good documentation | Basic log present | Missing or superficial |
+| Learning demonstrated | Clear growth and understanding | Good learning shown | Some learning evident | No learning demonstrated |
+
+## Submission Checklist
+
+**Code:**
+
+- [ ] Complete React source code (exclude `node_modules`)
+- [ ] `package.json` with all dependencies
+- [ ] `.gitignore` properly configured
+- [ ] No API keys or secrets in code
+
+**Documentation:**
+
+- [ ] README.md with setup instructions
+- [ ] Application design document
+- [ ] Reflection document (500-700 words)
+- [ ] AI collaboration log
+
+**Demonstration:**
+
+- [ ] Screenshots of main views (list, detail, mobile)
+- [ ] Screenshot of loading state
+- [ ] Screenshot of error state (simulated if necessary)
+
+**WordPress:**
+
+- [ ] WordPress export file (if content is needed)
+- [ ] Or note that app uses public API/test data
+
+## Getting Started
+
+Begin with these conversations:
+
+```
+Ask your AI:
+I'm building a React app that fetches WordPress posts. What's the
+basic structure I should start with? Walk me through the component
+hierarchy and data flow.
+```
+
+```
+Ask your AI:
+In a React app, I need to show a list of posts and then show details
+when one is clicked. What are my options for handling this without
+React Router? Explain the useState approach.
+```
+
+```
+Ask your AI:
+My WordPress site is at [URL]. What does the REST API endpoint for
+posts look like? How do I get featured images included?
+```
+
+## Common Pitfalls to Avoid
+
+1. **Skipping the plan**: Jumping into code without designing component architecture leads to refactoring
+2. **One giant component**: Put everything in App.js instead of breaking into focused components
+3. **Ignoring loading states**: App breaks or shows nothing while data loads
+4. **No error handling**: App crashes when API fails instead of showing helpful message
+5. **Props drilling confusion**: Not understanding where state should live
+6. **Not using keys in lists**: Causes warnings and potential bugs
+7. **Committing node_modules**: Makes repository huge and unusable
+8. **Hardcoded URLs**: API endpoints should be configurable or documented
+
+## Technical Tips
+
+**Fetching WordPress posts with featured images:**
+
+```javascript
+// Include _embed to get featured media data
+const response = await fetch(
+    'http://your-site.local/wp-json/wp/v2/posts?_embed'
+);
+const posts = await response.json();
+
+// Access featured image URL
+const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
+```
+
+**Project structure suggestion:**
+
+```
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── PostCard.jsx
+│   ├── PostList.jsx
+│   ├── PostDetail.jsx
+│   └── LoadingSpinner.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+**useState for view navigation:**
+
+```javascript
+const [selectedPost, setSelectedPost] = useState(null);
+
+// In render
+{selectedPost ? (
+    <PostDetail post={selectedPost} onBack={() => setSelectedPost(null)} />
+) : (
+    <PostList posts={posts} onSelectPost={setSelectedPost} />
+)}
+```
+
+## Professional Context
+
+This project demonstrates skills employers look for:
+
+1. **Frontend architecture**: Structuring React applications logically
+2. **API integration**: Working with external data sources
+3. **State management**: Handling application data flow
+4. **User experience**: Loading states, error handling, responsive design
+5. **Professional practices**: Version control, documentation, code quality
+
+Headless architecture is increasingly common in enterprise development. Understanding how to build frontends that consume APIs—whether WordPress, a custom backend, or third-party services—is valuable regardless of your eventual specialisation.
+
+## After Submission
+
+This project, combined with your WordPress Business Site, demonstrates full-stack thinking:
+
+- Backend: WordPress content management
+- API: REST interface design
+- Frontend: React component architecture
+- Professional: Version control, documentation, testing
+
+Consider extending this portfolio piece by:
+
+- Adding more interactive features
+- Implementing React Router for proper URLs
+- Adding tests with Vitest
+- Deploying to a hosting service
+
+These extensions show initiative and technical depth to potential employers.

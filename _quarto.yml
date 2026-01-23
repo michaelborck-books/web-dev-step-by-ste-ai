@@ -3,14 +3,14 @@ project:
   output-dir: _book
 
 book:
-  title: "Web Development Step by Step"
-  subtitle: "Building Business Solutions with AI"
+  title: "Build Web, Guide AI"
+  subtitle: "Business Web Development with AI"
   author: "Michael Borck"
   date: today
   description: "A practical approach to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React."
   # cover-image: cover.png
-  site-url: https://michaelborck-books.github.io/web-dev-step-by-ste-ai
-  repo-url: https://github.com/michaelborck-books/web-dev-step-by-ste-ai
+  site-url: https://michaelborck-books.github.io/build-web-guide-ai
+  repo-url: https://github.com/michaelborck-books/build-web-guide-ai
   repo-branch: main
   repo-actions: [edit, issue]
 
@@ -61,7 +61,7 @@ book:
     collapse-level: 2
     tools:
       - icon: github
-        href: https://github.com/michaelborck-books/web-dev-step-by-ste-ai
+        href: https://github.com/michaelborck-books/build-web-guide-ai
 
 bibliography: references.bib
 

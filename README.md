@@ -1,4 +1,4 @@
-# Web Development Step by Step: Building Business Solutions with AI
+# Build Web, Guide AI: Business Web Development with AI
 
 A practical guide to web development that embraces AI as your development partner while building real business solutions with HTML, CSS, JavaScript, WordPress, and React.
 
@@ -24,15 +24,15 @@ This book teaches web development differently:
 This book is part of a comprehensive series for mastering modern software development in the AI era:
 
 ### Foundational Methodology
-- **[Intentional Prompting](https://michaelborck-books.github.io/intentional-prompting)**: Mastering the Human-AI Development Process
+- **[Conversation, Not Delegation](https://michaelborck-books.github.io/intentional-prompting)**: Mastering Human-AI Development
 
 ### Python Track
-- **[Python Step by Step with AI](https://michaelborck-books.github.io/python-step-by-step-ai)**: Perfect for absolute beginners learning computational thinking
-- **[Python Foundations](https://michaelborck-books.github.io/python-foundations)**: Coding Fundamentals for the AI Era
-- **[Python Development Pipelines](https://michaelborck-books.github.io/python-development-pipelines)**: Tools and Workflows for Professional Python
+- **[Think Python, Direct AI](https://michaelborck-books.github.io/python-step-by-step-ai)**: Computational Thinking for Beginners
+- **[Code Python, Consult AI](https://michaelborck-books.github.io/python-foundations)**: Python Fundamentals for the AI Era
+- **[Ship It: Python in Production](https://michaelborck-books.github.io/python-development-pipelines)**: Professional Tools and Workflows
 
 ### Web Track
-- **[Web Development Step by Step](https://michaelborck-books.github.io/web-dev-step-by-step-ai)** (this book): Building Business Solutions with AI
+- **[Build Web, Guide AI](https://michaelborck-books.github.io/web-dev-step-by-step-ai)** (this book): Business Web Development with AI
 
 ## Building the Book
 

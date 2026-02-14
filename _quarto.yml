@@ -16,6 +16,7 @@ book:
 
   chapters:
     - index.qmd
+    - copyright.qmd
     - reading-list.qmd
     - acknowledgments.qmd
 
@@ -53,6 +54,7 @@ book:
         - chapter-14-ai-era-developer.qmd
 
     - references.qmd
+    - about-author.qmd
 
   page-navigation: true
   sidebar:

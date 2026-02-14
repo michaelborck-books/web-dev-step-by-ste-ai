@@ -117,6 +117,20 @@ If you're also interested in Python development, explore the Python learning pat
 
 Start wherever matches your goals. The methodology from Conversation, Not Delegation enhances all paths.
 
+## Source Code & Feedback
+
+**Source Code**
+All code examples and project files are available at:
+https://github.com/michael-borck/build-web-guide-ai
+
+**Feedback and Errata**
+Found an error? Have a suggestion? We welcome your feedback:
+
+- Open an issue: https://github.com/michael-borck/build-web-guide-ai/issues
+- Email: michael@borck.me
+
+Your input helps improve this book for future readers.
+
 ---
 
 Let's build something meaningful together.
